@@ -2,6 +2,10 @@ html{
     height: 100%;
 }
 
+.top-nav{
+    background-color: #DBDBDB !important;
+}
+   
 .heroimg {
     background: url('/media/top-pic.jpg')no-repeat center center/cover;
     width: 100%;
@@ -20,4 +24,9 @@ html{
     border-color:#CF7500 !important;
     color: #DBDBDB !important;
     margin-top: 5%;
+}
+
+.shop-button:hover{
+    background-color: #F0A500 !important;
+    border-color: #F0A500 !important;
 }

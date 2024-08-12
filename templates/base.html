@@ -43,11 +43,11 @@
     <title>The Hair Experts {% block extra_title%}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top">
-      <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+    <header class="container-fluid fixed-top top-nav">
+      <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex top-nav">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-              <a href="{% url 'home' %}" class="nav-link main-logo-link">
-              <h2 class="logo-title">THE HAIR EXPERTS</h2>
+              <a href="{% url 'home' %}" class="nav-link main-logo-link text-dark">
+              <h2 class="logo-title text-black">THE HAIR EXPERTS</h2>
             </a>
           </div>
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -69,8 +69,8 @@
                   <li class="list-inline-item dropdown">
                       <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <div class="text-center">
-                              <div><i class="fas fa-user fa-lg"></i></div>
-                              <p class="my-0">My Account</p>
+                              <div><i class="fas fa-user fa-lg text-dark"></i></div>
+                              <p class="my-0 text-dark">My Account</p>
                           </div>
                       </a>
                       <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -89,8 +89,8 @@
                   <li class="list-inline-item">
                       <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                           <div class="text-center">
-                              <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                              <p class="my-0">
+                              <div><i class="fas fa-shopping-bag fa-lg text-dark"></i></div>
+                              <p class="my-0 text-dark">
                                   {% if grand_total %}
                                       ${{ grand_total|floatformat:2 }}
                                   {% else %}
