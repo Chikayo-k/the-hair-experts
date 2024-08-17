@@ -15,8 +15,12 @@ html{
 }
 
 .delivery-banner{
-    background-color:black ;
+    background-color:black !important;
     color:#DBDBDB !important;
+}
+
+.delivery-w{
+   padding: 5px 0;
 }
    
 .heroimg {
