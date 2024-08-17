@@ -47,3 +47,74 @@ html{
     background-color: #F0A500 !important;
     border-color: #F0A500 !important;
 }
+
+
+.category-container, .category-container2{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    margin: 5% 0;
+}
+
+.category{
+    display: flex;
+    flex-direction: row;
+    flex: 50%;
+    margin:2%;
+}
+
+.category-shampoo{
+    background: url('/media/shampoo.jpg')no-repeat center center/cover;
+    height: 40vh;
+    width: 60%;
+        
+}
+
+.category-hair-health{
+    background: url('/media/hair-health.jpg')no-repeat center center/cover;
+    height: 40vh; 
+    width: 60%;
+}
+
+.category-description{
+    background-color: #DBDBDB !important;
+    height: 40vh;
+    flex: 40%;
+}
+
+.category-description1{
+    background-color: #DBDBDB !important;
+    height: 40vh;
+    width: 30%;
+    flex: 40%;
+}
+
+.category-container2{
+    display: flex;
+    flex-direction: row;
+    flex: 50%;
+    margin:2%;
+}
+
+.category-hair-products{
+    background: url('/media/hair-products.jpg')no-repeat center center/cover;
+    height: 40vh;
+    flex: 50%;    
+}
+
+@media (max-width: 1100px) {
+    .category-container {
+      flex-direction: column;
+    }
+    .category{
+        height: 40vh;
+        width: 95%;
+        flex: 100%;    
+    }
+
+    .category-hair-health{
+        order: 2;
+    }
+ 
+  }
