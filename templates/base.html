@@ -120,6 +120,39 @@
   {% block content %}
   {% endblock %}
 
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Help center</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          If you have any quesstion, please contact us.<br>
+          Phone:000-0000-0000
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+   </div>
+
+  <footer>
+    <div class="social-media">       
+       <a href="https://www.facebook.com/" aria-label="Visit our Facebook page (opens in a new tub)" target="_blank"><i class="fa-brands fa-facebook-f fa-xl" style="color: #DBDBDB ;"></i></a>
+       <a href="https://www.instagram.com/" aria-label="Visit our Instagram page (opens in a new tub)" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #DBDBDB ;"></i></a>
+       <a href="https://www.youtube.com/" aria-label="Visit our YouTube page (opens in a new tub)" target="_blank"><i class="fa-brands fa-youtube fa-xl" style="color: #DBDBDB ;"></i></a>
+    </div>
+ 
+  <!-- Button trigger modal -->
+  <button type="button" class="btn help-center " data-toggle="modal" data-target="#exampleModal">
+    Help Center
+  </button>
+</footer>
   {% block postloadjs %}
     <script src="{% static 'js/base.js' %}"></script> 
   {% endblock %}

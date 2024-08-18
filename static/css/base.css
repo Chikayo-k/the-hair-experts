@@ -49,7 +49,7 @@ html{
 }
 
 
-.category-container, .category-container2{
+.category-container,.category-container2{
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -101,6 +101,49 @@ html{
     background: url('/media/hair-products.jpg')no-repeat center center/cover;
     height: 40vh;
     flex: 50%;    
+}
+
+
+/* Footer */
+
+footer {
+	background-color:black;
+	color:  #DBDBDB !important;
+	width: 100%;
+	padding: 2%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	bottom: 0;
+    margin-top: 5%;
+}
+
+.social-media {
+	width: 30%;
+}
+
+.social-media i {
+	padding-right: 3%;
+}
+
+
+.help-center {
+	background-color: black;
+	color: #DBDBDB !important;
+	border: none;
+	list-style-type: none;
+}
+
+.help-center:hover {
+	opacity: 0.7;
+	color: #DBDBDB !important;
+    background-color: black;    
+}
+
+.help-center:active {
+	opacity: 0.7;
+	color: #DBDBDB !important;
+    background-color: black;
 }
 
 @media (max-width: 1100px) {
