@@ -2,6 +2,8 @@ html{
     height: 100%;
 }
 
+/* Navigation  */
+
 .top-nav{
     background-color: #DBDBDB !important;
 }
@@ -22,9 +24,11 @@ html{
 .delivery-w{
    padding: 5px 0;
 }
+
+/* Header */
    
 .heroimg {
-    background: url('/media/top-pic.jpg')no-repeat center right/cover;
+    background: url('/media/top-pic.jpg')no-repeat center left/cover;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -32,8 +36,15 @@ html{
     align-items: center;
 }
 
+.lead-message-box{
+    padding: 1.2%;
+    margin-right: 5%;
+}
+
 .lead-message{
     color: #DBDBDB !important;
+    font-size:3rem;
+    font-family: "Playfair Display", serif;
 }
 
 .shop-button{
@@ -48,6 +59,7 @@ html{
     border-color: #F0A500 !important;
 }
 
+/* Main index page */
 
 .category-container,.category-container2{
     display: flex;
@@ -88,6 +100,9 @@ html{
     height: 40vh;
     width: 30%;
     flex: 40%;
+}
+.category-name{
+    font-size: 1.2rem;
 }
 
 .category-container2{
@@ -146,10 +161,25 @@ footer {
     background-color: black;
 }
 
+
+/*------------------- Media query-------------------*/
+
+  /* max 1100px */
 @media (max-width: 1100px) {
+
+
+    .lead-message{
+        font-size: 2rem;
+    }
     .category-container {
       flex-direction: column;
     }
+
+    .lead-message-box{
+        background-color: rgb(0, 0, 0, 0.8); 
+        margin-top: 80%;
+    }
+
     .category{
         height: 40vh;
         width: 95%;
@@ -158,6 +188,5 @@ footer {
 
     .category-hair-health{
         order: 2;
-    }
- 
-  }
+    } 
+}
