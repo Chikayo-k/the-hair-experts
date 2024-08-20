@@ -166,11 +166,27 @@ footer {
     background-color: black;
 }
 
+/* Products Page */
+.products{
+  min-height: 100vh;
+  width: 100%;
+}
+
+.products-w{
+    color:gray;
+    margin: 3% 0%;
+}
+
+
+
 
 /*------------------- Media query-------------------*/
 
   /* max 998px */
 @media (max-width: 998px) {
+    .logo-title{
+        font-size: 1.3rem;
+    }
 
 
     .lead-message{
@@ -202,6 +218,9 @@ footer {
 
   /* max 790px */
   @media (max-width: 790px){
+    .navbar-toggler-icon{
+        font-size: 0.7rem;
+    }
 
     .lead-message-box{
         margin-top: 50%;
@@ -212,12 +231,20 @@ footer {
         font-size: 1.5rem;
     }
 
+    .header-container{
+        margin-top: 100px;;
+    }
+
+    .delivery-w{
+        font-size: 0.7rem;
+    }
+
   }
 
 @media (max-width: 400px) {
 
-.header-container{
-    margin-top: 210px;
+.logo-title{
+        font-size: 1.2rem;
 }
 
 .category-name{
