@@ -177,6 +177,33 @@ footer {
     margin: 3% 0%;
 }
 
+  /* Detail page */
+  .detail-page{
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .detail-container{
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+  }
+
+  .item-img{
+    width: 50%;
+  }
+
+  .item-detail{
+    width: 50%;
+    padding-left: 5%;
+  }
+
+  .detail-img{
+    width: 100%;
+  }
+
 
 
 
@@ -241,11 +268,7 @@ footer {
 
   }
 
-  /* Detail page */
-  .detail-page{
-    width: 100%;
-    min-height: 100vh;
-  }
+
 
 @media (max-width: 400px) {
 
@@ -269,5 +292,23 @@ footer {
 .social-media{
     font-size: 0.7rem;
 }
+
+/* detail page */
+
+.detail-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-img{
+    width: 100%;
+}
+
+ .item-detail{
+    width: 100%;
+    padding: 5% 0%;
+}
+
 
 }

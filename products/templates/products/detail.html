@@ -11,7 +11,27 @@
 
 {% block content %}
    <div class="detail-page">
-     <p>product detail</p>
+    
+    <div class="detail-container">
+      <div class="item-img">
+        {% if product.image %}
+        <a href="{%url 'detail' product.id%}">
+            <img class="detail-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+        </a>
+        {% else %}
+        <a href="{%url 'detail' product.id%}">
+            <img class="detail-img" src="/media/noimg.jpg" alt="{{ product.name }}">
+        </a>
+        {% endif %}    
+      </div>
+      <div class="item-detail">
+        <div class="">
+          <p class="mb-0">{{ product.name }}</p>
+          <p class="mb-0">{{ product.description }}</p>
+        </div>        
+      </div>
+    </div>
+
    </div>
 
    
