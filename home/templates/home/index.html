@@ -28,26 +28,28 @@
      <div class="container-fluid">
         <div class="category-box">
         <div class="category-container">
-            <div class="category">
+            
+            <a href="{%url 'products'%}?category=shampoo,conditioner,set" class="category">
                 <div class="category-shampoo"></div>
                 <div class="category-description1 d-flex justify-content-center align-items-center p-3">
                     <h4 class="category-name">Shampoo &amp Conditioner</h4>
                 </div>
-            </div>
-            <div class="category">
+            </a>
+            
+            <a href="{%url 'products'%}?category=hair_oil" class="category">
                 <div class="category-hair-health"></div>
                 <div class="category-description d-flex justify-content-center align-items-center p-3">
                     <h4 class="category-name">Hiair Mask &amp Oil</h4>
                 </div>
-            </div>
+            </a>
         </div>
         </div>
-        <div class="category-container2">
+        <a href="{%url 'products'%}?category=electric" class="category-container2">
             <div class="category-hair-products"></div>
             <div class="category-description1 d-flex justify-content-center align-items-center p-3">
                 <h4 class="category-name">Electrical</h4>
             </div>
-        </div>
+        </a>
      </div>
 
     

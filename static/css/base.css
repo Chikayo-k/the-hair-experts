@@ -79,6 +79,8 @@ html{
     flex-direction: row;
     flex: 50%;
     margin:2%;
+    color: black;
+    text-decoration: none;
 }
 
 .category-shampoo{
@@ -115,6 +117,8 @@ html{
     flex-direction: row;
     flex: 50%;
     margin:2%;
+    color: black;
+    text-decoration: none;
 }
 
 .category-hair-products{
@@ -123,6 +127,17 @@ html{
     flex: 50%;    
 }
 
+.category:hover{
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+}
+
+.category-container2:hover{
+    text-decoration: none;
+    color: black;
+    opacity: 0.7;
+}
 
 /* Footer */
 
