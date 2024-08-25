@@ -18,6 +18,11 @@
                 <div class="col-10 offset-1">
                     <h2 class="text-center products-w">Products</h2> 
                     <div class="text-left">
+                        {% if search_word %}
+                            <small>
+                                found for  {{search_word}}
+                            </small>
+                        {% endif %}
                         <p>{{products|length}} Products</p>
                     </div>
                     <div class="text-right">     
