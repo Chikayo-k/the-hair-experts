@@ -10,8 +10,7 @@
 {% endblock %}
 
 {% block content %}
-   <div class="detail-page">
-    
+   <div class="detail-page">    
     <div class="detail-container">
       <div class="item-img">
         {% if product.image %}
@@ -26,6 +25,12 @@
       </div>
       <div class="item-detail">
         <div class="">
+          {% if product.category %}
+          <a class="category-tag text-muted" href="{%url 'products'%}?category={{ product.category.name }}">
+              <i class="fa-regular fa-clipboard">  {{product.category.display_name}}</i>
+          </a>
+          {% endif %}
+          <br>
           <p class="font-weight-bold">{{ product.name }}</p>
           <p class="font-weight-bold">€{{ product.price }}</p>
           <small class="text-muted">Tax included. Shipping free over €50 </small>

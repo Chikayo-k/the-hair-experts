@@ -219,6 +219,13 @@ footer {
     width: 80%;
   }
 
+/* Category Tag */
+
+.category-tag{
+    text-decoration: none;
+    font-size: 0.5rem;   
+    text-transform: lowercase;
+}
 
 
 

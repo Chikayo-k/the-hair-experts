@@ -32,6 +32,11 @@
                                     {% endif %}
                                     <div class="card-body pb-0">
                                         <p class="mb-0">{{ product.name }}</p>
+                                        {% if product.category %}
+                                        <a class="category-tag text-muted" href="{%url 'products'%}?category={{ product.category.name }}">
+                                            <i class="fa-regular fa-clipboard">  {{product.category.display_name}}</i>
+                                        </a>
+                                        {% endif %}
                                     </div>
                                     <div class="card-footer bg-white pt-0 border-0 text-left">
                                         <div class="row">
