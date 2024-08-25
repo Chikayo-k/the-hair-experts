@@ -12,10 +12,25 @@
 {% block content %}
     <div class="products">
         
-      <h2 class="text-center products-w">Products</h2>  
+
       <div class="container-fluid">
             <div class="row">
                 <div class="col-10 offset-1">
+                          <h2 class="text-center products-w">Products</h2> 
+                    <div class="text-right">     
+                        <label for="cars">Sort:</label>
+                        <select name="cars" id="sort-selecter">
+                            <option value="reset" {%if sorting == 'None_None' %}selected{% endif%}>Sort by...</option>
+                            <option value="price_asc" {%if sorting == 'price_asc'%}selected{%endif%}>Price (low to high)</option>
+                            <option value="price_desc" {%if sorting == 'price_desc'%}selected{%endif%}>Price (high to low)</option>
+                            <option value="rating_asc" {%if sorting == 'rating_asc'%}selected{%endif%}>Rating (low to high)</option>
+                            <option value="rating_desc" {%if sorting == 'rating_desc'%}selected{%endif%}>Rating (low to high)</option>
+                            <option value="category_asc" {%if sorting == 'category_asc'%}selected{%endif%}>category (A to Z)</option>
+                            <option value="category_desc" {%if sorting == 'category_desc'%}selected{%endif%}>category (Z to A)</option>
+                            <option value="name_asc" {%if sorting == 'name_asc'%}selected{%endif%}>Name (A to Z)</option>
+                            <option value="name_desc" {%if sorting == 'name_desc'%}selected{%endif%}>Name (Z to A)</option>
+                        </select>
+                    </div>  
                     <div class="row mt-1 mb-2"></div>
                     <div class="row">
                         {% for product in products %}
