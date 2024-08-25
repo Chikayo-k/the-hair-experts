@@ -16,10 +16,13 @@
       <div class="container-fluid">
             <div class="row">
                 <div class="col-10 offset-1">
-                          <h2 class="text-center products-w">Products</h2> 
+                    <h2 class="text-center products-w">Products</h2> 
+                    <div class="text-left">
+                        <p>{{products|length}} Products</p>
+                    </div>
                     <div class="text-right">     
-                        <label for="cars">Sort:</label>
-                        <select name="cars" id="sort-selecter">
+                        <label for="sort-selecter">Sort:</label>
+                        <select name="sort-selecter" id="sort-selecter">
                             <option value="reset" {%if sorting == 'None_None' %}selected{% endif%}>Sort by...</option>
                             <option value="price_asc" {%if sorting == 'price_asc'%}selected{%endif%}>Price (low to high)</option>
                             <option value="price_desc" {%if sorting == 'price_desc'%}selected{%endif%}>Price (high to low)</option>
@@ -56,7 +59,7 @@
                                     <div class="card-footer bg-white pt-0 border-0 text-left">
                                         <div class="row">
                                             <div class="col">
-                                                <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                                <p class="lead mb-0 text-left font-weight-bold">€ {{ product.price }}</p>
                                             </div>
                                         </div>
                                     </div>
