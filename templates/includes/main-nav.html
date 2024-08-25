@@ -30,8 +30,9 @@
                 Electric
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Hair dryer</a>
-                <a href="" class="dropdown-item">Hair iron</a>
+                <a href="{%url 'products'%}?category=hair_dryer" class="dropdown-item">Hair dryer</a>
+                <a href="{%url 'products'%}?category=hair_iron" class="dropdown-item">Hair iron</a>
+                <a href="{%url 'products'%}?category=hair_dryer,hair_iron" class="dropdown-item">All Products</a>
             </div>
         </li>
 
