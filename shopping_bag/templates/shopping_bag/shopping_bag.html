@@ -11,7 +11,13 @@
 
 {% block content %}
 <div class="shopping-bag">
-   <h1>shopping bag</h1>   
+   <h2> Shopping bag </h2>
+   {% if bag_items %}
+   <div></div>
+   {% else %}
+    <p>Your bag is empty.</p>
+    <a href="{% url 'products' %}">Keep shopping</a>
+   {% endif %}
 </div>
 
 

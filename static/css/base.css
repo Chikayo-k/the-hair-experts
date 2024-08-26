@@ -238,7 +238,8 @@ footer {
 .shopping-bag{
     width: 100%;
     height: 100vh;
-    margin-top: 160px;
+    margin-top: 50px;
+    padding: 5%;
 }
 
 /*------------------- Media query-------------------*/
