@@ -1,3 +1,4 @@
+// Sorting
 $('#sort').change(function(){
     let selector = $(this);
     let url = new URL(window.location);
@@ -17,4 +18,8 @@ $('#sort').change(function(){
     }
 });
 
-console.log('hi');
+
+// Scroll top
+$('.scroll-top').click(function(e){
+    window.scroll(0,0);
+});
