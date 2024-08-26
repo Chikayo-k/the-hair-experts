@@ -27,12 +27,12 @@
                     </div>
                     <div class="text-right">     
                         <label for="sort-selecter">Sort:</label>
-                        <select name="sort-selecter" id="sort-selecter">
+                        <select name="sort-selecter" id="sort">
                             <option value="reset" {%if sorting == 'None_None' %}selected{% endif%}>Sort by...</option>
                             <option value="price_asc" {%if sorting == 'price_asc'%}selected{%endif%}>Price (low to high)</option>
                             <option value="price_desc" {%if sorting == 'price_desc'%}selected{%endif%}>Price (high to low)</option>
                             <option value="rating_asc" {%if sorting == 'rating_asc'%}selected{%endif%}>Rating (low to high)</option>
-                            <option value="rating_desc" {%if sorting == 'rating_desc'%}selected{%endif%}>Rating (low to high)</option>
+                            <option value="rating_desc" {%if sorting == 'rating_desc'%}selected{%endif%}>Rating (high to low)</option>
                             <option value="category_asc" {%if sorting == 'category_asc'%}selected{%endif%}>category (A to Z)</option>
                             <option value="category_desc" {%if sorting == 'category_desc'%}selected{%endif%}>category (Z to A)</option>
                             <option value="name_asc" {%if sorting == 'name_asc'%}selected{%endif%}>Name (A to Z)</option>
