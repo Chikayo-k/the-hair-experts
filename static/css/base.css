@@ -221,10 +221,11 @@ footer {
 
   .quantity{
     margin-top: 2%;
+    margin-bottom: 1%;
   }
  
   .quantity-box{
-    margin-top: 2%;
+    margin-top: 1%;
     display: flex;
   }
 
@@ -269,10 +270,27 @@ footer {
     padding: 5%;
 }
 
-.buy-btn{
-
+.detail-hr{
+    margin: 5% 0;
 }
 
+.keep-shop-container{
+    margin-top: 5%;
+}
+
+.keep-shop{   
+    text-decoration: none;
+    color: black;
+}
+
+.keep-shop:hover{
+     color: black;
+     opacity: 0.7;
+}
+
+.deliverly{
+    margin: 5% 0;
+}
 
 
 /*------------------- Media query-------------------*/
