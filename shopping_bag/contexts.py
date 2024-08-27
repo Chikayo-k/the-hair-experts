@@ -8,11 +8,14 @@ def shopping_bag_contents(request):
     product_count= 0
     free_delivery_price = settings.FREE_DELIVERY_PRICE
 
-    if total < settings.FREE_DELIVERY_PRICE:
-        delivery_cost = settings.STANDARD_DELIVERY_PRICE
-        free_delivery_cost =  free_delivery_price - total 
-    else:
+    if total >= settings.FREE_DELIVERY_PRICE:
         delivery_cost = 0
+        
+    elif total >= 1 & total < settings.FREE_DELIVERY_PRICE:
+        delivery_cost =settings.STANDARD_DELIVERY_PRICE 
+        free_delivery_cost =  free_delivery_price - total
+    else:
+       free_delivery_cost =  free_delivery_price - total 
 
     grand_total = delivery_cost + total
     
