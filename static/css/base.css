@@ -219,6 +219,33 @@ footer {
     width: 80%;
   }
 
+  .quantity{
+    margin-top: 2%;
+  }
+ 
+  .quantity-box{
+    margin-top: 2%;
+    display: flex;
+  }
+
+  .quantity-input{
+    text-align: center;
+  }
+
+  .buy-btn{
+    background-color:#CF7500 !important;
+    border-color:#CF7500 !important;
+    color: white !important;
+    margin-left: 2%;
+  }
+
+  .buy-btn:hover{
+    background-color: #F0A500 !important;
+    border-color: #F0A500 !important;
+  }
+
+  
+
 /* Category Tag */
 
 .category-tag{
@@ -241,6 +268,12 @@ footer {
     margin-top: 50px;
     padding: 5%;
 }
+
+.buy-btn{
+
+}
+
+
 
 /*------------------- Media query-------------------*/
 

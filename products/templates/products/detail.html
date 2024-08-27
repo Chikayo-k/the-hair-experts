@@ -24,7 +24,7 @@
         {% endif %}    
       </div>
       <div class="item-detail">
-        <div class="">
+        <div>
           {% if product.category %}
           <a class="category-tag text-muted" href="{%url 'products'%}?category={{ product.category.name }}">
               <i class="fa-regular fa-clipboard">  {{product.category.display_name}}</i>
@@ -41,6 +41,16 @@
           {% else %}
               <small class="text-muted">No Rating</small>
           {% endif %}
+
+          <form action="" method="POST">
+            {% csrf_token %}
+            <p class="quantity">Quantity</p>  
+            <div class="quantity-box">           
+              <input class="quantity-input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{product.id}}" id="id_qty_{{product.id}}">
+              <input type="submit" class="btn buy-btn round-0" value="Add to Bag">
+            </div>
+            
+          </form>
         </div>        
       </div>
     </div>
