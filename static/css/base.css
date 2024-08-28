@@ -237,14 +237,17 @@ footer {
     background-color:#CF7500 !important;
     border-color:#CF7500 !important;
     color: white !important;
-    margin-left: 2%;
+    margin-left: 5%;
   }
 
   .buy-btn:hover{
     background-color: #F0A500 !important;
     border-color: #F0A500 !important;
   }
-
+  
+  .input-right{
+    padding-right:10px
+  }
   
 
 /* Category Tag */
