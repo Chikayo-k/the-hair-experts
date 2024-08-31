@@ -230,10 +230,21 @@ footer {
   .quantity-box{
     margin-top: 1%;
     display: flex;
+    flex-direction: row;
   }
 
   .quantity-input{
     text-align: center;
+  }
+
+
+  .quantity-btns{
+    display: flex;
+  }
+
+  .btn-quantity{
+    border-color: #e7e7e7;
+    border-width: thin;
   }
 
   .buy-btn{

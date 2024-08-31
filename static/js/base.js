@@ -23,3 +23,22 @@ $('#sort').change(function(){
 $('.scroll-top').click(function(e){
     window.scroll(0,0);
 });
+
+
+//Increment Decrement quantity button
+
+    // Increment quantity
+    $('.increment').click(function(e) {
+        e.preventDefault();
+        var closestInput = $(this).closest('.input-group').find('.quantity_input')[0];
+        var currentValue = parseInt($(closestInput).val());
+        $(closestInput).val(currentValue + 1);
+     });
+ 
+     // Decrement quantity
+     $('.decrement').click(function(e) {
+        e.preventDefault();
+        var closestInput = $(this).closest('.input-group').find('.quantity_input')[0];
+        var currentValue = parseInt($(closestInput).val());
+        $(closestInput).val(currentValue - 1);
+     });
