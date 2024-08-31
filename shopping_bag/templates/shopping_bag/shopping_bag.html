@@ -12,10 +12,54 @@
 
 {% block content %}
 <div class="shopping-bag">
-   <h2> Shopping bag </h2>
+   <h2 class="text-center text-muted shoppingbag-title"> Shopping bag </h2>
+
    {% if bag_items %}
-   <div>
-      {{ bag_items }}
+  
+      
+      <table class="table table-sm bag-table">
+         <thead class="text-black">
+             <tr>
+                 <th scope="col">Product Info</th>
+                 <th scope="col"></th>
+                 <th scope="col">Price</th>
+                 <th scope="col">Qty</th>
+                 <th scope="col">Subtotal</th>
+             </tr> 
+         </thead>
+        
+         {% for item in bag_items %}
+         <tbody>
+            <tr>
+               <td class="p-3 w-25">
+                  {% if item.product.image %}
+                  <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                  {% else %}
+                  <img class="img-fluid roundded" src="/media/noimg.jpg" alt="{{ product.name }}">
+                  {% endif %} 
+               </td>
+               <td class="py-3">
+                  <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                  <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+               </td>
+               <td class="py-3">
+                  <p class="my-0">${{ item.product.price }}</p>
+               </td>
+               <td class="py-3 w-25">
+                  <p class="my-0">{{ item.quantity }}</p>
+               </td>
+               <td class="py-3">
+                  <p class="my-0">${{ item.product.price }}</p>
+               </td>
+            </tr>
+         </tbody>
+         {% endfor %}
+      </table>
+      </div>
+   </div>   
+
+
+     
    </div>
    {% else %}
     <p>Your bag is empty.</p>
