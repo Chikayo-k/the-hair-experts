@@ -4,7 +4,8 @@
 {% block page_header %}
    <div class="container">
       <div class="row">
-          <div class="col"></div>
+          <div class="col">
+          </div>
       </div>
    </div>
 {% endblock %}
@@ -13,7 +14,9 @@
 <div class="shopping-bag">
    <h2> Shopping bag </h2>
    {% if bag_items %}
-   <div></div>
+   <div>
+      {{ bag_items }}
+   </div>
    {% else %}
     <p>Your bag is empty.</p>
     <a  class="keep-shop" href="{% url 'products' %}"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a>  
