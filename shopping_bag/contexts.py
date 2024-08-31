@@ -8,6 +8,7 @@ def shopping_bag_contents(request):
     bag_items = []
     total= 0
     product_count= 0
+    delivery_cost = settings.STANDARD_DELIVERY_PRICE
     free_delivery_price = settings.FREE_DELIVERY_PRICE
     free_delivery_cost = 50
     shopping_bag = request.session.get('shopping_bag', {})
@@ -23,12 +24,10 @@ def shopping_bag_contents(request):
             'product':product,
         }) 
 
-
-
     if total >= settings.FREE_DELIVERY_PRICE:
         delivery_cost = 0
         
-    elif total >= 1 & total < settings.FREE_DELIVERY_PRICE:
+    elif total >= 1 and total < settings.FREE_DELIVERY_PRICE:
         delivery_cost =settings.STANDARD_DELIVERY_PRICE 
         free_delivery_cost =  free_delivery_price - total
     else:
@@ -46,3 +45,10 @@ def shopping_bag_contents(request):
     }
     
     return context
+
+
+
+
+
+
+
