@@ -54,12 +54,36 @@
             </tr>
          </tbody>
          {% endfor %}
-      </table>
+      </table>     
+      <hr>
+
+      <!-- Total and deliverly -->
+      <div>
+        <p class="text-right">Total: ${{ total|floatformat:2 }}</p>
+        <p class="text-right">Deliverly: ${{ delivery_cost|floatformat:2 }}</p>
+        <p class="text-right"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></p>
+        {% if delivery_cost > 0 %}
+        <p class="text right text-danger">
+            You could get free delivery by spending just <strong>${{ free_delivery_cost }}</strong> more!
+        </p>
+        {% endif %}
       </div>
+      <div class="small checkout-container">
+         <div>
+         <a  class="keep-shop" href="{% url 'products' %}"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a>  
+        </div>
+        <br>
+         <div class="checkout-btn text-center">
+            <a class="checkout" href="">
+               <span>Secure Checkout</span>
+            </a>
+         </div>
+      </div>
+      
+    </div>
    </div>   
 
 
-     
    </div>
    {% else %}
     <p>Your bag is empty.</p>
