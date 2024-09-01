@@ -26,19 +26,41 @@ $('.scroll-top').click(function(e){
 
 
 //Increment Decrement quantity button
+    function enableDisable(itemId){
+        const valueNow = parseInt($(`#id_qty_${itemId}`).val());
+        const minimum = valueNow < 2;
+        const maximum = valueNow > 98;
+        $(`#decrement${itemId}`).prop('disabled',minimum);
+        $(`#increment${itemId}`).prop('disabled',maximum);
+    }
+    
+    const quantity = $('.quantity_input');
+    for(let i = 0; i < quantity.length; i++){
+        const itemId = $(quantity[i]).data('item_id');
+        enableDisable(itemId);
+    }
+
+    $('.quantity_input').change(function(){
+        const itemId = $(this).data('item_id');
+        enableDisable(itemId);
+    });
 
     // Increment quantity
     $('.increment').click(function(e) {
         e.preventDefault();
-        var closestInput = $(this).closest('.input-group').find('.quantity_input')[0];
-        var currentValue = parseInt($(closestInput).val());
+        const closestInput = $(this).closest('.input-group').find('.quantity_input')[0];
+        const currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue + 1);
+        const itemId = $(this).data('item_id');
+        enableDisable(itemId);
      });
  
      // Decrement quantity
      $('.decrement').click(function(e) {
         e.preventDefault();
-        var closestInput = $(this).closest('.input-group').find('.quantity_input')[0];
-        var currentValue = parseInt($(closestInput).val());
+        const closestInput = $(this).closest('.input-group').find('.quantity_input')[0];
+        const currentValue = parseInt($(closestInput).val());
         $(closestInput).val(currentValue - 1);
+        const itemId = $(this).data('item_id');
+        enableDisable(itemId);
      });
