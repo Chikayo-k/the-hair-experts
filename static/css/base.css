@@ -481,6 +481,10 @@ footer {
         justify-content: center;
     }
 
+    .table-title{
+        display: none;
+    }
+
 
 
 }
