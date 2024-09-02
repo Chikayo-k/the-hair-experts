@@ -14,10 +14,12 @@
 <div class="shopping-bag">
    <h2 class="text-center text-muted shoppingbag-title"> Shopping bag </h2>
 
-   {% if bag_items %}
-  
-      
-      <table class="table table-sm bag-table">
+
+<div class="row">
+  <div class="col">
+   {% if bag_items %}       
+   <div class="table-responsive rounded">
+      <table class="table table-sm">
          <thead class="text-black">
              <tr>
                  <th scope="col">Product Info</th>
@@ -29,33 +31,58 @@
          </thead>
         
          {% for item in bag_items %}
-         <tbody>
-            <tr>
-               <td class="p-3 w-25">
+            <tr class="table">
+               <td class="py-3 table-w table-pic-w">
                   {% if item.product.image %}
-                  <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                  <img class="img-fluid rounded  table-pic" src="{{ item.product.image.url }}">
                   {% else %}
-                  <img class="img-fluid roundded" src="/media/noimg.jpg" alt="{{ product.name }}">
+                  <img class="img-fluid roundded  table-pic" src="/media/noimg.jpg" alt="{{ product.name }}">
                   {% endif %} 
                </td>
-               <td class="py-3">
+               <td class="py-3 table-w">
                   <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                   <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
-               </td>
-               <td class="py-3">
+               </td> 
+               <td class="py-3 table-w">
                   <p class="my-0">${{ item.product.price }}</p>
                </td>
-               <td class="py-3 w-25">
-                  <p class="my-0">{{ item.quantity }}</p>
+               <td class="py-3 table-w">
+                  <form action="POST">
+                     {% csrf_token %}
+                     <div class="quantity-btns input-group quantity-box">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-black btn-quantity decrement btn-sm" data-item_id="{{item.item.id}}" id="decrement{{item.item_id}}">
+                            <span>
+                              <i class="fas fa-minus"></i>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="input-main">
+                           <input class="form-control-sm form-control quantity_input text-center" type="number" name="quantity" value="{{item.quantity}}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ product.id }}">
+                        </div>
+                          <div class="input-group-append">
+                            <button class="btn btn-black btn-quantity increment btn-sm"  data-item_id="{{item.item_id}}" id="increment{{item.item_id}}">
+                              <span>
+                                <i class="fas fa-plus"></i>
+                              </span>
+                            </button>
+                          </div>
+                     </div>
+                  </form>
+                  <a class="update-link text-info" href=""><small>Update</small></a>
+                  <a href="remove-item text-danger" id="remove_{item.item_id}"><small>Remove</small></a>
                </td>
-               <td class="py-3">
+               <td class="py-3 table-w">
                   <p class="my-0">${{ item.product.price }}</p>
                </td>
             </tr>
-         </tbody>
          {% endfor %}
-      </table>     
-      <hr>
+      </table>    
+   </div>
+</div>
+</div>
+    
+ <hr>
 
       <!-- Total and deliverly -->
       <div>

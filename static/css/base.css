@@ -238,10 +238,6 @@ footer {
   }
 
 
-  .quantity-btns{
-    display: flex;
-  }
-
   .btn-quantity{
     border-color: #e7e7e7;
     border-width: thin;
@@ -338,6 +334,17 @@ footer {
     opacity: 0.7;
 }
 
+.table-pic{
+    width: 100%;
+}
+
+
+.table-pic-w{
+    width: 20%;
+}
+
+
+
 /*------------------- Media query-------------------*/
 
   /* max 998px */
@@ -409,6 +416,9 @@ footer {
     }
 
 
+    
+
+
   }
 
 @media (max-width: 580px){
@@ -444,7 +454,36 @@ footer {
     width: 40%;
 }
 
-} 
+
+
+}
+
+@media (max-width: 650px) {
+    .table{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+
+    .table-pic{
+        width: 50%;
+        text-align: center;
+    }
+
+    .table-w{
+        width: 100%;
+        text-align: center;
+    }
+
+    .quantity-box{
+        justify-content: center;
+    }
+
+
+
+}
 
 
 @media (max-width: 400px) {
