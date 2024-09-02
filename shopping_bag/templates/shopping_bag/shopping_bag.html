@@ -44,7 +44,7 @@
                   <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                </td> 
                <td class="py-3 table-w">
-                  <p class="my-0">${{ item.product.price }}</p>
+                  <p class="my-0">€{{ item.product.price }}</p>
                </td>
                <td class="py-3 table-w">
                   <form action="POST">
@@ -73,7 +73,7 @@
                   <a href="remove-item text-danger" id="remove_{item.item_id}"><small>Remove</small></a>
                </td>
                <td class="py-3 table-w">
-                  <p class="my-0">${{ item.product.price }}</p>
+                  <p class="my-0">€{{ item.product.price }}</p>
                </td>
             </tr>
          {% endfor %}
@@ -86,12 +86,12 @@
 
       <!-- Total and deliverly -->
       <div>
-        <p class="text-right">Total: ${{ total|floatformat:2 }}</p>
-        <p class="text-right">Deliverly: ${{ delivery_cost|floatformat:2 }}</p>
-        <p class="text-right"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></p>
+        <p class="text-right">Total: €{{ total|floatformat:2 }}</p>
+        <p class="text-right">Deliverly: €{{ delivery_cost|floatformat:2 }}</p>
+        <p class="text-right"><strong>Grand Total:€{{ grand_total|floatformat:2 }}</strong></p>
         {% if delivery_cost > 0 %}
         <p class="text right text-danger">
-            You could get free delivery by spending just <strong>${{ free_delivery_cost }}</strong> more!
+            You could get free delivery by spending just <strong>é{{ free_delivery_cost }}</strong> more!
         </p>
         {% endif %}
       </div>
