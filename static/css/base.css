@@ -311,6 +311,9 @@ footer {
     margin: 5% 0;
 }
 
+.update-qty, .remove-pd{
+    cursor: pointer;
+}
 
 .checkout-container{
     display: flex;
