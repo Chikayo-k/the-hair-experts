@@ -46,12 +46,13 @@
                <td class="py-3 table-w">
                   <p class="my-0">€{{ item.product.price }}</p>
                </td>
+               
                <td class="py-3 table-w">
-                  <form action="POST">
+                  <form class="update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                      {% csrf_token %}
                      <div class="quantity-btns input-group quantity-box">
                         <div class="input-group-prepend">
-                          <button class="btn btn-black btn-quantity decrement btn-sm" data-item_id="{{item.item.id}}" id="decrement{{item.item_id}}">
+                          <button class="btn btn-black btn-quantity decrement btn-sm" data-item_id="{{item.item_id}}" id="decrement{{item.item_id}}">
                             <span>
                               <i class="fas fa-minus"></i>
                             </span>
@@ -69,8 +70,8 @@
                           </div>
                      </div>
                   </form>
-                  <a class="update-link text-info" href=""><small>Update</small></a>
-                  <a href="remove-item text-danger" id="remove_{item.item_id}"><small>Remove</small></a>
+                  <a class="update-qty text-info"><small>Update</small></a>
+                  <a class="remove-pd text-danger" id="remove_{{item.item_id}}"><small>Remove</small></a>
                </td>
                <td class="py-3 table-w">
                   <p class="my-0">€{{ item.product.price }}</p>
@@ -117,6 +118,31 @@
     <a  class="keep-shop" href="{% url 'products' %}"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a>  
    {% endif %}
 </div>
+
+<script type="text/javascript">
+   //Update quantity 
+   $('.update-qty').click(function(e){
+      console.log("Hello")
+      const updateForm = $(this).prev('.update-form');
+      updateForm.submit();
+   });
+
+   //Remove item
+   $('.remove-pd').click(function(e){
+      const csrfToken ="{{ csrf_token }}";
+      const itemId = $(this).attr('id').split('remove_')[1];
+      const url = '/shopping_bag/remove/${itemId}/';
+      const data = {'crfmiddlewaretoken':csrfToken};
+      
+      $.post(url,data)
+      .done(function() {
+            location.reload();
+      });
+   });
+
+
+
+</script>
 
 
     
