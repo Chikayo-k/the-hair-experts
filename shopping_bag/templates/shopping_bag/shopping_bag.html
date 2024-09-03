@@ -70,8 +70,9 @@
                           </div>
                      </div>
                   </form>
+                  <!-- Update Remove btns -->
                   <a class="update-qty text-info"><small>Update</small></a>
-                  <a class="remove-pd text-danger" id="remove_{{item.item_id}}"><small>Remove</small></a>
+                  <a class="remove-pd text-danger" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                </td>
                <td class="py-3 table-w">
                   <p class="my-0">€{{ item.product.price }}</p>
@@ -129,15 +130,15 @@
 
    //Remove item
    $('.remove-pd').click(function(e){
-      const csrfToken ="{{ csrf_token }}";
+      const csrfToken = "{{ csrf_token }}";
       const itemId = $(this).attr('id').split('remove_')[1];
-      const url = '/shopping_bag/remove/${itemId}/';
-      const data = {'crfmiddlewaretoken':csrfToken};
+      const url = `/shopping_bag/remove/${itemId}/`;
+      const data = {'csrfmiddlewaretoken': csrfToken};
       
-      $.post(url,data)
-      .done(function() {
-            location.reload();
-      });
+      $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
    });
 
 
