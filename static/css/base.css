@@ -346,6 +346,20 @@ footer {
     width: 20%;
 }
 
+.message-container{
+    position:fixed;
+    top: 130px;
+    right: 15px;
+    z-index: 99999999999999;
+}
+
+.custom-toast{
+    overflow:visible
+}
+
+.toast-capper{
+    height: 2px;
+}
 
 
 /*------------------- Media query-------------------*/
