@@ -9,6 +9,47 @@
       </div>
       <div class="toast-body">
         {{ message }}
-      </div>
+        <hr>   
+    
+    {% if grand_total %}
+    <p>Bag items ({{product_count}})</p>
+    <div class="bag-details">
+      {% for item in bag_items %}
+          <div class="row">
+              <div class="col-3 my-1">
+                  <img class="w-100" src="{{ item.product.image.url }}">
+              </div>
+              <div class="col-9">
+                  <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                  <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+              </div>
+          </div>
+      {% endfor %}
     </div>
+    <div>
+      <hr>
+      
+      {% if delivery_cost > 0 %}
+        <p class="text-right text-danger">
+            Free delivery: €{{ free_delivery_cost }} more!
+        </p>
+
+        {% endif %}
+        <p class="text-right mb-0">Total: €{{ total|floatformat:2 }}</p>
+        <p class="text-right mb-0">Deliverly: €{{ delivery_cost|floatformat:2 }}</p>
+        <p class="text-right text-bold mb-0">Grand Total: €{{grand_total}}</p>
+        
+    </div>
+  {% endif %}
+  <hr>
+  <div class="text-right my-2"><a  class="keep-shop" href="{% url 'products' %}"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a></div>
+    <a href="{% url 'view_bag' %}" class="btn btn-block rounded-0 checkout-bg-btn">
+      <span class="text-uppercase">Go To Secure Checkout</span>
+      <span class="icon">
+          <i class="fas fa-lock"></i>
+      </span>
+    </a>
+   
   </div>
+</div>
+</div>
