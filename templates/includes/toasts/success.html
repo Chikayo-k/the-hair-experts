@@ -17,10 +17,14 @@
       {% for item in bag_items %}
           <div class="row">
               <div class="col-3 my-1">
-                  <img class="w-100" src="{{ item.product.image.url }}">
+                  <a href="{%url 'detail' item.product.id%}" class="text-decoration-none text-dark">
+                    <img class="w-100" src="{{ item.product.image.url }}">
+                  </a>
               </div>
               <div class="col-9">
-                  <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                  <a href="{%url 'detail' item.product.id%}" class="text-decoration-none text-dark">
+                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                  </a>
                   <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
               </div>
           </div>

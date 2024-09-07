@@ -35,14 +35,21 @@
             <tr class="table">
                <td class="py-3 table-w table-pic-w">
                   {% if item.product.image %}
-                  <img class="img-fluid rounded  table-pic" src="{{ item.product.image.url }}">
+                  <a href="{%url 'detail' item.product.id%}">
+                    <img class="img-fluid rounded  table-pic" src="{{ item.product.image.url }}">
+                  </a>
                   {% else %}
-                  <img class="img-fluid roundded  table-pic" src="/media/noimg.jpg" alt="{{ product.name }}">
+                  <a href="{%url 'detail' item.product.id%}">
+                    <img class="img-fluid roundded  table-pic" src="/media/noimg.jpg" alt="{{ product.name }}">
+                  <a href="{%url 'detail' item.product.id%}">
                   {% endif %} 
                </td>
                <td class="py-3 table-w">
+                  <a href="{%url 'detail' item.product.id%}" class="text-decoration-none text-dark">
                   <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                  </a>
                   <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                 
                </td> 
                <td class="py-3 table-w">
                   <p class="my-0">€{{ item.product.price }}</p>
