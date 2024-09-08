@@ -70,8 +70,7 @@ class OrderItem(models.Model):
         update the total cost
         
         """
-        if not self.order_number:
-            self.item_total = self.product.price* self.quantity
+        self.item_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
     
     def __str__(self):
