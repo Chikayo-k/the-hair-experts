@@ -56,6 +56,9 @@
           <p class="text-right mb-0">Total: €{{ total|floatformat:2 }}</p>
           <p class="text-right mb-0">Deliverly: €{{ delivery_cost|floatformat:2 }}</p>
           <p class="text-right text-bold mb-0">Grand Total: €{{grand_total}}</p>
+          <div class="text-right mt-3">
+            <a  class="keep-shop" href="{% url 'view_bag' %}"><i class="fa-solid fa-cart-shopping"></i> Adjust bag >></a>  
+           </div>
           
       </div>
     {% endif %}
