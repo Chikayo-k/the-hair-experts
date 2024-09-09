@@ -17,9 +17,15 @@
       {% for item in bag_items %}
           <div class="row">
               <div class="col-3 my-1">
-                  <a href="{%url 'detail' item.product.id%}" class="text-decoration-none text-dark">
-                    <img class="w-100" src="{{ item.product.image.url }}">
-                  </a>
+                {% if item.product.image %}
+                <a href="{%url 'detail' item.product.id%}">
+                  <img class="img-fluid rounded  table-pic" src="{{ item.product.image.url }}">
+                </a>
+                {% else %}
+                <a href="{%url 'detail' item.product.id%}">
+                  <img class="img-fluid roundded  table-pic" src="/media/noimg.jpg" alt="{{ product.name }}">
+                <a href="{%url 'detail' item.product.id%}">
+                {% endif %} 
               </div>
               <div class="col-9">
                   <a href="{%url 'detail' item.product.id%}" class="text-decoration-none text-dark">
