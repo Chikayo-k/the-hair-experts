@@ -21,3 +21,14 @@ const style = {
 };
 const card = elements.create('card', {style: style});
 card.mount('#card-element');
+
+// Handle errors
+card.addEventListener('change',function(e){
+    const errorMessage = document.getElementById('card-errors');
+    if(e.error){
+        const content =`<p>${e.error.message}</p>`;
+        $(errorMessage).html(content);
+    }else{
+        errorMessage.textContent('');
+    }
+});
