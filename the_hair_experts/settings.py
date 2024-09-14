@@ -16,8 +16,13 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+from pathlib import Path
+import os
 from dotenv import load_dotenv
-import os 
+ 
+
+if os.path.isfile('env.py'):
+    import env
 
 load_dotenv()
 
@@ -181,5 +186,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 FREE_DELIVERY_PRICE = 50
 STANDARD_DELIVERY_PRICE = 5
 STRIPE_CURRENCY = 'eur'
+
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY','')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY','')

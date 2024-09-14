@@ -28,13 +28,14 @@ class Order(models.Model):
         """
         Generate order number using UUID
         """
-        return uuid.uuid4.hex.upper()
+        return uuid.uuid4().hex.upper()
+
 
     def culc_total(self):
         """
         Culc grand total. accounting for deliverly cost
         """
-        self.total_cost = self.lineitems.aggregate(Sum('item_total'))['item_total_sum']
+        self.total_cost = self.lineitems.aggregate(Sum('item_total'))['item_total__sum'] or 0
         if self.total_cost > settings.FREE_DELIVERY_PRICE:
             self.deliverly_fee = settings.STANDARD_DELIVERY_PRICE
         else:
