@@ -1,6 +1,6 @@
 {% extends "base.html"%}
 {% load static %}
-
+{% load bag_calc %}
 
 {% block extra_css %}
   <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -15,13 +15,56 @@
    </div>
 {% endblock %}
 
-{% block content %}        
-
-<div class="container-checkout">
-   <h2 class="text-center mb-5">Thank You !!</h2>
-   <p>Your order information is down below</p>
-<div class="row">
+{% block content %}   
+   
  
-</div>    
+   
+   <div class="container-checkout">
+      <h2 class="text-center mb-5">Thank you for shopping with us !</h2>
+      <p class="text-center">We will send you a confirmation email shortly.</p>
+
+      <div class="order-number">
+         <p class="font-weight-bold ordernum-p">Deliverly to: </p>
+         <p class="ordernum-p">{{ order.order_number }}</p>
+      </div>
+      <hr>
+      <div class="customer-info">
+         <div class="order-number">
+            <small class="mr-1 font-weight-bold">Full Name: </small>
+            <small class="mr-2">{{ order.full_name }}</small>
+         </div>
+         <div class="order-number">
+            <small class="mr-1 font-weight-bold">Address: </small>
+            <small class="mr-2">{{ order.address1 }}</small>
+            {% if order.address2 %}          
+            <small class="mr-2">{{ order.address2 }}</small>
+            {% endif %}
+            <small class="mr-2">{{ order.town_city }}</small>
+            <small class="mr-2">{{ order.county_region }}</small>
+            <small class="mr-2">{{ order.country }}</small>
+         </div>         
+      </div>
+
+      <hr>
+    
+      <div>      
+         {% for item in order.lineitems.all %}
+
+         <div class="order-number">
+            <p>{{ item.product.name }}</p>
+            <p class="">{{ item.quantity }} @ ${{ item.product.price }} each</p>
+         </div>
+
+         {% endfor %}
+      </div>
+
+
+</div>
+              
+     
+   
+   
 {% endblock %}
+   
+
 
