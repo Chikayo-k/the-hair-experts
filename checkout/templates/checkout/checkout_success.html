@@ -46,19 +46,25 @@
       </div>
 
       <hr>
-    
-      <div>      
-         {% for item in order.lineitems.all %}
-
-         <div class="order-number">
-            <p>{{ item.product.name }}</p>
-            <p class="">{{ item.quantity }} @ ${{ item.product.price }} each</p>
+            
+       <p class="text-md-center font-weight-bold text-sm-left">Order</p> 
+      <div class="order border border-secondary p-3">
+         <div class="order-inner">
+            {% for item in order.lineitems.all %}
+               <div>
+                  <p>{{ item.product.name }} x {{ item.quantity }} €{{ item.product.price }} each</p>
+               </div>
+            {% endfor %}
+            <hr>
+            <p><span class="font-weight-bold">Total: </span> €{{ order.total_cost }}</p>
+            <p><span class="font-weight-bold">Deriverly: </span> €{{ order.deliverly_fee }}</p>
+            <p><span class="font-weight-bold">Grand Total: </span>€{{ order.grand_total }}</p>
+            <hr>
+            <p class="font-weight-bold">What's Next?</p>
+            <p>We'll be in touch once it's been despatched.</p>
+            <p>If you have any queries or need to contact us</p>
          </div>
-
-         {% endfor %}
-      </div>
-
-
+      </div>   
 </div>
               
      

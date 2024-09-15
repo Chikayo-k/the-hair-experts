@@ -72,7 +72,17 @@
     justify-content: center;
 }
 
-
+.order{
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-direction: column;
+  width: 40%;
+  margin-left: 30%;
+}
+.order-inner{
+  justify-content: center;
+}
 
 
 
@@ -92,6 +102,12 @@
   .customer-info{
     flex-direction: column;
 }
+
+.order{
+  width: 100%;
+  margin-left: 0;
+}
+
 
 
 
