@@ -58,8 +58,7 @@
           <p class="text-right text-bold mb-0">Grand Total: €{{grand_total}}</p>
           <div class="text-right mt-3">
             <a  class="keep-shop" href="{% url 'view_bag' %}"><i class="fa-solid fa-cart-shopping"></i> Adjust bag >></a>  
-           </div>
-          
+           </div>          
       </div>
     {% endif %}
    </div>
@@ -118,9 +117,15 @@
             </form>
            </div> 
          </div>
-  
-
 </div>    
+
+<div id="loading-overlay">
+   <h1 class="text-light logo-font loading-spinner">
+      <span class="icon">
+         <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+      </span>
+   </h1>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
