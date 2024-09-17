@@ -12,7 +12,7 @@ def webhook(request):
     """Webhooks from Stripe"""
     # Settings
     webhook_secret = settings.STRIPE_WEBHOOK_SECRET
-    stripe_api_key = settings.STRIPE_SECRET_KEY
+    stripe.api_key = settings.STRIPE_SECRET_KEY
 
     # Get the webhook data and verify its signature
     payload = request.body
