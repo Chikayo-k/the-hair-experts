@@ -17,25 +17,26 @@
 {% block content %}        
 
     <div class="container profile-container">
+        <hr>
+        <h2 class="logo-font mb-4">My Profile</h2>
+        <hr>
         <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">My Profile</h2>
-                <hr>
                 {{ profile }}   
-            </div>
-            <div class="row">
-                <p>Default Deliverly Information</p>
-                <form class="mt-3" action="{%url 'profile' %}" method="POST" id="profile-update-form">
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <button class="btn btn-black">Update Information</button>
-                </form>
-            </div>
-            <div>
-                <p>Order History</p>
-                {{ orders }}
-            </div>
+                <div  class="col-lg-6">
+                    <p>Default Deliverly Information</p>
+                    <form class="mt-3" action="{%url 'profile' %}" method="POST" id="profile-update-form">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <button class="btn btn-dark float-right">Update Information</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <p>Order History</p>
+                    {{ orders }}
+                </div>
+            
+            
+            
         </div>
       </div>
    
