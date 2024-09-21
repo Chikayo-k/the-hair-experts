@@ -3,3 +3,11 @@
     margin-top: 150px;
 }
 
+#id-default_country,
+#id_default_country option:not(:first-child){
+    color: black;
+}
+
+#id_defalt_country option:first-child{
+    color: gray;
+}

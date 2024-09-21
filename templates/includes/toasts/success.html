@@ -11,7 +11,8 @@
         {{ message }}
         <hr>   
     
-    {% if grand_total %}
+    {% if total and not on_profile_page%}
+
     <p>Bag items ({{product_count}})</p>
     <div class="bag-details">
       {% for item in bag_items %}
@@ -50,7 +51,7 @@
         <p class="text-right text-bold mb-0">Grand Total: €{{grand_total}}</p>
         
     </div>
-  {% endif %}
+ 
   <hr>
   <div class="text-right my-2"><a  class="keep-shop" href="{% url 'products' %}"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a></div>
     <a href="{% url 'view_bag' %}" class="btn btn-block rounded-0 checkout-bg-btn">
@@ -59,7 +60,7 @@
           <i class="fas fa-lock"></i>
       </span>
     </a>
-   
+  {% endif %}  
   </div>
 </div>
 </div>

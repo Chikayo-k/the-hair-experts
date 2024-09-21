@@ -12,11 +12,11 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone = models.CharField(max_length=20, null=True, blank=True)
     default_eircode = models.CharField(max_length=15,null=True, blank=True )
-    default_country = CountryField(blank_label='Country *', null=True, blank=True)
     default_address1 = models.CharField(max_length=50,null=True, blank=True)
     default_address2 = models.CharField(max_length=50,null=True, blank=True)
     default_town_city = models.CharField(max_length=50,null=True, blank=True)
     default_county_region = models.CharField(max_length=50,null=True, blank=True)
+    default_country = CountryField(blank_label='Country', null=True, blank=True)
 
     def __str__(self):
             return self.user.username
