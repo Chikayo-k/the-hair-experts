@@ -383,6 +383,13 @@ footer {
     color: white;
 }
 
+/* All auth */
+.container-allauth{
+    min-height: 100vh;
+    padding-top: 2rem;   
+}
+
+
 /*------------------- Media query-------------------*/
 
   /* max 998px */
