@@ -1,6 +1,6 @@
 {% extends "base.html"%}
 {% load static %}
-{% load bag_calc %}
+<!-- {% load bag_calc %} -->
 
 {% block extra_css %}
   <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -58,7 +58,7 @@
             <hr>
             
             
-              <p><span class="font-weight-bold">Deriverly: </span>€{{  order.delivery_cost }}</p>
+              <p><span class="font-weight-bold">Deriverly: </span>€{{  order.deliverly_fee }}</p>
              <p><span class="font-weight-bold">Total: </span> €{{ order.total_cost }}</p>
             <p><span class="font-weight-bold">Grand Total: </span>  €{{order.grand_total}}</p>           
             <hr>

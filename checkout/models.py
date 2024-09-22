@@ -43,7 +43,7 @@ class Order(models.Model):
         Culc grand total. accounting for deliverly cost
         """
         self.total_cost = self.lineitems.aggregate(Sum('item_total'))['item_total__sum'] or 0
-        if self.total_cost > settings.FREE_DELIVERY_PRICE:
+        if self.total_cost < settings.FREE_DELIVERY_PRICE:
             self.deliverly_fee = settings.STANDARD_DELIVERY_PRICE
         else:
             self.deliverly_fee = 0

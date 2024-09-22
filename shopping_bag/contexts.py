@@ -45,10 +45,3 @@ def shopping_bag_contents(request):
     }
     
     return context
-
-
-
-
-
-
-
