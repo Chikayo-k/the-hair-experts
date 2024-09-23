@@ -19,7 +19,8 @@ class UserProfileForm(forms.ModelForm):
             'default_address2': 'Address 2',
             'default_town_city': 'Town / City',
             'default_county_region': 'County /Region',
-            'default_eircode':'Eir Code'
+            'default_eircode':'Eir Code',
+            'default_country':'Country',
         }
 
         self.fields['default_phone'].widget.attrs['autofocus'] = True
