@@ -73,13 +73,13 @@ class StripeWebHook:
         if username != 'AnonymousUser':
             profile = UserProfile.objects.get(user__username=username)
             if save_info:
-                profile.default_phone =shipping_details.phone,
-                profile.default_country =shipping_details.address.country,
-                profile.default_eircode =shipping_details.address.postal_code,
-                profile.default_town_city =shipping_details.address.city,
-                profile.default_address1 =shipping_details.address.line1,
-                profile.default_address2 =shipping_details.address.line2,
-                profile.default_county_region =shipping_details.address.state,
+                profile.default_phone =shipping_details.phone
+                profile.default_country =shipping_details.address.country
+                profile.default_eircode =shipping_details.address.postal_code
+                profile.default_town_city =shipping_details.address.city
+                profile.default_address1 =shipping_details.address.line1
+                profile.default_address2 =shipping_details.address.line2
+                profile.default_county_region =shipping_details.address.state
                 profile.save()
         
         order_exists = False
