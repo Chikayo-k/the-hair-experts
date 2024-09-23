@@ -1,0 +1,22 @@
+Hello, {{ order.full_name }}
+
+Thank you for ordering with The Hair Experts!
+This is the confirmation of your order.
+
+Order Date: {{ order.date }}
+Order Number : {{ order.order_number }}
+
+Order Total:€ {{ order.total_cost }}
+Delivery: € {{ order.deliverly_fee }}
+Grand Total:€ {{ order.grand_total }}
+
+Shipping To:
+ {{ order.address1 }}  {{ order.address2 }} {{ order.town_city }} {{ order.county_region }} {{ order.country }}
+
+We will dispatch your items within 24 working hours.
+If you have any questions, fell free to contact us at {{ contact_email }}
+
+Sincerely,
+
+The Hair Experts
+
