@@ -107,4 +107,31 @@ def add_item(request):
     return render(request,template,context)
 
 
+def edit_item(request, product_id):
+    """
+    Edit item in stock
+    """
+    item = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form= ItemForm(request.POST, request.FILES, instance=item)
+        if form.is_valid():
+            form.save()
+            messages.success(request,'Updated stock successfully!')
+            return redirect(reverse('detail',args=[item.id]))
+        else:
+            messages.error(request,'Failed to update stock. Please try again.')
+    else:
+        form = ItemForm(instance=item)
+        messages.info(request, f'You are editing {item.name}')
+
+    template ='products/edit_item.html'
+    context ={
+        'form':form,
+        'item':item,
+    }
+
+    return render(request,template,context)
+
+
+
 
