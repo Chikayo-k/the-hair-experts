@@ -92,9 +92,9 @@ def add_item(request):
     if request.method =='POST':
         form = ItemForm(request.POST,request.FILES)
         if form.is_valid():
-            form.save()
+            item = form.save()
             messages.success(request, 'Item was added successfully!')
-            return redirect(reverse('add_item'))
+            return redirect(reverse('detail',args=[item.id]))
         else:
             messages.error(request, 'Failed. Please try again!')
     else:
@@ -131,6 +131,18 @@ def edit_item(request, product_id):
     }
 
     return render(request,template,context)
+
+def delete_item(request, product_id):
+    """
+    Delete item from stock
+    """
+    item = get_object_or_404(Product, pk=product_id)
+    item.delete()
+    messages.success(request,'Item has been deleted!')
+    return redirect(reverse ('products'))
+
+    
+
 
 
 

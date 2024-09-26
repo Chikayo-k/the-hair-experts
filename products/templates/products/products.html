@@ -66,6 +66,12 @@
                                             <div class="col">
                                                 <p class="lead mb-0 text-left font-weight-bold">€ {{ product.price }}</p>
                                             </div>
+                                            {% if request.user.is_superuser %}
+                                            <small>
+                                               <a class="btn-sm btn-secondary" href="{% url 'edit_item' product.id %}">Edit</a>
+                                               <a class="btn-sm btn-danger" href="{% url 'delete_item' product.id %}">Delete</a>
+                                            </small>
+                                           {% endif %}                                      
                                         </div>
                                     </div>
                                 </div>
