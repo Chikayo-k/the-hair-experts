@@ -1,3 +1,8 @@
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
  {% if widget.is_initial %}
    <P>{{ widget.initial_text }}: </P>
   <a href="{{ widget.value.url }}">
@@ -16,8 +21,8 @@
   {% endif %}<br>
   {{ widget.input_text }}
 {% endif %} 
-<span class="btn btn-black rounded-0 btn-file"></span>
-    Select Image <input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
+<span class="btn btn-dark img-select btn-img">
+    Select Image<input id="new-image" type="{{ widget.type }}" name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
 </span>
 <strong><p class="text-danger" id="filename"></p></strong>
 
