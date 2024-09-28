@@ -20,11 +20,20 @@
    
    <div class="text-center">
     <h1>News</h1>
-    <p>Stay uptodate with our latest news and new products</p>
+    <p class="mt-3">Stay uptodate with our latest news and new products</p>
    </div>
 
-   <div>
-    
+   <div class="newses">
+    {% for news in news %}
+      <div class="border mt-5 news-box">
+        <div class="m-5">
+          <h3>{{news.title}}</h3>
+          <hr>
+          <p>{{news.body}}</p>
+          <small>{{news.post_date}}</small>
+        </div>
+      </div>
+    {% endfor %}    
    </div>
 
   </div>
