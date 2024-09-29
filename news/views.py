@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from .models import News
 from news.forms import NewsForm
 from django.contrib import messages
@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+@login_required 
 def news(request):
     """
     Display news
@@ -62,6 +63,21 @@ def news_edit(request,news_id):
     }
 
     return render(request,template,context)
+
+
+@login_required 
+def news_delete(request, news_id):
+    """
+    Delete news 
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'limited to store owners')
+        return redirect(reverse('home'))
+
+    news = get_object_or_404(News, pk=news_id)
+    news.delete()
+    messages.success(request,'News has been deleted!')
+    return redirect('news')
 
 
 

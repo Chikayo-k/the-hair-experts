@@ -34,7 +34,7 @@
           {% if request.user.is_superuser %}
           <div class="edit-delete-btns mt-3">
             <a href="{% url 'news_edit' news.id %}" class="btn btn-sm btn-secondary edit-btn" data-news_id="{{ news.id }}">Edit</a>
-            <button class="btn btn-sm btn-danger delete-btn" data-news_id="{{ news.id }}">Delete</button>
+            <a href="{% url 'news_delete' news.id %}" class="btn btn-sm btn-danger delete-btn" data-news_id="{{ news.id }}">Delete</a>
          </div>
          {% endif %}
         </div>
