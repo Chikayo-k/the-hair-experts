@@ -16,18 +16,27 @@
 {% endblock %}
 
 {% block content %}
- 
+    
+<div class="news-containre">
+   
+  <div class="text-center">
+   <h3>Edit News</h3>
+  </div>
+  
+  <div class="edit-news m-5">
     {% if request.user.is_superuser %}
-    <div class="mt-5">
-      <h3 class="mb-5">Add News</h3>
+    <div class="edit-news">
       <form  method="POST"  action="{% url 'news_edit' news.id %}" enctype="multipart/form-data">        
           <div>
             {% csrf_token %}
             {{ form | crispy }}
           </div>
-            <button type="submit" class="btn btn-dark">Submit</button>   
+            <a class="btn btn-secondary" href="{% url 'news' %}"> Cancel </a>
+            <button type="submit" class="btn btn-dark">Update</button>   
       </form>
     </div>
    {% endif %}
+  </div>
+</div>
    
 {% endblock %}
