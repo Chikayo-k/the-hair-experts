@@ -7,6 +7,9 @@ class News(models.Model):
     body = models.TextField()
     post_date = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['-post_date']
+
     def __str__(self):
        return f'News: {self.title}'
 
