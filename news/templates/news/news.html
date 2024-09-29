@@ -31,6 +31,12 @@
           <hr>
           <p>{{news.body}}</p>
           <small>{{news.post_date}}</small>
+          {% if request.user.is_superuser %}
+          <div class="edit-delete-btns mt-3">
+            <button class="btn btn-sm btn-secondary edit-btn" data-news_id="{{ news.id }}">Edit</button>
+            <button class="btn btn-sm btn-danger delete-btn" data-news_id="{{ news.id }}">Delete</button>
+         </div>
+         {% endif %}
         </div>
       </div>
     {% endfor %}    
