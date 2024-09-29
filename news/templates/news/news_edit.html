@@ -1,0 +1,33 @@
+
+{% extends "base.html"%}
+{% load static %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'news/css/news.css' %}">
+{% endblock %}
+
+
+{% block page_header %}
+   <div class="container">
+      <div class="row">
+          <div class="col"></div>
+      </div>
+   </div>
+{% endblock %}
+
+{% block content %}
+ 
+    {% if request.user.is_superuser %}
+    <div class="mt-5">
+      <h3 class="mb-5">Add News</h3>
+      <form  method="POST"  action="{% url 'news_edit' news.id %}" enctype="multipart/form-data">        
+          <div>
+            {% csrf_token %}
+            {{ form | crispy }}
+          </div>
+            <button type="submit" class="btn btn-dark">Submit</button>   
+      </form>
+    </div>
+   {% endif %}
+   
+{% endblock %}
