@@ -1,6 +1,6 @@
 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-    <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
+    <div class="navbar-nav w-auto mx-auto">
+        <div class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
@@ -10,9 +10,9 @@
                 <a href="{%url 'products'%}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{%url 'products'%}" class="dropdown-item">All Products</a>
             </div>
-        </li>
+        </div>
 
-        <li class="nav-item dropdown">
+        <div class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Hair Products
             </a>
@@ -23,9 +23,9 @@
                 <a href="{%url 'products'%}?category=hair_oil" class="dropdown-item">Hair oil</a>
                 <a href="{%url 'products'%}?category=shampoo,conditioner,set,hair_oil" class="dropdown-item">All Products</a>
             </div>
-        </li>
+        </div>
 
-        <li class="nav-item dropdown">
+        <div class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Electric
             </a>
@@ -34,10 +34,10 @@
                 <a href="{%url 'products'%}?category=hair_iron" class="dropdown-item">Hair iron</a>
                 <a href="{%url 'products'%}?category=hair_dryer,hair_iron" class="dropdown-item">All Products</a>
             </div>
-        </li>
+        </div>
 
-        <li class="nav-item">
+        <div class="nav-item">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{%url 'news'%}" >News</a>
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>

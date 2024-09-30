@@ -68,7 +68,7 @@
                         </div>
                     </div>
                 </form>
-                <li class="list-inline-item dropdown">
+                <div class="list-inline-item dropdown">
                     <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="text-center">
                             <div><i class="fas fa-user fa-lg text-dark"></i></div>
@@ -87,8 +87,8 @@
                             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                         {% endif %}
                     </div>
-                </li>
-                <li class="list-inline-item">
+                </div>
+                <div class="list-inline-item">
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                         <div class="text-center">
                             <div><i class="fas fa-shopping-bag fa-lg text-dark"></i></div>
@@ -101,8 +101,8 @@
                             </p>
                         </div>
                     </a>
-                </li>
-              </ul>          
+                  </div>
+                </div>          
             </div>
           </nav>
           <div id="delivery-banner" class="text-center delivery-banner">
