@@ -26,8 +26,8 @@
                         <p>{{products|length}} Products</p>
                     </div>
                     <div class="text-right">     
-                        <label for="sort-selecter">Sort:</label>
-                        <select name="sort-selecter" id="sort">
+                        <label for="sort">Sort:</label>
+                        <select name="sort" id="sort">
                             <option value="reset" {%if sorting == 'None_None' %}selected{% endif%}>Sort by...</option>
                             <option value="price_asc" {%if sorting == 'price_asc'%}selected{%endif%}>Price (low to high)</option>
                             <option value="price_desc" {%if sorting == 'price_desc'%}selected{%endif%}>Price (high to low)</option>
