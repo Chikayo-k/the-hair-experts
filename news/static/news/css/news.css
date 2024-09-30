@@ -15,6 +15,10 @@
 
 }
 
+.contents{
+  padding: 5%;
+}
+
 /* Edit news */
 .edit-news{
   margin: 0 15%;
@@ -30,4 +34,12 @@
 .add-btn:hover{
   opacity: 0.7;
   color: white;
+}
+
+/*------------------- Media query-------------------*/
+@media (max-width: 650px){
+  .title{
+   font-size: 1.2rem;
+   text-align: center;
+  }
 }

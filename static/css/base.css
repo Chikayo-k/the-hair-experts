@@ -376,14 +376,6 @@ footer {
 .detail-img{
     width: 100%;
   }
-
-/* .checkout-btn{
-    background-color: #CF7500;
-    padding: 4%;
-    width: 40%;
-} */
-
-
 }
 
 @media (max-width: 650px) {
@@ -393,7 +385,6 @@ footer {
         width: 100%;
         font-size: 1rem;
     }
-
 
     .table-pic{
         width: 50%;
@@ -440,10 +431,5 @@ footer {
 .social-media{
     font-size: 0.7rem;
 }
-
-.checkout-btn{
-    background-color: #CF7500 important!;
-}
-
 
 }
