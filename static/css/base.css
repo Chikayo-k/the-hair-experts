@@ -377,12 +377,11 @@ footer {
     width: 100%;
   }
 
-.checkout-btn{
+/* .checkout-btn{
     background-color: #CF7500;
     padding: 4%;
     width: 40%;
-}
-
+} */
 
 
 }
@@ -443,9 +442,7 @@ footer {
 }
 
 .checkout-btn{
-    background-color: #CF7500;
-    padding: 4%;
-    width: 60%;
+    background-color: #CF7500 important!;
 }
 
 
