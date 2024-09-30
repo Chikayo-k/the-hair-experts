@@ -25,7 +25,6 @@
       <a href="{% url 'news_add' %}" class="btn add-btn" data-news_id="{{ news.id }}">Add News</a>
     {% endif %}
    </div>
-
    <div class="newses">
     {% for news in news %}
       <div class="border mt-5 news-box">
@@ -43,6 +42,7 @@
         </div>
       </div>
     {% endfor %}    
-
+   </div>
+</div>
     
 {% endblock %}
