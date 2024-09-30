@@ -43,8 +43,6 @@ def news_add(request):
     return render(request,template,context)
 
 
-
-
 @login_required 
 def news_edit(request,news_id):
     """
@@ -60,10 +58,10 @@ def news_edit(request,news_id):
         if form.is_valid():
             form.save()
             messages.success(request,'Updated news successfully!')
-            return redirect('news')
+            return redirect(reverse('news'))
         else:
             messages.error(request,'Failed to update news. Please try again.')
-            return render(request, 'news/news.html',{'news': news, 'form':form})
+            
     else:
         form = NewsForm(instance=news)
         messages.info(request, f'You are editing {news.title}')
@@ -88,8 +86,8 @@ def news_delete(request, news_id):
 
     news = get_object_or_404(News, pk=news_id)
     news.delete()
-    messages.success(request,'News has been deleted!')
-    return redirect('news')
+    messages.success(request, f'News: {news.title} has been deleted!')
+    return redirect(reverse('news'))
 
 
 
