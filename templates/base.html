@@ -94,9 +94,9 @@
                             <div><i class="fas fa-shopping-bag fa-lg text-dark"></i></div>
                             <p class="my-0 text-dark">
                                 {% if grand_total >= 50 %}
-                                    ${{ grand_total|floatformat:2 }}
+                                    €{{ grand_total|floatformat:2 }}
                                 {% else %}
-                                    ${{ total|floatformat:2}}
+                                    €{{ total|floatformat:2}}
                                 {% endif %}
                             </p>
                         </div>
