@@ -6,30 +6,42 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-@login_required 
+@login_required
 def news(request):
     """
     Display news
     """
-    news = News.objects.all()
-    
-    # Add news
-    if request.method == 'POST':
-        
-        form = NewsForm(request.POST)
+    news = News.objects.all()               
 
+    return render(request, 'news/news.html',{'news': news})
+
+
+@login_required    
+def news_add(request):
+    """
+    Add News 
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'limited to store owners')
+        return redirect(reverse('home'))
+
+    if request.method =='POST':
+        form = NewsForm(request.POST,request.FILES)
         if form.is_valid():
-            form.save()
-            messages.success(request, 'News was added succssfuly')
-            return redirect('news')
+            news = form.save()
+            messages.success(request, 'News was added successfully!')
+            return redirect(reverse('news'))
         else:
-            messages.error(request, 'News was not added. Please try again')
-
+            messages.error(request, 'Failed. Please try again!')
     else:
         form = NewsForm()
-            
+    template ='news/news_add.html'
+    context ={
+        'form':form,
+    }
 
-    return render(request, 'news/news.html',{'news': news, 'form':form})
+    return render(request,template,context)
+
 
 
 

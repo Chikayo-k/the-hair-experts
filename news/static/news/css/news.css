@@ -19,3 +19,15 @@
 .edit-news{
   margin: 0 15%;
 }
+
+/* Add news */
+.add-btn{
+  background-color:#CF7500 !important;
+  border-color:#CF7500 !important;
+  color: white
+}
+
+.add-btn:hover{
+  opacity: 0.7;
+  color: white;
+}
