@@ -78,6 +78,7 @@ def detail(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
+    comment = detail.chosen_article.all().order_by("-comment_date")
 
     context = {
         'product': product,
