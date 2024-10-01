@@ -20,3 +20,9 @@
     cursor: pointer;
 }
 
+/* Comment */
+.comment-box{
+    max-height: 20vh;
+    overflow-x: hidden;
+    overflow-y: auto
+}

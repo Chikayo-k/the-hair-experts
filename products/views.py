@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, Comment
 from .forms import ItemForm
 
 
@@ -78,10 +78,11 @@ def detail(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
-    comment = detail.chosen_article.all().order_by("-comment_date")
+    comment = product.chosen_product.all().order_by("-comment_date")
 
     context = {
         'product': product,
+        'comment': comment,
     }
 
     return render(request, 'products/detail.html', context)
