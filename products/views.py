@@ -5,6 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Comment
 from .forms import ItemForm
+from .comment_form import CommentForm
 
 
 # Create your views here.
@@ -79,10 +80,31 @@ def detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     comment = product.chosen_product.all().order_by("-comment_date")
+    product = Product.objects.get(id=product_id)
+    
+     # Write Review Submission
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.product = product       
+            comment.save()
+            messages.success(
+                request,"Comment submitted Thank you!!"
+            )
+            return redirect(reverse('detail',args=[product_id]))
+        else:
+            messages.error(request, 'Please try again!')
+
+        
+    comment_form = CommentForm()
+
 
     context = {
         'product': product,
         'comment': comment,
+        'comment_form':comment_form
     }
 
     return render(request, 'products/detail.html', context)
@@ -156,8 +178,6 @@ def delete_item(request, product_id):
     item.delete()
     messages.success(request,'Item has been deleted!')
     return redirect(reverse ('products'))
-
-    
 
 
 

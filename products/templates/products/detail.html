@@ -92,17 +92,41 @@
                <input type="hidden" name="redirect_url" value="{{ request.path }}">
              </div>  
         </form>
-
-          <h6 class="mt-5">Product Comment</h6>
+          
+        <h6 class="mt-5">Product Comment</h6>
+        {% if comment %}          
           <div class="border p-3 comment-box">
             {% for comment in comment %}
             <p class="font-weight-bold">Title: {{ comment.review_title}}</p>
             <p>{{ comment.comment_area }}</p>
             <p>{{ comment.comment_date }}</p>
             <hr>
-            {% endfor %}
+            {% endfor %}           
           </div>
-          
+        {% else %}
+          <p>No comment</p>
+        {% endif %}
+
+       
+      {% if user.is_authenticated %}
+      <form method="POST" action="{% url 'detail' product_id=product.id %}">
+        <button class="btn-sm btn-dark mt-5 mb-3" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Add Product Comment
+        </button> 
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body"> 
+          {% csrf_token %}
+         {{ comment_form | crispy }}
+         <button type="submit" class="btn btn-dark" >Add Comment</button> 
+        </div>
+      </div> 
+      </form>
+      {% else %}
+      <p class="mt-5">*If you wish to share your product review, please log In first.</p>
+      {% endif %}
+
+  
+
         </div>  
       </div>
     </div>
