@@ -100,6 +100,11 @@
             <p class="font-weight-bold">Title: {{ comment.review_title}}</p>
             <p>{{ comment.comment_area }}</p>
             <p>{{ comment.comment_date }}</p>
+            {% if user.is_authenticated and comment.author == user %}
+            <div class="delete-btns">
+               <a href="{% url 'delete_comment'  product.id comment.id  %}" class="btn btn-sm btn-danger btn-delete" data-review_id="{{comment.id}} {{product.id}}">Delete</a>
+            </div>
+            {% endif %}
             <hr>
             {% endfor %}           
           </div>

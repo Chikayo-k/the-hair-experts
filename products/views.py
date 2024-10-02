@@ -80,7 +80,6 @@ def detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     comment = product.chosen_product.all().order_by("-comment_date")
-    product = Product.objects.get(id=product_id)
     
      # Write Review Submission
     if request.method == "POST":
@@ -108,6 +107,23 @@ def detail(request, product_id):
     }
 
     return render(request, 'products/detail.html', context)
+
+def delete_comment(request, comment_id, product_id):
+
+    comment = get_object_or_404(Comment, id=comment_id, product_id=product_id)
+    # products = get_object_or_404(Product, product_id=product_id)
+    
+
+    if comment.author == request.user:
+       comment.delete()
+       messages.success(
+            request,"Comment was successfully deleted !"
+       )
+       return redirect(reverse('detail',args=[product_id]))
+    else:
+        message.error(request,'Error. try again')
+    return redirect(reverse('detail',args=[product_id]))
+   
 
 @login_required    
 def add_item(request):
@@ -178,6 +194,9 @@ def delete_item(request, product_id):
     item.delete()
     messages.success(request,'Item has been deleted!')
     return redirect(reverse ('products'))
+
+
+
 
 
 
