@@ -118,10 +118,30 @@
       </div> 
       <!-- Wishlist -->
       <div class="mt-5">
-      {% for item in wished_items %}
-        <p>{{ item.product.name }}</p>
-      {% endfor %}
-      </div>    
+         <p class="font-weight-bold text-center wish-txt pt-3">Your wish list </p>
+       <div class="border wish-box">
+        {% for item in wished_items %}
+        <div class="d-flex justify-content-center mb-3">
+           <div class="row">              
+              <div class="col">
+                 {% if item.product.image %}
+                 <a href="{%url 'detail' item.product.id%}">
+                   <img class="img-fluid wish-img float-right" src="{{ item.product.image.url }}">
+                 </a>
+                 {% else %}
+                 <a href="{%url 'detail' item.product.id%}">
+                   <img class="img-fluid wish-img" src="/media/noimg.jpg" alt="{{ product.name }}">
+                 <a href="{%url 'detail' item.product.id%}">
+                 {% endif %} 
+              </div>
+               <div class="col">
+              <p>{{ item.product.name }}</p>
+           </div>            
+        </div>
+     </div> 
+        {% endfor %}  
+     </div>
+     </div>   
 
       {% else %}
       <p>Your bag is empty.</p>
@@ -129,29 +149,29 @@
       
       <!-- Wishlist -->
       <div class="mt-5">
-         <p class="font-weight-bold">You have wish list </p>
+          <p class="font-weight-bold text-center wish-txt pt-3">Your wish list </p>
+        <div class="border wish-box">
          {% for item in wished_items %}
-         <div class="container">
-            <div class="row">
-              
-               <div class="col-sm">
+         <div class="d-flex justify-content-center mb-3">
+            <div class="row">              
+               <div class="col">
                   {% if item.product.image %}
-                  <a href="{%url 'detail wish-img' item.product.id%}">
-                    <img class="img-fluid " src="{{ item.product.image.url }}">
+                  <a href="{%url 'detail' item.product.id%}">
+                    <img class="img-fluid wish-img float-right" src="{{ item.product.image.url }}">
                   </a>
                   {% else %}
-                  <a href="{%url 'detail wish-img' item.product.id%}">
-                    <img class="img-fluid " src="/media/noimg.jpg" alt="{{ product.name }}">
+                  <a href="{%url 'detail' item.product.id%}">
+                    <img class="img-fluid wish-img" src="/media/noimg.jpg" alt="{{ product.name }}">
                   <a href="{%url 'detail' item.product.id%}">
                   {% endif %} 
                </div>
-               <div class="col-sm">
-                  <p>{{ item.product.name }}</p>
-               </div>
-            </div>
-         </div>   
+                <div class="col">
+               <p>{{ item.product.name }}</p>
+            </div>            
+         </div>
+      </div> 
+         {% endfor %}  
       </div>
-      {% endfor %}
       </div>   
      {% endif %}
     </div>
