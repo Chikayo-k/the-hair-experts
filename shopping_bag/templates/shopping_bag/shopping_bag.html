@@ -114,20 +114,52 @@
          
             <a class="btn-lg checkout-btn text-center" type="button" href="{% url 'checkout' %}">
                Secure Checkout
-            </a>
-         
-      </div>
+            </a>         
+      </div> 
+      <!-- Wishlist -->
+      <div class="mt-5">
+      {% for item in wished_items %}
+        <p>{{ item.product.name }}</p>
+      {% endfor %}
+      </div>    
+
+      {% else %}
+      <p>Your bag is empty.</p>
+      <a  class="keep-shop" href="{% url 'products' %}"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a>  
       
+      <!-- Wishlist -->
+      <div class="mt-5">
+         <p class="font-weight-bold">You have wish list </p>
+         {% for item in wished_items %}
+         <div class="container">
+            <div class="row">
+              
+               <div class="col-sm">
+                  {% if item.product.image %}
+                  <a href="{%url 'detail wish-img' item.product.id%}">
+                    <img class="img-fluid " src="{{ item.product.image.url }}">
+                  </a>
+                  {% else %}
+                  <a href="{%url 'detail wish-img' item.product.id%}">
+                    <img class="img-fluid " src="/media/noimg.jpg" alt="{{ product.name }}">
+                  <a href="{%url 'detail' item.product.id%}">
+                  {% endif %} 
+               </div>
+               <div class="col-sm">
+                  <p>{{ item.product.name }}</p>
+               </div>
+            </div>
+         </div>   
+      </div>
+      {% endfor %}
+      </div>   
+     {% endif %}
     </div>
    </div>   
-
-
    </div>
-   {% else %}
-    <p>Your bag is empty.</p>
-    <a  class="keep-shop" href="{% url 'products' %}"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a>  
-   {% endif %}
 </div>
+
+
 
 <script type="text/javascript">
    //Update quantity 

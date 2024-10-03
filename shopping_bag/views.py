@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from .models import*
 
 from products.models import Product
 
@@ -7,7 +9,12 @@ from products.models import Product
 
 def view_bag(request):
   """A view that renders the bag contents page"""
-  return render(request, 'shopping_bag/shopping_bag.html')
+  wished_items = Wishlist.objects.filter(user=request.user)
+  context = {
+    'wished_items': wished_items
+  }
+  print(wished_items)
+  return render(request, 'shopping_bag/shopping_bag.html',context)
 
 
 def add_to_bag(request, item_id):
@@ -62,4 +69,5 @@ def remove_bag(request, item_id):
         message.error(request, f'Error: {e}')
         return HttpResponse(status=500)
 
-        
+
+
