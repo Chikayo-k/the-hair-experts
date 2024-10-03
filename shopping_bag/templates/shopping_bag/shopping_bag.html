@@ -117,37 +117,7 @@
             </a>         
       </div> 
       <!-- Wishlist -->
-      <div class="mt-5">
-         <p class="font-weight-bold text-center wish-txt pt-3">Your wish list </p>
-       <div class="border wish-box">
-        {% for item in wished_items %}
-        <div class="d-flex justify-content-center mb-3">
-           <div class="row">              
-              <div class="col">
-                 {% if item.product.image %}
-                 <a href="{%url 'detail' item.product.id%}">
-                   <img class="img-fluid wish-img float-right" src="{{ item.product.image.url }}">
-                 </a>
-                 {% else %}
-                 <a href="{%url 'detail' item.product.id%}">
-                   <img class="img-fluid wish-img" src="/media/noimg.jpg" alt="{{ product.name }}">
-                 <a href="{%url 'detail' item.product.id%}">
-                 {% endif %} 
-              </div>
-               <div class="col">
-              <p>{{ item.product.name }}</p>
-           </div>            
-        </div>
-     </div> 
-        {% endfor %}  
-     </div>
-     </div>   
-
-      {% else %}
-      <p>Your bag is empty.</p>
-      <a  class="keep-shop" href="{% url 'products' %}"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a>  
-      
-      <!-- Wishlist -->
+      {% if user.is_authenticated and user == user %}
       <div class="mt-5">
           <p class="font-weight-bold text-center wish-txt pt-3">Your wish list </p>
         <div class="border wish-box">
@@ -166,11 +136,51 @@
                   {% endif %} 
                </div>
                 <div class="col">
-               <p>{{ item.product.name }}</p>
-            </div>            
+                  <p>{{ item.product.name }}</p>
+               </div>              
+             <div class="delete-btns">
+               <a href="" class="btn btn-sm btn-danger btn-delete" data-review_id="{{comment.id}} {{product.id}}">Delete</a>
+             </div>                   
          </div>
       </div> 
-         {% endfor %}  
+      {% endfor %}  
+      {% endif %}  
+      </div>
+      </div>   
+
+      {% else %}
+      <p>Your bag is empty.</p>
+      <a  class="keep-shop" href="{% url 'products' %}"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a>  
+      
+      <!-- Wishlist -->
+      {% if user.is_authenticated and user == user %}
+      <div class="mt-5">
+          <p class="font-weight-bold text-center wish-txt pt-3">Your wish list </p>
+        <div class="border wish-box">
+         {% for item in wished_items %}
+         <div class="d-flex justify-content-center mb-3">
+            <div class="row">              
+               <div class="col">
+                  {% if item.product.image %}
+                  <a href="{%url 'detail' item.product.id%}">
+                    <img class="img-fluid wish-img float-right" src="{{ item.product.image.url }}">
+                  </a>
+                  {% else %}
+                  <a href="{%url 'detail' item.product.id%}">
+                    <img class="img-fluid wish-img" src="/media/noimg.jpg" alt="{{ product.name }}">
+                  <a href="{%url 'detail' item.product.id%}">
+                  {% endif %} 
+               </div>
+                <div class="col">
+                  <p>{{ item.product.name }}</p>
+               </div>              
+             <div class="delete-btns">
+               <a href="" class="btn btn-sm btn-danger btn-delete" data-review_id="{{comment.id}} {{product.id}}">Delete</a>
+             </div>                   
+         </div>
+      </div> 
+      {% endfor %}  
+      {% endif %}  
       </div>
       </div>   
      {% endif %}

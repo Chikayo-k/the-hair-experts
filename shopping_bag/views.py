@@ -9,12 +9,14 @@ from products.models import Product
 
 def view_bag(request):
   """A view that renders the bag contents page"""
-  wished_items = Wishlist.objects.filter(user=request.user)
-  context = {
-    'wished_items': wished_items
-  }
-  print(wished_items)
-  return render(request, 'shopping_bag/shopping_bag.html',context)
+  if request.user.is_authenticated:
+     wished_items = Wishlist.objects.filter(user=request.user)
+     context = {
+        'wished_items': wished_items
+     }
+     return render(request, 'shopping_bag/shopping_bag.html',context)
+    
+  return render(request, 'shopping_bag/shopping_bag.html')
 
 
 def add_to_bag(request, item_id):
