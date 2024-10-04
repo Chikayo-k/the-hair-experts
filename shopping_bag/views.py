@@ -17,7 +17,18 @@ def view_bag(request):
      return render(request, 'shopping_bag/shopping_bag.html',context)
     
   return render(request, 'shopping_bag/shopping_bag.html')
+  
+def delete_wishlist(request, item_id):
 
+     if request.user.is_authenticated:
+        item = get_object_or_404(Product, id=item_id)
+        wished_items = Wishlist.objects.filter(user=request.user)
+        for item in wished_items:
+            wished_items.delete()
+            return redirect(reverse('view_bag'))
+
+     return redirect(reverse('view_bag'))
+    
 
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """

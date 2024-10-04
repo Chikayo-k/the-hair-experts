@@ -139,7 +139,7 @@
                   <p>{{ item.product.name }}</p>
                </div>              
              <div class="delete-btns">
-               <a href="" class="btn btn-sm btn-danger btn-delete" data-review_id="{{comment.id}} {{product.id}}">Delete</a>
+               <a href="{% url 'delete_wishlist'  item.product.id %}" class="btn btn-sm btn-danger btn-delete" data-review_id="{{comment.id}} {{product.id}}">Delete</a>
              </div>                   
          </div>
       </div> 
