@@ -71,6 +71,11 @@
     color: #CF7500;
 }
 
+.readme-btn{
+    width: 60px;
+    height: 25px;
+    font-size: 0.55rem;
+}
 
 /*------------------- Media query-------------------*/
 
