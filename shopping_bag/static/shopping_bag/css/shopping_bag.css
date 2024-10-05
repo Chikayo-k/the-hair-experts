@@ -55,17 +55,22 @@
     width: 20%;
 }
 
-/* Wish list */
-.wish-img{
+/* Recommendation */
+.rec-img{
     width: 100px;
     height:auto;
 }
 
-.wish-box{
+.rec-box{
     width: 50%;
     margin-left: 25%;
     padding: 3% 0;    
 }
+
+.exclusive{
+    color: #CF7500;
+}
+
 
 /*------------------- Media query-------------------*/
 
@@ -83,7 +88,7 @@
         width: 100%;
     }
 
-    .wish-box{
+    .rec-box{
         width: 100%;
         margin-left: 0;     
         padding:3%; 
@@ -93,11 +98,11 @@
 }
 
 @media (max-width: 575px) {
-    .wish-img{
+    .rec-img{
         float: left !important;
     }
 
-    .wish-txt{
+    .rec-txt{
         text-align: left !important;
     }
 

@@ -116,35 +116,33 @@
                Secure Checkout
             </a>         
       </div> 
-      <!-- Wishlist -->
-      {% if user.is_authenticated and user == user %}
+      <!-- Recommendation -->      
       <div class="mt-5">
-          <p class="font-weight-bold text-center wish-txt pt-3">Your wish list </p>
-        <div class="border wish-box">
-         {% for item in wished_items %}
+          <p class="font-weight-bold text-center wish-txt pt-3">Recommendation </p>
+        <div class="border rec-box">
+         {% for recommendation in recommendation %}
          <div class="d-flex justify-content-center mb-3">
-            <div class="row">              
+               
+            <div class="row">                         
                <div class="col">
-                  {% if item.product.image %}
-                  <a href="{%url 'detail' item.product.id%}">
-                    <img class="img-fluid wish-img float-right" src="{{ item.product.image.url }}">
+                  {% if recommendation.product.image %}
+                  <a href="{%url 'detail' recommendation.product.id%}">
+                    <img class="img-fluid rec-img float-right" src="{{ recommendation.product.image.url }}">
                   </a>
                   {% else %}
-                  <a href="{%url 'detail' item.product.id%}">
-                    <img class="img-fluid wish-img" src="/media/noimg.jpg" alt="{{ product.name }}">
-                  <a href="{%url 'detail' item.product.id%}">
+                  <a href="{%url 'detail' recommendation.product.id%}">
+                    <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="{{ recommendation.product.name }}">
+                  <a href="{%url 'detail' recommendation.product.id%}">
                   {% endif %} 
                </div>
                 <div class="col">
-                  <p>{{ item.product.name }}</p>
+                  <p>{{ recommendation.product.name }}</p>
+                  <small class="exclusive">{{ recommendation.exclusive }}</small>
                </div>              
-             <div class="delete-btns">
-               <a href="{% url 'delete_wishlist'  item.product.id %}" class="btn btn-sm btn-danger btn-delete" data-review_id="{{comment.id}} {{product.id}}">Delete</a>
-             </div>                   
          </div>
       </div> 
       {% endfor %}  
-      {% endif %}  
+   
       </div>
       </div>   
 
@@ -155,7 +153,7 @@
       <!-- Wishlist -->
       {% if user.is_authenticated and user == user %}
       <div class="mt-5">
-          <p class="font-weight-bold text-center wish-txt pt-3">Your wish list </p>
+          <p class="font-weight-bold text-center rec-txt pt-3">Your wish list </p>
         <div class="border wish-box">
          {% for item in wished_items %}
          <div class="d-flex justify-content-center mb-3">
@@ -173,10 +171,7 @@
                </div>
                 <div class="col">
                   <p>{{ item.product.name }}</p>
-               </div>              
-             <div class="delete-btns">
-               <a href="" class="btn btn-sm btn-danger btn-delete" data-review_id="{{comment.id}} {{product.id}}">Delete</a>
-             </div>                   
+               </div>                             
          </div>
       </div> 
       {% endfor %}  

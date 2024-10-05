@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import*
+from .models import *
 
 from products.models import Product
 
@@ -10,25 +10,14 @@ from products.models import Product
 def view_bag(request):
   """A view that renders the bag contents page"""
   if request.user.is_authenticated:
-     wished_items = Wishlist.objects.filter(user=request.user)
+     recommendation = Recommendation.objects.all()
      context = {
-        'wished_items': wished_items
+        'recommendation': recommendation
      }
      return render(request, 'shopping_bag/shopping_bag.html',context)
     
   return render(request, 'shopping_bag/shopping_bag.html')
-  
-def delete_wishlist(request, item_id):
-
-     if request.user.is_authenticated:
-        item = get_object_or_404(Product, id=item_id)
-        wished_items = Wishlist.objects.filter(user=request.user)
-        for item in wished_items:
-            wished_items.delete()
-            return redirect(reverse('view_bag'))
-
-     return redirect(reverse('view_bag'))
-    
+      
 
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
