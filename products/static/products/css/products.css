@@ -1,9 +1,4 @@
-.container-products{
-    min-height: 100vh;
-    margin-top: 150px;
-}
-
-
+Product page
 
 .btn-img {
     position: relative;
@@ -26,3 +21,5 @@
     overflow-x: hidden;
     overflow-y: auto
 }
+
+

@@ -185,10 +185,11 @@ footer {
 }
 
 /* Products Page */
-.products{
-  min-height: 100vh;
-  width: 100%;
+.container-products{
+    min-height: 100vh;
+    margin-top: 150px;
 }
+
 
 .products-w{
     color:gray;
@@ -398,13 +399,18 @@ footer {
 
     .delivery-w{
         font-size: 0.7rem;
-    }
-
-
-    
+    } 
 
 
   }
+
+
+@media (max-width: 740px){
+    .container-products{
+      margin-top: 20vh;
+    }
+  }
+  
 
 @media (max-width: 580px){
     /* detail page */
