@@ -83,6 +83,13 @@
 
 /*------------------- Media query-------------------*/
 
+@media (max-width: 740px){
+  .shopping-bag{
+    margin-top: 35vh;
+  }
+}
+
+
 @media (max-width: 650px) {
     .table-pic-w{
         width: 100%;
@@ -121,6 +128,10 @@
 
     .rec-txt{
         text-align: left !important;
+    }
+
+    .shoppingbag-title{
+        font-size: 1.5rem;
     }
 
      
