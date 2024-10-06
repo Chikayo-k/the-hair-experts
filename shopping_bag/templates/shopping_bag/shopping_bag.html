@@ -40,7 +40,7 @@
                <td class="py-3 table-w table-pic-w">
                   {% if item.product.image %}
                   <a href="{%url 'detail' item.product.id%}">
-                    <img class="img-fluid rounded  table-pic" src="{{ item.product.image.url }}">
+                    <img class="img-fluid rounded  table-pic" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                   </a>
                   {% else %}
                   <a href="{%url 'detail' item.product.id%}">
@@ -259,7 +259,7 @@
 
 
 
-<script type="text/javascript">
+<script>
    //Update quantity 
    $('.update-qty').click(function(e){
       console.log("Hello")
