@@ -409,6 +409,10 @@ footer {
     .container-products{
       margin-top: 20vh;
     }
+
+    .detail-container{
+        margin-top: 10vh;
+    }
   }
   
 
@@ -419,6 +423,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 15vh;
 }
 
 .item-img{
