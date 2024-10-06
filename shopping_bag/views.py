@@ -9,12 +9,11 @@ from products.models import Product
 
 def view_bag(request):
   """A view that renders the bag contents page"""
-  if request.user.is_authenticated:
-     recommendation = Recommendation.objects.all()
-     context = {
+  recommendation = Recommendation.objects.all()
+  context = {
         'recommendation': recommendation
-     }
-     return render(request, 'shopping_bag/shopping_bag.html',context)
+        }
+  return render(request, 'shopping_bag/shopping_bag.html',context)
     
   return render(request, 'shopping_bag/shopping_bag.html')
       

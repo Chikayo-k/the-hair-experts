@@ -17,6 +17,8 @@
 
 {% block content %}
 <div class="shopping-bag">
+   
+  <div class="shopping-bag-container">
    <h2 class="text-center text-muted shoppingbag-title"> Shopping bag </h2>
 <div class="row">
   <div class="col">
@@ -121,9 +123,9 @@
           <p class="font-weight-bold text-center wish-txt pt-3">Recommendation </p>
         <div class="border rec-box">
          {% for recommendation in recommendation %}
-         <div class="d-flex justify-content-center mb-3">
+         <div class="d-flex justify-content-center align-items-center rec-flex">
                
-            <div class="row">                         
+            <div class="row rec-pic">                         
                <div class="col">
                   {% if recommendation.product.image %}
                   <a href="{%url 'detail' recommendation.product.id%}">
@@ -183,38 +185,77 @@
       <p>Your bag is empty.</p>
       <a  class="keep-shop" href="{% url 'products' %}"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a>  
       
-      <!-- Wishlist -->
-      {% if user.is_authenticated and user == user %}
+      <!-- Recommendation -->
       <div class="mt-5">
           <p class="font-weight-bold text-center rec-txt pt-3">Your wish list </p>
-        <div class="border wish-box">
-         {% for item in wished_items %}
-         <div class="d-flex justify-content-center mb-3">
-            <div class="row">              
-               <div class="col">
-                  {% if item.product.image %}
-                  <a href="{%url 'detail' item.product.id%}">
-                    <img class="img-fluid wish-img float-right" src="{{ item.product.image.url }}">
-                  </a>
-                  {% else %}
-                  <a href="{%url 'detail' item.product.id%}">
-                    <img class="img-fluid wish-img" src="/media/noimg.jpg" alt="{{ product.name }}">
-                  <a href="{%url 'detail' item.product.id%}">
-                  {% endif %} 
-               </div>
-                <div class="col">
-                  <p>{{ item.product.name }}</p>
-               </div>                             
-         </div>
-      </div> 
-      {% endfor %}  
+          <div class="border rec-box">
+            {% for recommendation in recommendation %}
+            <div class="d-flex justify-content-center align-items-center rec-flex">
+                  
+               <div class="row rec-pic">                         
+                  <div class="col">
+                     {% if recommendation.product.image %}
+                     <a href="{%url 'detail' recommendation.product.id%}">
+                       <img class="img-fluid rec-img float-right" src="{{ recommendation.product.image.url }}" alt="{{ recommendation.product.name }}">
+                     </a>
+                     {% else %}
+                     <a href="{%url 'detail' recommendation.product.id%}">
+                       <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="{{ recommendation.product.name }}">
+                     <a href="{%url 'detail' recommendation.product.id%}">
+                     {% endif %} 
+                  </div>
+                   <div class="col">
+                     <p class="mb-0">{{ recommendation.product.name }}</p>
+                     <small class="exclusive">{{ recommendation.exclusive }}</small><br>
+                     <button type="button" class="btn-sm btn-dark readme-btn" data-toggle="modal" data-target="#readme{{recommendation.product.id}}">
+                       Read Me
+                      </button>
+                     
+                        <div class="modal fade" id="readme{{recommendation.product.id}}" tabindex="-1" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                             <div class="modal-content">
+                               <div class="modal-header">
+                                 <h5 class="modal-title">{{ recommendation.recommendation_title}}</h5>
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                   <span aria-hidden="true">&times;</span>
+                                 </button>
+                               </div>
+                               <div class="modal-body">
+                                
+                                 <p class="font-weight-bold">{{ recommendation.product.name }}</p>
+                                 <small class="exclusive">{{ recommendation.exclusive }}</small>
+                                 {% if recommendation.product.image %}
+                                 <a href="{%url 'detail' recommendation.product.id%}">
+                                   <img class="img-fluid rec-img float-right" src="{{ recommendation.product.image.url }}" alt="{{ recommendation.product.name }}">
+                                 </a>
+                                 {% else %}
+                                 <a href="{%url 'detail' recommendation.product.id%}">
+                                   <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="{{ recommendation.product.name }}">
+                                 <a href="{%url 'detail' recommendation.product.id%}">
+                                 {% endif %} 
+                                 <p>{{ recommendation.description }}</p>                  
+                               </div>
+                               <div class="modal-footer">
+                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                               </div>
+                             </div>
+                           </div>
+                  </div>              
+            </div>
+         </div> 
+         {% endfor %}  
       {% endif %}  
       </div>
       </div>   
-     {% endif %}
     </div>
-   </div>   
+   </div> 
+   
+  </div> 
 </div>
+</div> 
+</div>
+</div>
+
 
 
 

@@ -4,6 +4,9 @@
     min-height: 100vh;
     margin-top: 150px;
     overflow: auto;
+}
+
+.shopping-bag-container{
     padding: 0 10%;
 }
 
@@ -62,9 +65,8 @@
 }
 
 .rec-box{
-    width: 50%;
-    margin-left: 25%;
-    padding: 3% 0;    
+    width: 100%;
+    padding: 3%; 
 }
 
 .exclusive{
@@ -76,6 +78,8 @@
     height: 25px;
     font-size: 0.55rem;
 }
+
+
 
 /*------------------- Media query-------------------*/
 
@@ -97,9 +101,17 @@
         width: 100%;
         margin-left: 0;     
         padding:3%; 
-        height: 20vh;
+        height: 40vh;
         overflow-x: auto;          
     }  
+
+    .rec-flex{
+        flex-direction: column;
+    }
+
+    .rec-pic{
+        margin-bottom: 5%;
+    }
 }
 
 @media (max-width: 575px) {
