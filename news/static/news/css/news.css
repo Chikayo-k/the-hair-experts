@@ -38,6 +38,14 @@
 }
 
 /*------------------- Media query-------------------*/
+
+
+@media (max-width: 740px){
+  .news-containre{
+    margin-top: 25vh;
+  }
+}
+
 @media (max-width: 650px){
   .title{
    font-size: 1.2rem;
