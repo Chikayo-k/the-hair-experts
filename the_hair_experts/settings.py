@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEYS')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-chikayok-thehairexperts-bic3z94aeho.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-chikayok-thehairexperts-bic3z94aeho.ws.codeinstitute-ide.net','the-hair-experts']
 
 
 # Application definition
