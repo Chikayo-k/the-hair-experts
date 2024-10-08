@@ -1,1 +1,1 @@
-web:gunicorn the_hair_experts.wsgi:application
+web:gunicorn the-hair-experts.wsgi:application
