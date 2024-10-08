@@ -127,7 +127,7 @@ WSGI_APPLICATION = 'the_hair_experts.wsgi.application'
 
 if 'DARABASE_URL'in os.environ:
    DATABASES = {
-     'default': dj_database_url.parse(os.getenv('DATABASE'))
+     'default': dj_database_url.parse(os.getenv('DATABASE_URL'))
    }
 else:
     DATABASES = {
