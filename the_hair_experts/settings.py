@@ -125,7 +125,7 @@ WSGI_APPLICATION = 'the_hair_experts.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'DARABASE_URL'in os.environ:
+if 'DATABASE_URL'in os.environ:
    DATABASES = {
      'default': dj_database_url.parse(os.getenv('DATABASE_URL'))
    }
