@@ -27,10 +27,10 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEYS')
+SECRET_KEY = os.environ.get('SECRET_KEYS', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['8000-chikayok-thehairexperts-bic3z94aeho.ws.codeinstitute-ide.net','the-hair-experts','the-hair-experts-530953dace3d.herokuapp.com']
 
