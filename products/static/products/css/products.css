@@ -3,10 +3,11 @@ Product page
 .btn-img {
     position: relative;
     overflow: hidden;
+    height: 5vh;
+    width: 20%;
 }
 
 .btn-img input[type="file"] {
-    position: absolute;
     top: 0;
     right: 0;
     min-width: 100%;
