@@ -1,9 +1,13 @@
-Product page
+/* Product page */
+.container-productmg{
+    margin-top: 20%;
+}
 
-.btn-img {
-    position: relative;
-    overflow: hidden;
-    height: 5vh;
+.add-product{
+  margin: 5%;
+}
+
+.image-button{
     width: 20%;
 }
 
