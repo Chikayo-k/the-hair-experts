@@ -16,3 +16,11 @@
     max-height: 50%;
     overflow-y: auto;
 }
+
+/*------------------- Media query-------------------*/
+
+@media (max-width: 740px){
+.profile-container{
+    margin-top: 25vh;
+}
+}
