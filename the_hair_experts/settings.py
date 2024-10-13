@@ -31,7 +31,6 @@ SECRET_KEY = os.environ.get('SECRET_KEYS', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG=True
 
 ALLOWED_HOSTS = ['8000-chikayok-thehairexperts-bic3z94aeho.ws.codeinstitute-ide.net','the-hair-experts','the-hair-experts-530953dace3d.herokuapp.com']
 
@@ -181,6 +180,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+AWS_DEFAULT_ACL = None
 
 if 'USE_AWS' in os.environ:
     AWS_S3_OBJECT_PARAMETERS = {
