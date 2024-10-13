@@ -343,6 +343,10 @@ footer {
         font-size: 1.3rem;
     }
 
+    .nav-icon{
+        font-size: 0.8em !important;
+    }
+
 
     .lead-message{
         font-size: 2rem;
