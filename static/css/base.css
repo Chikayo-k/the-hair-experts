@@ -417,6 +417,11 @@ footer {
     .detail-container{
         margin-top: 10vh;
     }
+
+    .container-allauth{
+        margin-top: 25vh;
+    }
+    
   }
   
 
