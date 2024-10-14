@@ -108,7 +108,7 @@ class StripeWebHook:
         if order_exists:
              self._send_confirmation_email(order)
              return HttpResponse(
-                content=f'Webhook received: {event['type']} | SUCCESS: The order has already been verified in the database.',
+                content=f"Webhook received: {event['type']} | SUCCESS: The order has already been verified in the database.",
                 status=200)
         else: 
             order = None       
