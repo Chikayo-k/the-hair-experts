@@ -40,11 +40,11 @@
                <td class="py-3 table-w table-pic-w">
                   {% if item.product.image %}
                   <a href="{%url 'detail' item.product.id%}">
-                    <img class="img-fluid rounded  table-pic" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                    <img class="img-fluid rounded  table-pic" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                   </a>
                   {% else %}
                   <a href="{%url 'detail' item.product.id%}">
-                    <img class="img-fluid roundded  table-pic" src="/media/noimg.jpg" alt="{{ product.name }}">
+                    <img class="img-fluid roundded  table-pic" src="/media/noimg.jpg" alt="No product image">
                   <a href="{%url 'detail' item.product.id%}">
                   {% endif %} 
                </td>
@@ -133,7 +133,7 @@
                   </a>
                   {% else %}
                   <a href="{%url 'detail' recommendation.product.id%}">
-                    <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="{{ recommendation.product.name }}">
+                    <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="No product image">
                   <a href="{%url 'detail' recommendation.product.id%}">
                   {% endif %} 
                </div>
@@ -163,7 +163,7 @@
                               </a>
                               {% else %}
                               <a href="{%url 'detail' recommendation.product.id%}">
-                                <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="{{ recommendation.product.name }}">
+                                <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="No product image">
                               <a href="{%url 'detail' recommendation.product.id%}">
                               {% endif %} 
                               <p>{{ recommendation.description }}</p>                  
@@ -200,7 +200,7 @@
                      </a>
                      {% else %}
                      <a href="{%url 'detail' recommendation.product.id%}">
-                       <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="{{ recommendation.product.name }}">
+                       <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="No product image">
                      <a href="{%url 'detail' recommendation.product.id%}">
                      {% endif %} 
                   </div>
@@ -230,7 +230,7 @@
                                  </a>
                                  {% else %}
                                  <a href="{%url 'detail' recommendation.product.id%}">
-                                   <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="{{ recommendation.product.name }}">
+                                   <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="No product page">
                                  <a href="{%url 'detail' recommendation.product.id%}">
                                  {% endif %} 
                                  <p>{{ recommendation.description }}</p>                  
