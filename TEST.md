@@ -34,6 +34,10 @@ However, one warning for h1 tag using for spinner.
 As this is a warning, I decided to leave as is.
 ![HTML validation checkout page](testing-image/html/checkout-page-validation.png)
 
+**Check out Success Page**
+
+![HTML validation checkout success page](testing-image/html/chekout-success-validation.png)
+
 **News page**
 
 ![HTML validation news page](testing-image/html/news-page-validation.png)
@@ -52,4 +56,12 @@ As this is a warning, I decided to leave as is.
 
 **My Profile Page**
 
-![HTML validation My profile Page](testing-image/html/my-profile-page-validationpng)
+![HTML validation My profile Page](testing-image/html/my-profile-page-validation.png)
+
+**Stock Management Page**
+
+![HTML validation Stock Management Page](testing-image/html/stock-mg-page-validation.png)
+
+**Edit Product Page**
+
+![HTML validation Edit Product Page](testing-image/html/edit-product-page-validation.png)
