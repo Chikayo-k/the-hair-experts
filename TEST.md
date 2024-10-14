@@ -10,15 +10,43 @@ It  contains all the testing information for the project The hair expert.
 HTML validation all passed.
 
 **Home page**
+
 ![HTML validation home page](testing-image/html/hom-validation.png)
 
 
 **Product page**
+
 ![HTML validation product page](testing-image/html/product-page-validation.png)
 
 **Product detail page**
+
 ![HTML validation product detail page](testing-image/html/product-detail-validation.png)
 
 **Shopping bag page**
+
 ![HTML validation shopping bag page](testing-image/html/shopping-bag-validation.png)
+
+**Check out page**
+
+There is no error present.
+
+However, one warning for h1 tag using for spinner.
+As this is a warning, I decided to leave as is.
+![HTML validation checkout page](testing-image/html/checkout-page-validation.png)
+
+**News page**
+
+![HTML validation news page](testing-image/html/news-page-validation.png)
+
+**Sign Up page**
+
+![HTML validation sign up page](testing-image/html/sign-up-page-validation.png)
+
+**Login page**
+
+![HTML validation login page](testing-image/html/login-page-validation.png)
+
+**Logout page**
+
+![HTML validation logout page](testing-image/html/logout-page-validation.png)
 
