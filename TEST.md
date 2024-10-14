@@ -50,3 +50,6 @@ As this is a warning, I decided to leave as is.
 
 ![HTML validation logout page](testing-image/html/logout-page-validation.png)
 
+**My Profile Page**
+
+![HTML validation My profile Page](testing-image/html/my-profile-page-validationpng)
