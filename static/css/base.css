@@ -20,7 +20,7 @@ boy{
 }
 
 .delivery-banner{
-    background-color:black !important;
+    background-image: linear-gradient(to right, black ,#111111, #222222,#444444, #555555) !important;
     color:#DBDBDB !important;
 }
 
