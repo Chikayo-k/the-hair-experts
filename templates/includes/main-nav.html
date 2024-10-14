@@ -1,43 +1,43 @@
 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <div class="navbar-nav w-auto mx-auto">
         <div class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="drodown menu all products">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{%url 'products'%}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{%url 'products'%}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{%url 'products'%}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                <a href="{%url 'products'%}" class="dropdown-item">All Products</a>
+                <a href="{%url 'products'%}?sort=price&direction=asc" class="dropdown-item" aria-label="Filter by price">By Price</a>
+                <a href="{%url 'products'%}?sort=rating&direction=desc" class="dropdown-item" aria-label="Filter by rating">By Rating</a>
+                <a href="{%url 'products'%}?sort=category&direction=asc" class="dropdown-item" aria-label="filter by category">By Category</a>
+                <a href="{%url 'products'%}" class="dropdown-item" aria-label="All products">All Products</a>
             </div>
         </div>
 
         <div class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="dropdown hair products">
                 Hair Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="{%url 'products'%}?category=shampoo" class="dropdown-item">Shampoo</a>
-                <a href="{%url 'products'%}?category=conditioner" class="dropdown-item">Conditioner</a>
-                <a href="{%url 'products'%}?category=set" class="dropdown-item">Set</a>
+                <a href="{%url 'products'%}?category=shampoo" class="dropdown-item" aria-label="Shampoo">Shampoo</a>
+                <a href="{%url 'products'%}?category=conditioner" class="dropdown-item" aria-label="Conditioner">Conditioner</a>
+                <a href="{%url 'products'%}?category=set" class="dropdown-item" aria-label="Set items">Set</a>
                 <a href="{%url 'products'%}?category=hair_oil" class="dropdown-item">Hair oil</a>
-                <a href="{%url 'products'%}?category=shampoo,conditioner,set,hair_oil" class="dropdown-item">All Products</a>
+                <a href="{%url 'products'%}?category=shampoo,conditioner,set,hair_oil" class="dropdown-item" aria-label="All Set products">All Products</a>
             </div>
         </div>
 
         <div class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="dropdown Electric">
                 Electric
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="{%url 'products'%}?category=hair_dryer" class="dropdown-item">Hair dryer</a>
-                <a href="{%url 'products'%}?category=hair_iron" class="dropdown-item">Hair iron</a>
-                <a href="{%url 'products'%}?category=hair_dryer,hair_iron" class="dropdown-item">All Products</a>
+                <a href="{%url 'products'%}?category=hair_dryer" class="dropdown-item" aria-label="Hair dryer">Hair dryer</a>
+                <a href="{%url 'products'%}?category=hair_iron" class="dropdown-item" aria-label="Hair iron">Hair iron</a>
+                <a href="{%url 'products'%}?category=hair_dryer,hair_iron" class="dropdown-item" aria-label="All Electric Products">All Products</a>
             </div>
         </div>
 
         <div class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{%url 'news'%}" >News</a>
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{%url 'news'%}" aria-label="Go to news page" >News</a>
         </div>
     </div>
 </div>

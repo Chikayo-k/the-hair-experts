@@ -28,17 +28,17 @@
             <div class="row">
                 <div class="col-3 my-1">
                   {% if item.product.image %}
-                  <a href="{%url 'detail' item.product.id%}">
+                  <a href="{%url 'detail' item.product.id%}" aria-label="Go to detail of {{item.product.name}} page">
                     <img class="img-fluid rounded  table-pic" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                   </a>
                   {% else %}
-                  <a href="{%url 'detail' item.product.id%}">
+                  <a href="{%url 'detail' item.product.id%}" aria-label="Go to detail of {{item.product.name}} page">
                     <img class="img-fluid roundded  table-pic" src="/media/noimg.jpg" alt="No product image">
-                  <a href="{%url 'detail' item.product.id%}">
+                  </a>
                   {% endif %} 
                 </div>
                 <div class="col-9">
-                    <a href="{%url 'detail' item.product.id%}" class="text-decoration-none text-dark">
+                    <a href="{%url 'detail' item.product.id%}" class="text-decoration-none text-dark" aria-label="Go to detail of {{item.product.name}} page">
                       <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                     </a>
                     <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
@@ -57,7 +57,7 @@
           <p class="text-right mb-0">Deliverly: €{{ delivery_cost|floatformat:2 }}</p>
           <p class="text-right text-bold mb-0">Grand Total: €{{grand_total}}</p>
           <div class="text-right mt-3">
-            <a  class="keep-shop" href="{% url 'view_bag' %}"><i class="fa-solid fa-cart-shopping"></i> Adjust bag >></a>  
+            <a class="keep-shop" href="{% url 'view_bag' %}" aria-label="Go back to the shopping bag page. You can adjust shopping items"><i class="fa-solid fa-cart-shopping"></i> Adjust bag >></a>  
            </div>          
       </div>
     {% endif %}
@@ -85,8 +85,8 @@
                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
                     {% else %}
                        <small class="form-check-label">
-                           <a class="text-info"  href="{% url 'account_signup' %}">Create an account</a> or 
-                           <a class="text-info"  href="{% url 'account_login' %}">login</a> to save this information
+                           <a class="text-info"  href="{% url 'account_signup' %}" aria-label="Go to sign up page">Create an account</a> or 
+                           <a class="text-info"  href="{% url 'account_login' %}" aria-label="Go to login page">login</a> to save this information
                        </small>
                     {% endif %}
                  </div>

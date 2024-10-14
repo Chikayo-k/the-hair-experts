@@ -18,11 +18,11 @@
     <div class="detail-container">
       <div class="item-img">
         {% if product.image %}
-        <a href="{%url 'detail' product.id%}">
+        <a href="{%url 'detail' product.id%}" aria-label="Go to {{ product.name }} detail page">
             <img class="detail-img" src="{{ product.image.url }}" alt="{{ product.name }}">
         </a>
         {% else %}
-        <a href="{%url 'detail' product.id%}">
+        <a href="{%url 'detail' product.id%}" aria-label="Go to {{ product.name }} detail page">
             <img class="detail-img" src="/media/noimg.jpg" alt="No product image">
         </a>
         {% endif %}    
@@ -30,7 +30,7 @@
       <div class="item-detail">
         <div>
           {% if product.category %}
-          <a class="category-tag text-muted" href="{%url 'products'%}?category={{ product.category.name }}">
+          <a class="category-tag text-muted" href="{%url 'products'%}?category={{ product.category.name }}" aria-label="{{product.category.name}}">
               <i class="fa-regular fa-clipboard">  {{product.category.display_name}}</i>
           </a>
           {% endif %}
@@ -48,8 +48,8 @@
           {% endif %}
           {% if request.user.is_superuser %}
           <small>
-             <a class="btn-sm btn-secondary" href="{% url 'edit_item' product.id %}">Edit</a>
-             <a class="btn-sm btn-danger" href="{% url 'delete_item' product.id %}">Delete</a>
+             <a class="btn-sm btn-secondary" href="{% url 'edit_item' product.id %}" aria-label="Edit this product">Edit</a>
+             <a class="btn-sm btn-danger" href="{% url 'delete_item' product.id %}" aria-label="Delete this product">Delete</a>
           </small>
          {% endif %}   
 
@@ -102,7 +102,7 @@
             <p>{{ comment.comment_date }}</p>
             {% if user.is_authenticated and comment.author == user %}
             <div class="delete-btns">
-               <a href="{% url 'delete_comment'  product.id comment.id  %}" class="btn btn-sm btn-danger btn-delete" data-review_id="{{comment.id}} {{product.id}}">Delete</a>
+               <a href="{% url 'delete_comment'  product.id comment.id  %}" class="btn btn-sm btn-danger btn-delete" data-review_id="{{comment.id}} {{product.id}}" aria-label="Delete comment">Delete</a>
             </div>
             {% endif %}
             <hr>

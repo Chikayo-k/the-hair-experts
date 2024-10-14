@@ -55,7 +55,7 @@
   <body>
     <header class="fixed-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-light top-nav">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link text-dark">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link text-dark" aria-label="Go to home page">
                 <h2 class="logo-title text-black">THE HAIR EXPERTS</h2>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +76,7 @@
                     </div>
                 </form>
                 <div class="list-inline-item dropdown">
-                    <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="dropdown button for account">
                         <div class="text-center">
                             <div><i class="fas fa-user fa-lg text-dark"></i></div>
                             <p class="my-0 text-dark nav-icon">My Account</p>
@@ -85,18 +85,18 @@
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                                <a href="{% url 'add_item' %}" class="dropdown-item">Product Management</a>
+                                <a href="{% url 'add_item' %}" class="dropdown-item" aria-label="Go to product management page">Product Management</a>
                             {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Go to my profile page">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="Go to logout page">Logout</a>
                         {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            <a href="{% url 'account_signup' %}" class="dropdown-item" aria-label="Go to register page">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Go to login page">Login</a>
                         {% endif %}
                     </div>
                 </div>
                 <div class="list-inline-item">
-                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}" aria-label="Go to shopping bag page">
                         <div class="text-center">
                             <div><i class="fas fa-shopping-bag fa-lg text-dark"></i></div>
                             <p class="my-0 text-dark  nav-icon">

@@ -18,7 +18,7 @@
             </h1>
             <div>
                 <h4>
-                    <a href="{%url 'products'%}" class="btn active  btn-primary shop-button font-weight-bold">Shop Now ></a>
+                    <a href="{%url 'products'%}" class="btn active  btn-primary shop-button font-weight-bold" aria-label="Go to products page">Shop Now ></a>
                 </h4>
             </div>
         </div>
@@ -29,14 +29,14 @@
         <div class="category-box">
         <div class="category-container">
             
-            <a href="{%url 'products'%}?category=shampoo,conditioner,set" class="category">
+            <a href="{%url 'products'%}?category=shampoo,conditioner,set" class="category" aria-label="Find Shampoo products">
                 <div class="category-shampoo"></div>
                 <div class="category-description1 d-flex justify-content-center align-items-center p-3">
                     <h4 class="category-name">Shampoo & Conditioner</h4>
                 </div>
             </a>
             
-            <a href="{%url 'products'%}?category=hair_oil" class="category">
+            <a href="{%url 'products'%}?category=hair_oil" class="category" aria-label="Find hair mask and oil products">
                 <div class="category-hair-health"></div>
                 <div class="category-description d-flex justify-content-center align-items-center p-3">
                     <h4 class="category-name">Hiair Mask & Oil</h4>
@@ -44,7 +44,7 @@
             </a>
         </div>
         </div>
-        <a href="{%url 'products'%}?category=hair_dryer,hair_iron" class="category-container2">
+        <a href="{%url 'products'%}?category=hair_dryer,hair_iron" class="category-container2" aria-label="Find hair Electrical products">
             <div class="category-hair-products"></div>
             <div class="category-description1 d-flex justify-content-center align-items-center p-3">
                 <h4 class="category-name">Electrical</h4>

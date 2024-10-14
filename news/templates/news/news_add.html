@@ -31,7 +31,7 @@
             {% csrf_token %}
             {{ form | crispy }}
           </div>
-            <a class="btn btn-secondary" href="{% url 'news' %}"> Cancel </a>
+            <a class="btn btn-secondary" href="{% url 'news' %}" aria-label="Go to news page"> Cancel </a>
             <button type="submit" class="btn btn-dark">Update</button>   
       </form>
     </div>

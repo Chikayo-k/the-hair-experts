@@ -19,17 +19,17 @@
           <div class="row">
               <div class="col-3 my-1">
                 {% if item.product.image %}
-                <a href="{%url 'detail' item.product.id%}">
+                <a href="{%url 'detail' item.product.id%}" aria-label="Go to {{ item.product.name }} detail page">
                   <img class="img-fluid rounded  table-pic" src="{{ item.product.image.url }}"  alt="{{ item.product.name }}">
                 </a>
                 {% else %}
-                <a href="{%url 'detail' item.product.id%}">
+                <a href="{%url 'detail' item.product.id%}" aria-label="Go to {{ item.product.name }} detail page">
                   <img class="img-fluid roundded  table-pic" src="/media/noimg.jpg" alt="No product image">
                 <a href="{%url 'detail' item.product.id%}">
                 {% endif %} 
               </div>
               <div class="col-9">
-                  <a href="{%url 'detail' item.product.id%}" class="text-decoration-none text-dark">
+                  <a href="{%url 'detail' item.product.id%}" class="text-decoration-none text-dark" aria-label="Go to {{ item.product.name }} detail page">
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                   </a>
                   <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
@@ -53,8 +53,8 @@
     </div>
  
   <hr>
-  <div class="text-right my-2"><a  class="keep-shop" href="{% url 'products' %}"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a></div>
-    <a href="{% url 'view_bag' %}" class="btn btn-block rounded-0 checkout-bg-btn">
+  <div class="text-right my-2"><a  class="keep-shop" href="{% url 'products' %}" aria-label="Go to products page"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a></div>
+    <a href="{% url 'view_bag' %}" class="btn btn-block rounded-0 checkout-bg-btn" aria-label="Go to shopping bag page">
       <span class="text-uppercase">Go To Secure Checkout</span>
       <span class="icon">
           <i class="fas fa-lock"></i>
