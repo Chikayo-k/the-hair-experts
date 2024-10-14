@@ -153,6 +153,6 @@ class StripeWebHook:
         Handle the payment intent failed webfook from stripe
         """
         return HttpResponse(
-            content=f'Webhook received: {event['type']}',
+            content=f"Webhook received: {event['type']}",
             status=200
         )
