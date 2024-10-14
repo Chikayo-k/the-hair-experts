@@ -25,7 +25,7 @@
 
 /* Comment */
 .comment-box{
-    max-height: 20vh;
+    max-height: 45vh;
     overflow-x: hidden;
     overflow-y: auto
 }
