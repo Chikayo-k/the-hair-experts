@@ -117,4 +117,9 @@ Best performance was a bit low score due to cookie is using
 ![Lighthouse test logout page](testing-image/lighthouse/logout.png)
 
 **Stock Management Page**
+
+
+
 **Edit Product Page**
+
+![Lighthouse test logout page](testing-image/lighthouse/edit-product.png)
