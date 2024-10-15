@@ -65,3 +65,17 @@ As this is a warning, I decided to leave as is.
 **Edit Product Page**
 
 ![HTML validation Edit Product Page](testing-image/html/edit-product-page-validation.png)
+
+
+## Lighthouse testing
+
+**Home Page**
+
+Best performance was a bit low score due to cookie is using
+
+![Lighthouse test home page](testing-image/lighthouse/home.png)
+
+
+**Product Page**
+
+![Lighthouse test product page](testing-image/lighthouse/product.png)
