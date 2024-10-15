@@ -105,6 +105,18 @@ Best performance was a bit low score due to cookie is using
 ![Lighthouse test signup page](testing-image/lighthouse/signup.png)
 
 **Login page**
+
+![Lighthouse test login page](testing-image/lighthouse/login.png)
+
 **My Profile Page**
+
+![Lighthouse test profile page](testing-image/lighthouse/profile.png)
+
+
+
+**Logout Page**
+
+![Lighthouse test logout page](testing-image/lighthouse/logout.png)
+
 **Stock Management Page**
 **Edit Product Page**
