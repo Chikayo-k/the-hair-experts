@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /shopping_bag/
+Sitemap: https://the-hair-experts-530953dace3d.herokuapp.com/sitemap.xml
