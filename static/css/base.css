@@ -281,6 +281,25 @@ footer {
     padding-top: 2rem;   
 }
 
+.signup-account{
+    color: green;
+}
+
+.signup-account:hover{
+    color: green;
+    opacity: 0.7;
+}
+
+.login-account{
+    color: blue;
+}
+
+.login-account:hover{
+    color: blue;
+    opacity: 0.7;
+}
+
+
 /* bag (Toast)*/
 
 .message-container{
