@@ -112,8 +112,6 @@ Best performance was a bit low score due to cookie is using
 
 ![Lighthouse test profile page](testing-image/lighthouse/profile.png)
 
-
-
 **Logout Page**
 
 ![Lighthouse test logout page](testing-image/lighthouse/logout.png)

@@ -322,6 +322,9 @@ footer {
     overflow-x: hidden;
     overflow-y: auto
 }
+.alart{
+    color: blue;
+}
 
 .toast-body{
     background-color: white;
