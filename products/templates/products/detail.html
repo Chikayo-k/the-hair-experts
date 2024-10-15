@@ -68,7 +68,7 @@
                     </button>
                   </div>
                   <div>
-                     <input class="form-control quantity_input text-center" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                     <input class="form-control quantity_input text-center" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" aria-label="quantity">
                   </div>
                     <div class="input-group-append">
                       <button class="btn btn-black btn-quantity increment"  data-item_id="{{product.id}}" id="increment{{product.id}}" aria-label="plus quantity button">
@@ -93,9 +93,9 @@
              </div>
         </form>
           
-        <h6 class="mt-5">Review</h6>
+        <p class="mt-5 font-weight-bold ">Review</p>
         {% if comment %}          
-          <div class="border p-3 comment-box">
+          <div class="border p-3 comment-box"> 
             {% for comment in comment %}
             <p class="font-weight-bold">Title: {{ comment.review_title}}</p>
             <p>{{ comment.comment_area }}</p>
