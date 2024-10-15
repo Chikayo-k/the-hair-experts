@@ -69,9 +69,9 @@ As this is a warning, I decided to leave as is.
 
 ## Lighthouse testing
 
-**Home Page**
+All the lighthouse testing scores are high. Only the Best Practices score is below 80 this is because of cookie related issue with version 3 of stripe.
 
-Best performance was a bit low score due to cookie is using
+**Home Page**
 
 ![Lighthouse test home page](testing-image/lighthouse/home.png)
 
@@ -118,7 +118,7 @@ Best performance was a bit low score due to cookie is using
 
 **Stock Management Page**
 
-
+![Lighthouse test stock management page](testing-image/lighthouse/stockmanagement.png)
 
 **Edit Product Page**
 
