@@ -151,3 +151,4 @@ All the css file are passed
 
 **checkout.css**
 
+![CSS validator test checkout.css](testing-image/css/checkout.png)
