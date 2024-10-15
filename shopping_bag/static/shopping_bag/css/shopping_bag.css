@@ -22,8 +22,10 @@
     margin: 5% 0;
 }
 
+
 .update-qty, .remove-pd{
     cursor: pointer;
+    color: blue;
 }
 
 .checkout-container{
@@ -38,7 +40,7 @@
     font-weight: bold; 
 }
 .checkout-btn{
-    background-color: #CF7500 !important;
+    background-color: #AD6200 !important;
     color: white;
 }
 
@@ -70,7 +72,8 @@
 }
 
 .exclusive{
-    color: #CF7500;
+    color: #AD6200;
+    font-size: 0.8rem;
 }
 
 .readme-btn{
@@ -86,6 +89,10 @@
 @media (max-width: 740px){
   .shopping-bag{
     margin-top: 35vh;
+  }
+
+  .update-qty, .remove-pd{
+    font-size: 0.8rem;
   }
 }
 

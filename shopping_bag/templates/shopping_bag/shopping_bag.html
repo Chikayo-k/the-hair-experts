@@ -82,8 +82,8 @@
                      </div>
                   </form>
                   <!-- Update Remove btns -->
-                  <a class="update-qty text-info mr-5" aria-label="Update quantity"><small>Update</small></a>
-                  <a class="remove-pd text-danger" id="remove_{{ item.item_id }}" aria-label="Remove this item"><small>Remove</small></a>
+                  <a class="update-qty mr-4" aria-label="Update quantity">Update</a>
+                  <a class="remove-pd text-danger" id="remove_{{ item.item_id }}" aria-label="Remove this item">Remove</a>
                </td>
                <td class="py-3 table-w">
                   <p class="my-0">€{{ item.product.price | subtotal:item.quantity }}</p>
@@ -139,7 +139,7 @@
                </div>
                 <div class="col">
                   <p class="mb-0">{{ recommendation.product.name }}</p>
-                  <small class="exclusive">{{ recommendation.exclusive }}</small><br>
+                  <p class="exclusive">{{ recommendation.exclusive }}</p><br>
                   <button type="button" class="btn-sm btn-dark readme-btn" data-toggle="modal" data-target="#readme{{recommendation.product.id}}" aria-label="click to read recommendation details">
                     Read Me
                    </button>
@@ -156,7 +156,7 @@
                             <div class="modal-body">
                              
                               <p class="font-weight-bold">{{ recommendation.product.name }}</p>
-                              <small class="exclusive">{{ recommendation.exclusive }}</small>
+                              <p class="exclusive">{{ recommendation.exclusive }}</p>
                               {% if recommendation.product.image %}
                               <a href="{%url 'detail' recommendation.product.id%}" aria-label="Go to {{ recommendation.product.name }} detail page">
                                 <img class="img-fluid rec-img float-right" src="{{ recommendation.product.image.url }}" alt="{{ recommendation.product.name }}">
@@ -206,7 +206,7 @@
                   </div>
                    <div class="col">
                      <p class="mb-0">{{ recommendation.product.name }}</p>
-                     <small class="exclusive">{{ recommendation.exclusive }}</small><br>
+                     <p class="exclusive">{{ recommendation.exclusive }}</p><br>
                      <button type="button" class="btn-sm btn-dark readme-btn" data-toggle="modal" data-target="#readme{{recommendation.product.id}}" aria-label="Recommendation detail">
                        Read Me
                       </button>
@@ -223,7 +223,7 @@
                                <div class="modal-body">
                                 
                                  <p class="font-weight-bold">{{ recommendation.product.name }}</p>
-                                 <small class="exclusive">{{ recommendation.exclusive }}</small>
+                                 <p class="exclusive">{{ recommendation.exclusive }}</p>
                                  {% if recommendation.product.image %}
                                  <a href="{%url 'detail' recommendation.product.id%}" aria-label="Go to {{ recommendation.product.name }} detail page">
                                    <img class="img-fluid rec-img float-right" src="{{ recommendation.product.image.url }}" alt="{{ recommendation.product.name }}">
