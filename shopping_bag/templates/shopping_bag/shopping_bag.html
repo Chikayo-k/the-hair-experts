@@ -1,198 +1,121 @@
 {% extends "base.html"%}
 {% load static %}
 {% load bag_calc %}
-
 {% block extra_css %}
-  <link rel="stylesheet" href="{% static 'shopping_bag/css/shopping_bag.css' %}">
+<link rel="stylesheet" href="{% static 'shopping_bag/css/shopping_bag.css' %}">
 {% endblock %}
-
 {% block page_header %}
-   <div class="container">
-      <div class="row">
-          <div class="col">
-          </div>
+<div class="container">
+   <div class="row">
+      <div class="col">
       </div>
    </div>
+</div>
 {% endblock %}
-
 {% block content %}
 <div class="shopping-bag">
-   
-  <div class="shopping-bag-container">
-   <h2 class="text-center text-muted shoppingbag-title"> Shopping bag </h2>
-<div class="row">
-  <div class="col">
-   {% if bag_items %}       
-   <div class="table-responsive rounded">
-      <table class="table table-sm ">
-         <thead class="text-dark table-title">
-             <tr>
-                 <th scope="col">Product Info</th>
-                 <th scope="col"></th>
-                 <th scope="col">Price</th>
-                 <th scope="col">Qty</th>
-                 <th scope="col">Subtotal</th>
-             </tr> 
-         </thead>
-        
-         {% for item in bag_items %}
-            <tr class="table">
-               <td class="py-3 table-w table-pic-w">
-                  {% if item.product.image %}
-                  <a href="{%url 'detail' item.product.id%}" aria-label="Go to {{ item.product.name }} detail page">
-                    <img class="img-fluid rounded  table-pic" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
-                  </a>
-                  {% else %}
-                  <a href="{%url 'detail' item.product.id%}" aria-label="Go to {{ item.product.name }} detail page">
-                    <img class="img-fluid roundded  table-pic" src="/media/noimg.jpg" alt="No product image">
-                  <a href="{%url 'detail' item.product.id%}">
-                  {% endif %} 
-               </td>
-               <td class="py-3 table-w">
-                  <a href="{%url 'detail' item.product.id%}" class="text-decoration-none text-dark" aria-label="Go to {{ item.product.name }} detail page">
-                  <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                  </a>
-                  <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>                 
-               </td> 
-               <td class="py-3 table-w">
-                  <p class="my-0">€{{ item.product.price }}</p>
-               </td>
-               
-               <td class="py-3 table-w">
-                  <form class="update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
-                     {% csrf_token %}
-                     <div class="quantity-btns input-group quantity-box">
-                        <div class="input-group-prepend">
-                          <button class="btn btn-black btn-quantity decrement btn-sm" data-item_id="{{item.item_id}}" id="decrement{{item.item_id}}" aria-label="minus quantity button">
-                            <span>
-                              <i class="fas fa-minus"></i>
-                            </span>
-                          </button>
-                        </div>
-                        <div class="input-main">
-                           <input class="form-control-sm form-control quantity_input text-center" type="number" name="quantity" value="{{item.quantity}}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.product.id }}" aria-label="quantity">
-                        </div>
-                          <div class="input-group-append">
-                            <button class="btn btn-black btn-quantity increment btn-sm"  data-item_id="{{item.item_id}}" id="increment{{item.item_id}}" aria-label="plus quantity button">
-                              <span>
-                                <i class="fas fa-plus"></i>
-                              </span>
-                            </button>
-                          </div>
-                     </div>
-                  </form>
-                  <!-- Update Remove btns -->
-                  <a class="update-qty mr-4" aria-label="Update quantity">Update</a>
-                  <a class="remove-pd text-danger" id="remove_{{ item.item_id }}" aria-label="Remove this item">Remove</a>
-               </td>
-               <td class="py-3 table-w">
-                  <p class="my-0">€{{ item.product.price | subtotal:item.quantity }}</p>
-               </td>
-            </tr>
-         {% endfor %}
-      </table>    
-   </div>
-</div>
-</div>
-    
- <hr>
-
+   <div class="shopping-bag-container">
+      <h2 class="text-center text-muted shoppingbag-title"> Shopping bag </h2>
+      <div class="row">
+         <div class="col">
+            {% if bag_items %}       
+            <div class="table-responsive rounded">
+               <table class="table table-sm ">
+                  <thead class="text-dark table-title">
+                     <tr>
+                        <th scope="col">Product Info</th>
+                        <th scope="col"></th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Qty</th>
+                        <th scope="col">Subtotal</th>
+                     </tr>
+                  </thead>
+                  {% for item in bag_items %}
+                  <tr class="table">
+                     <td class="py-3 table-w table-pic-w">
+                        {% if item.product.image %}
+                        <a href="{%url 'detail' item.product.id%}" aria-label="Go to {{ item.product.name }} detail page">
+                          <img class="img-fluid rounded  table-pic" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{%url 'detail' item.product.id%}" aria-label="Go to {{ item.product.name }} detail page">
+                          <img class="img-fluid roundded  table-pic" src="/media/noimg.jpg" alt="No product image">
+                        <a href="{%url 'detail' item.product.id%}">
+                           {% endif %} 
+                     </td>
+                     <td class="py-3 table-w">
+                     <a href="{%url 'detail' item.product.id%}" class="text-decoration-none text-dark" aria-label="Go to {{ item.product.name }} detail page">
+                       <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                     </a>
+                     <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>                 
+                     </td> 
+                     <td class="py-3 table-w">
+                        <p class="my-0">€{{ item.product.price }}</p>
+                     </td>
+                     <td class="py-3 table-w">
+                        <form class="update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+                           {% csrf_token %}
+                           <div class="quantity-btns input-group quantity-box">
+                              <div class="input-group-prepend">
+                                 <button class="btn btn-black btn-quantity decrement btn-sm" data-item_id="{{item.item_id}}" id="decrement{{item.item_id}}" aria-label="minus quantity button">
+                                  <span>
+                                  <i class="fas fa-minus"></i>
+                                  </span>
+                                 </button>
+                              </div>
+                              <div class="input-main">
+                                 <input class="form-control-sm form-control quantity_input text-center" type="number" name="quantity" value="{{item.quantity}}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.product.id }}" aria-label="quantity">
+                              </div>
+                              <div class="input-group-append">
+                                 <button class="btn btn-black btn-quantity increment btn-sm"  data-item_id="{{item.item_id}}" id="increment{{item.item_id}}" aria-label="plus quantity button">
+                                  <span>
+                                    <i class="fas fa-plus"></i>
+                                  </span>
+                                 </button>
+                              </div>
+                           </div>
+                        </form>
+                        <!-- Update Remove btns -->
+                        <a class="update-qty mr-4" aria-label="Update quantity">Update</a>
+                        <a class="remove-pd text-danger" id="remove_{{ item.item_id }}" aria-label="Remove this item">Remove</a>
+                     </td>
+                     <td class="py-3 table-w">
+                        <p class="my-0">€{{ item.product.price | subtotal:item.quantity }}</p>
+                     </td>
+                  </tr>
+                  {% endfor %}
+               </table>
+            </div>
+         </div>
+      </div>
+      <hr>
       <!-- Total and deliverly -->
       <div>
-        <p class="text-right">Total: €{{ total|floatformat:2 }}</p>
-        <p class="text-right">Deliverly: €{{ delivery_cost|floatformat:2 }}</p>
-        <p class="text-right"><strong>Grand Total:€{{ grand_total|floatformat:2 }}</strong></p>
-        {% if delivery_cost > 0 %}
-        <p class="text right text-danger">
+         <p class="text-right">Total: €{{ total|floatformat:2 }}</p>
+         <p class="text-right">Deliverly: €{{ delivery_cost|floatformat:2 }}</p>
+         <p class="text-right"><strong>Grand Total:€{{ grand_total|floatformat:2 }}</strong></p>
+         {% if delivery_cost > 0 %}
+         <p class="text right text-danger">
             You could get free delivery by spending just <strong>€{{ free_delivery_cost }}</strong> more!
-        </p>
-        {% endif %}
+         </p>
+         {% endif %}
       </div>
       <div class="small checkout-container">
          <div>
-         <a  class="keep-shop" href="{% url 'products' %}" aria-label="Go to products page"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a>  
-        </div>
-        <br>
-         
-            <a class="btn-lg checkout-btn text-center"  href="{% url 'checkout' %}" aria-label="Go to secure checkout">
-               Secure Checkout
-            </a>         
-      </div> 
+            <a  class="keep-shop" href="{% url 'products' %}" aria-label="Go to products page"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a>  
+         </div>
+         <br>
+         <a class="btn-lg checkout-btn text-center"  href="{% url 'checkout' %}" aria-label="Go to secure checkout">
+         Secure Checkout
+         </a>         
+      </div>
       <!-- Recommendation -->      
       <div class="mt-5">
-          <p class="font-weight-bold text-center wish-txt pt-3">Recommendation </p>
-        <div class="border rec-box">
-         {% for recommendation in recommendation %}
-         <div class="d-flex justify-content-center align-items-center rec-flex">
-               
-            <div class="row rec-pic">                         
-               <div class="col">
-                  {% if recommendation.product.image %}
-                  <a href="{%url 'detail' recommendation.product.id%}" aria-label="Go to {{ recommendation.product.name }} detail page">
-                    <img class="img-fluid rec-img float-right" src="{{ recommendation.product.image.url }}" alt="{{ recommendation.product.name }}">
-                  </a>
-                  {% else %}
-                  <a href="{%url 'detail' recommendation.product.id%}" aria-label="Go to {{ recommendation.product.name }} detail page">
-                    <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="No product image">
-                  </a>
-                  {% endif %} 
-               </div>
-                <div class="col">
-                  <p class="mb-0">{{ recommendation.product.name }}</p>
-                  <p class="exclusive">{{ recommendation.exclusive }}</p><br>
-                  <button type="button" class="btn-sm btn-dark readme-btn" data-toggle="modal" data-target="#readme{{recommendation.product.id}}" aria-label="click to read recommendation details">
-                    Read Me
-                   </button>
-                  
-                     <div class="modal fade" id="readme{{recommendation.product.id}}" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title">{{ recommendation.recommendation_title}}</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                             
-                              <p class="font-weight-bold">{{ recommendation.product.name }}</p>
-                              <p class="exclusive">{{ recommendation.exclusive }}</p>
-                              {% if recommendation.product.image %}
-                              <a href="{%url 'detail' recommendation.product.id%}" aria-label="Go to {{ recommendation.product.name }} detail page">
-                                <img class="img-fluid rec-img float-right" src="{{ recommendation.product.image.url }}" alt="{{ recommendation.product.name }}">
-                              </a>
-                              {% else %}
-                              <a href="{%url 'detail' recommendation.product.id%}" aria-label="Go to {{ recommendation.product.name }} detail page">
-                                <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="No product image">
-                              </a>
-                              {% endif %} 
-                              <p>{{ recommendation.description }}</p>                  
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="close button">Close</button>
-                            </div>
-                          </div>
-                        </div>
-               </div>              
-         </div>
-      </div> 
-      {% endfor %}  
-   
-      </div>
-      </div>   
-
-      {% else %}
-      <p>Your bag is empty.</p>
-      <a  class="keep-shop" href="{% url 'products' %}" aria-label="Go to products page"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a>  
-      
-      <!-- Recommendation -->
-      <div class="mt-5">
-          <p class="font-weight-bold text-center rec-txt pt-3">Recommendation</p>
-          <div class="border rec-box">
+         <p class="font-weight-bold text-center wish-txt pt-3">Recommendation </p>
+         <div class="border rec-box">
             {% for recommendation in recommendation %}
             <div class="d-flex justify-content-center align-items-center rec-flex">
-                  
-               <div class="row rec-pic">                         
+               <div class="row rec-pic">
                   <div class="col">
                      {% if recommendation.product.image %}
                      <a href="{%url 'detail' recommendation.product.id%}" aria-label="Go to {{ recommendation.product.name }} detail page">
@@ -204,24 +127,23 @@
                      </a>
                      {% endif %} 
                   </div>
-                   <div class="col">
+                  <div class="col">
                      <p class="mb-0">{{ recommendation.product.name }}</p>
-                     <p class="exclusive">{{ recommendation.exclusive }}</p><br>
-                     <button type="button" class="btn-sm btn-dark readme-btn" data-toggle="modal" data-target="#readme{{recommendation.product.id}}" aria-label="Recommendation detail">
-                       Read Me
-                      </button>
-                     
-                        <div class="modal fade" id="readme{{recommendation.product.id}}" tabindex="-1" aria-hidden="true">
-                           <div class="modal-dialog modal-dialog-centered">
-                             <div class="modal-content">
-                               <div class="modal-header">
+                     <p class="exclusive">{{ recommendation.exclusive }}</p>
+                     <br>
+                     <button type="button" class="btn-sm btn-dark readme-btn" data-toggle="modal" data-target="#readme{{recommendation.product.id}}" aria-label="click to read recommendation details">
+                     Read Me
+                     </button>
+                     <div class="modal fade" id="readme{{recommendation.product.id}}" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                           <div class="modal-content">
+                              <div class="modal-header">
                                  <h5 class="modal-title">{{ recommendation.recommendation_title}}</h5>
                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                   <span aria-hidden="true">&times;</span>
+                                 <span aria-hidden="true">&times;</span>
                                  </button>
-                               </div>
-                               <div class="modal-body">
-                                
+                              </div>
+                              <div class="modal-body">
                                  <p class="font-weight-bold">{{ recommendation.product.name }}</p>
                                  <p class="exclusive">{{ recommendation.exclusive }}</p>
                                  {% if recommendation.product.image %}
@@ -230,32 +152,92 @@
                                  </a>
                                  {% else %}
                                  <a href="{%url 'detail' recommendation.product.id%}" aria-label="Go to {{ recommendation.product.name }} detail page">
-                                   <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="No product page">
+                                   <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="No product image">
                                  </a>
                                  {% endif %} 
-                                 <p>{{ recommendation.description }}</p>                  
-                               </div>
-                               <div class="modal-footer">
+                                 <p>{{ recommendation.description }}</p>
+                              </div>
+                              <div class="modal-footer">
                                  <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="close button">Close</button>
-                               </div>
-                             </div>
+                              </div>
                            </div>
-                  </div>              
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               {% endfor %}  
             </div>
-         </div> 
-         {% endfor %}  
-      {% endif %}  
+         </div>
+         {% else %}
+         <p>Your bag is empty.</p>
+         <a  class="keep-shop" href="{% url 'products' %}" aria-label="Go to products page"><i class="fa-solid fa-cart-shopping"></i> Keep shopping >></a>  
+         <!-- Recommendation -->
+         <div class="mt-5">
+            <p class="font-weight-bold text-center rec-txt pt-3">Recommendation</p>
+            <div class="border rec-box">
+               {% for recommendation in recommendation %}
+               <div class="d-flex justify-content-center align-items-center rec-flex">
+                  <div class="row rec-pic">
+                     <div class="col">
+                        {% if recommendation.product.image %}
+                        <a href="{%url 'detail' recommendation.product.id%}" aria-label="Go to {{ recommendation.product.name }} detail page">
+                          <img class="img-fluid rec-img float-right" src="{{ recommendation.product.image.url }}" alt="{{ recommendation.product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="{%url 'detail' recommendation.product.id%}" aria-label="Go to {{ recommendation.product.name }} detail page">
+                          <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="No product image">
+                        </a>
+                        {% endif %} 
+                     </div>
+                     <div class="col">
+                        <p class="mb-0">{{ recommendation.product.name }}</p>
+                        <p class="exclusive">{{ recommendation.exclusive }}</p>
+                        <br>
+                        <button type="button" class="btn-sm btn-dark readme-btn" data-toggle="modal" data-target="#readme{{recommendation.product.id}}" aria-label="Recommendation detail">
+                        Read Me
+                        </button>
+                        <div class="modal fade" id="readme{{recommendation.product.id}}" tabindex="-1" aria-hidden="true">
+                           <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                                 <div class="modal-header">
+                                    <h5 class="modal-title">{{ recommendation.recommendation_title}}</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                 </div>
+                                 <div class="modal-body">
+                                    <p class="font-weight-bold">{{ recommendation.product.name }}</p>
+                                    <p class="exclusive">{{ recommendation.exclusive }}</p>
+                                    {% if recommendation.product.image %}
+                                    <a href="{%url 'detail' recommendation.product.id%}" aria-label="Go to {{ recommendation.product.name }} detail page">
+                                      <img class="img-fluid rec-img float-right" src="{{ recommendation.product.image.url }}" alt="{{ recommendation.product.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="{%url 'detail' recommendation.product.id%}" aria-label="Go to {{ recommendation.product.name }} detail page">
+                                      <img class="img-fluid rec-img" src="/media/noimg.jpg" alt="No product page">
+                                    </a>
+                                    {% endif %} 
+                                    <p>{{ recommendation.description }}</p>
+                                 </div>
+                                 <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="close button">Close</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  {% endfor %}  
+                  {% endif %}  
+               </div>
+            </div>
+         </div>
       </div>
-      </div>   
-    </div>
-   </div> 
-  </div>
-</div> 
+   </div>
+</div>
 </div>
 </div> 
-  </div> 
- 
-
+</div> 
 <script>
    //Update quantity 
    $('.update-qty').click(function(e){
@@ -263,7 +245,7 @@
       const updateForm = $(this).prev('.update-form');
       updateForm.submit();
    });
-
+   
    //Remove item
    $('.remove-pd').click(function(e){
       const csrfToken = "{{ csrf_token }}";
@@ -277,5 +259,4 @@
          });
    });
 </script>
-
-{% endblock %}   
+{% endblock %}
