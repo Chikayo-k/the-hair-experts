@@ -1,7 +1,13 @@
 # Testing
 
 This is the Testing section of the [README.md](README.md) file.  
-It  contains all the testing information for the project The hair expert.
+It contains all the testing information for the project The hair experts.
+
+
+## Responsiveness
+
+Tested on mobile, tablet, laptop and desktop. 
+And all devices works as expected.
 
 ## Validation
 
@@ -32,6 +38,7 @@ There is no error present.
 
 However, one warning for h1 tag using for spinner.
 As this is a warning, I decided to leave as is.
+
 ![HTML validation checkout page](testing-image/html/checkout-page-validation.png)
 
 **Check out Success Page**
@@ -84,27 +91,27 @@ All the lighthouse testing scores are high. Only the Best Practices score is bel
 
 ![Lighthouse test detail page](testing-image/lighthouse/detail.png)
 
-**Shopping bag page**
+**Shopping bag Page**
 
 ![Lighthouse test shopping bag page](testing-image/lighthouse/shopping-bag.png)
 
-**Check out page**
+**Checkout Page**
 
 ![Lighthouse test checkout page](testing-image/lighthouse/checkout.png)
 
-**Check out Success Page**
+**Checkout Success Page**
 
 ![Lighthouse test checkout success page](testing-image/lighthouse/checkout-success.png)
 
-**News page**
+**News Page**
 
 ![Lighthouse test news page](testing-image/lighthouse/news.png)
 
-**Sign Up page**
+**Sign Up Page**
 
 ![Lighthouse test signup page](testing-image/lighthouse/signup.png)
 
-**Login page**
+**Login Page**
 
 ![Lighthouse test login page](testing-image/lighthouse/login.png)
 
@@ -126,7 +133,7 @@ All the lighthouse testing scores are high. Only the Best Practices score is bel
 
 # CSS Validator Test
 
-All the css file are passed
+All the css files have passed.
 
 **base.css**
 
