@@ -83,3 +83,15 @@ Best performance was a bit low score due to cookie is using
 **Detail Page**
 
 ![Lighthouse test detail page](testing-image/lighthouse/detail.png)
+
+**Shopping bag page**
+
+
+**Check out page**
+**Check out Success Page**
+**News page**
+**Sign Up page**
+**Login page**
+**My Profile Page**
+**Stock Management Page**
+**Edit Product Page**
