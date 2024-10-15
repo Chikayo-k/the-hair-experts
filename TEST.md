@@ -75,10 +75,10 @@ Best performance was a bit low score due to cookie is using
 
 ![Lighthouse test home page](testing-image/lighthouse/home.png)
 
-
 **Product Page**
 
 ![Lighthouse test product page](testing-image/lighthouse/product.png)
+
 
 **Detail Page**
 
@@ -86,11 +86,24 @@ Best performance was a bit low score due to cookie is using
 
 **Shopping bag page**
 
+![Lighthouse test shopping bag page](testing-image/lighthouse/shopping-bag.png)
 
 **Check out page**
+
+![Lighthouse test checkout page](testing-image/lighthouse/checkout.png)
+
 **Check out Success Page**
+
+![Lighthouse test checkout success page](testing-image/lighthouse/checkout-success.png)
+
 **News page**
+
+![Lighthouse test news page](testing-image/lighthouse/news.png)
+
 **Sign Up page**
+
+![Lighthouse test signup page](testing-image/lighthouse/signup.png)
+
 **Login page**
 **My Profile Page**
 **Stock Management Page**
