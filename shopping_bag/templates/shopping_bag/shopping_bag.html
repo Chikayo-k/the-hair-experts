@@ -70,7 +70,7 @@
                           </button>
                         </div>
                         <div class="input-main">
-                           <input class="form-control-sm form-control quantity_input text-center" type="number" name="quantity" value="{{item.quantity}}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.product.id }}">
+                           <input class="form-control-sm form-control quantity_input text-center" type="number" name="quantity" value="{{item.quantity}}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.product.id }}" aria-label="quantity">
                         </div>
                           <div class="input-group-append">
                             <button class="btn btn-black btn-quantity increment btn-sm"  data-item_id="{{item.item_id}}" id="increment{{item.item_id}}" aria-label="plus quantity button">
