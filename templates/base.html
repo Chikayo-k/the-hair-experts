@@ -1,186 +1,168 @@
 {% load static %}
-
 <!doctype html>
 <html lang="en">
-  <head>
-
-    {% block meta %}
-        <!-- Required meta tags -->
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description"
-        content="The hair experts provide customers with salon quality hair products from shampoo, conditioner, hair oil and hair dryer and iron. We provide the best home care products to help customers grow healthy, shiny hair">
-        <meta name="keyword"
-        content="Professional hair products for shiny hair">
-    {% endblock %}
-
-    {% block extra_meta %}
-    {% endblock %}
-
-    {% block corecss %}
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <!-- Google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <!-- CSS-->
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
-    {% endblock %}
-
-    {% block extra_css %}
-    {% endblock %}
-
-    {% block corejs %}
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/8111712961.js" crossorigin="anonymous"></script>
-         <!-- Stripe -->
-         <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
-
-    
-    {% block extra_js %}
-    {% endblock %}
-
-    <title>The Hair Experts {% block extra_title%}{% endblock %}</title>
-  </head>
-  <body>
-    <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light top-nav">
+   <head>
+      {% block meta %}
+      <!-- Required meta tags -->
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description"
+         content="The hair experts provide customers with salon quality hair products from shampoo, conditioner, hair oil and hair dryer and iron. We provide the best home care products to help customers grow healthy, shiny hair">
+      <meta name="keyword"
+         content="Professional hair products for shiny hair">
+      {% endblock %}
+      {% block extra_meta %}
+      {% endblock %}
+      {% block corecss %}
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+      <!-- Google fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+      <!-- CSS-->
+      <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      <!-- Favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+      {% endblock %}
+      {% block extra_css %}
+      {% endblock %}
+      {% block corejs %}
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/8111712961.js" crossorigin="anonymous"></script>
+      <!-- Stripe -->
+      <script src="https://js.stripe.com/v3/"></script>
+      {% endblock %}
+      {% block extra_js %}
+      {% endblock %}
+      <title>The Hair Experts {% block extra_title%}{% endblock %}</title>
+   </head>
+   <body>
+      <header class="fixed-top">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light top-nav">
             <a href="{% url 'home' %}" class="nav-link main-logo-link text-dark" aria-label="Go to home page">
-                <h2 class="logo-title text-dark">THE HAIR EXPERTS</h2>
+               <h2 class="logo-title text-dark">THE HAIR EXPERTS</h2>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              
-                {% include 'includes/main-nav.html' %}
-                <form method="GET" action="{%url 'products'%}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit" aria-label="search button" >
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <div class="list-inline-item dropdown">
-                    <a class="text-dark nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="dropdown button for account">
-                        <div class="text-center">
-                            <div><i class="fas fa-user fa-lg text-dark"></i></div>
-                            <p class="my-0 text-dark nav-icon">My Account</p>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                        {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                                <a href="{% url 'add_item' %}" class="dropdown-item" aria-label="Go to product management page">Product Management</a>
-                            {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Go to my profile page">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="Go to logout page">Logout</a>
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            {% include 'includes/main-nav.html' %}
+            <form method="GET" action="{%url 'products'%}">
+               <div class="input-group w-100">
+                  <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                  <div class="input-group-append">
+                     <button class="form-control btn btn-black border border-black rounded-0" type="submit" aria-label="search button" >
+                     <span class="icon">
+                     <i class="fas fa-search"></i>
+                     </span>
+                     </button>
+                  </div>
+               </div>
+            </form>
+            <div class="list-inline-item dropdown">
+               <a class="text-dark nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="dropdown button for account">
+                  <div class="text-center">
+                     <div><i class="fas fa-user fa-lg text-dark"></i></div>
+                     <p class="my-0 text-dark nav-icon">My Account</p>
+                  </div>
+               </a>
+               <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                  {% if request.user.is_authenticated %}
+                  {% if request.user.is_superuser %}
+                  <a href="{% url 'add_item' %}" class="dropdown-item" aria-label="Go to product management page">Product Management</a>
+                  {% endif %}
+                  <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Go to my profile page">My Profile</a>
+                  <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="Go to logout page">Logout</a>
+                  {% else %}
+                  <a href="{% url 'account_signup' %}" class="dropdown-item" aria-label="Go to register page">Register</a>
+                  <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Go to login page">Login</a>
+                  {% endif %}
+               </div>
+            </div>
+            <div class="list-inline-item">
+               <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link" href="{% url 'view_bag' %}" aria-label="Go to shopping bag page">
+                  <div class="text-center">
+                     <div><i class="fas fa-shopping-bag fa-lg text-dark"></i></div>
+                     <p class="my-0 text-dark  nav-icon">
+                        {% if grand_total >= 50 %}
+                        €{{ grand_total|floatformat:2 }}
                         {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item" aria-label="Go to register page">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Go to login page">Login</a>
+                        €{{ total|floatformat:2}}
                         {% endif %}
-                    </div>
-                </div>
-                <div class="list-inline-item">
-                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link" href="{% url 'view_bag' %}" aria-label="Go to shopping bag page">
-                        <div class="text-center">
-                            <div><i class="fas fa-shopping-bag fa-lg text-dark"></i></div>
-                            <p class="my-0 text-dark  nav-icon">
-                                {% if grand_total >= 50 %}
-                                    €{{ grand_total|floatformat:2 }}
-                                {% else %}
-                                    €{{ total|floatformat:2}}
-                                {% endif %}
-                            </p>
-                        </div>
-                    </a>
-                </div>          
-          </nav>
-          <div id="delivery-banner" class="text-center delivery-banner">
+                     </p>
+                  </div>
+               </a>
+            </div>
+         </nav>
+         <div id="delivery-banner" class="text-center delivery-banner">
             <div class="col">
                <p class="delivery-w">Free delivery on order over €{{ free_delivery_cost }} !</p>
             </div>
          </div>
-  </header>
-
-  {% if messages %}
-    <div class="message-container">
-      {% for message in messages %}
-        {% with message.level as level %}
-          {% if level == 40 %}
-            {% include 'includes/toasts/error.html' %}
-          {% elif level == 30 %}
-            {% include 'includes/toasts/warning.html' %}
-          {% elif level == 25 %}
-            {% include 'includes/toasts/success.html' %}
-          {% else %}   
-            {% include 'includes/toasts/info.html' %}
-          {% endif %}
-        {% endwith %}          
-      {% endfor %}
-    </div>
-  {% endif %}
-
-  {% block page_header %}
-  {% endblock %}
-
-  {% block content %}
-  {% endblock %}
-
-   <!-- Modal -->
-   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Help center</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          If you have any quesstion, please contact us.<br>
-          Phone:000-0000-0000
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="close button">Close</button>
-        </div>
+      </header>
+      {% if messages %}
+      <div class="message-container">
+         {% for message in messages %}
+         {% with message.level as level %}
+         {% if level == 40 %}
+         {% include 'includes/toasts/error.html' %}
+         {% elif level == 30 %}
+         {% include 'includes/toasts/warning.html' %}
+         {% elif level == 25 %}
+         {% include 'includes/toasts/success.html' %}
+         {% else %}   
+         {% include 'includes/toasts/info.html' %}
+         {% endif %}
+         {% endwith %}          
+         {% endfor %}
       </div>
-    </div>
-   </div>
-
-  <footer>
-    <div class="social-media">       
-       <a href="https://www.facebook.com/profile.php?id=61566928480243" aria-label="Visit our Facebook page (opens in a new tub)" target="_blank"><i class="fa-brands fa-facebook-f fa-xl" style="color: #DBDBDB ;"></i></a>
-       <a href="https://www.instagram.com/" aria-label="Visit our Instagram page (opens in a new tub)" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #DBDBDB ;"></i></a>
-       <a href="https://www.youtube.com/" aria-label="Visit our YouTube page (opens in a new tub)" target="_blank"><i class="fa-brands fa-youtube fa-xl" style="color: #DBDBDB ;"></i></a>
-    </div>
-    
-  <!-- Button trigger modal -->
-  <button type="button" class="btn help-center " data-toggle="modal" data-target="#exampleModal" aria-label="help center button">
-    Help Center
-  </button>
-</footer>
-  {% block postloadjs %}
-  <script>
-      $('.toast').toast('show');
-  </script>
-    
-  {% endblock %}
-
-    <script src="{% static 'js/base.js' %}"></script> 
-  </body>
+      {% endif %}
+      {% block page_header %}
+      {% endblock %}
+      {% block content %}
+      {% endblock %}
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Help center</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  If you have any quesstion, please contact us.<br>
+                  Phone:000-0000-0000
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="close button">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer>
+         <div class="social-media">       
+            <a href="https://www.facebook.com/profile.php?id=61566928480243" aria-label="Visit our Facebook page (opens in a new tub)" target="_blank"><i class="fa-brands fa-facebook-f fa-xl" style="color: #DBDBDB ;"></i></a>
+            <a href="https://www.instagram.com/" aria-label="Visit our Instagram page (opens in a new tub)" target="_blank"><i class="fa-brands fa-instagram fa-xl" style="color: #DBDBDB ;"></i></a>
+            <a href="https://www.youtube.com/" aria-label="Visit our YouTube page (opens in a new tub)" target="_blank"><i class="fa-brands fa-youtube fa-xl" style="color: #DBDBDB ;"></i></a>
+         </div>
+         <!-- Button trigger modal -->
+         <button type="button" class="btn help-center " data-toggle="modal" data-target="#exampleModal" aria-label="help center button">
+         Help Center
+         </button>
+      </footer>
+      {% block postloadjs %}
+      <script>
+         $('.toast').toast('show');
+      </script>
+      {% endblock %}
+      <script src="{% static 'js/base.js' %}"></script> 
+   </body>
 </html>
