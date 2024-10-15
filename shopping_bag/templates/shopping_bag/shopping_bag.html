@@ -63,7 +63,7 @@
                      {% csrf_token %}
                      <div class="quantity-btns input-group quantity-box">
                         <div class="input-group-prepend">
-                          <button class="btn btn-black btn-quantity decrement btn-sm" data-item_id="{{item.item_id}}" id="decrement{{item.item_id}}">
+                          <button class="btn btn-black btn-quantity decrement btn-sm" data-item_id="{{item.item_id}}" id="decrement{{item.item_id}}" aria-label="minus quantity button">
                             <span>
                               <i class="fas fa-minus"></i>
                             </span>
@@ -73,7 +73,7 @@
                            <input class="form-control-sm form-control quantity_input text-center" type="number" name="quantity" value="{{item.quantity}}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.product.id }}">
                         </div>
                           <div class="input-group-append">
-                            <button class="btn btn-black btn-quantity increment btn-sm"  data-item_id="{{item.item_id}}" id="increment{{item.item_id}}">
+                            <button class="btn btn-black btn-quantity increment btn-sm"  data-item_id="{{item.item_id}}" id="increment{{item.item_id}}" aria-label="plus quantity button">
                               <span>
                                 <i class="fas fa-plus"></i>
                               </span>
@@ -140,7 +140,7 @@
                 <div class="col">
                   <p class="mb-0">{{ recommendation.product.name }}</p>
                   <small class="exclusive">{{ recommendation.exclusive }}</small><br>
-                  <button type="button" class="btn-sm btn-dark readme-btn" data-toggle="modal" data-target="#readme{{recommendation.product.id}}">
+                  <button type="button" class="btn-sm btn-dark readme-btn" data-toggle="modal" data-target="#readme{{recommendation.product.id}}" aria-label="click to read recommendation details">
                     Read Me
                    </button>
                   
@@ -169,7 +169,7 @@
                               <p>{{ recommendation.description }}</p>                  
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="close button">Close</button>
                             </div>
                           </div>
                         </div>
@@ -207,7 +207,7 @@
                    <div class="col">
                      <p class="mb-0">{{ recommendation.product.name }}</p>
                      <small class="exclusive">{{ recommendation.exclusive }}</small><br>
-                     <button type="button" class="btn-sm btn-dark readme-btn" data-toggle="modal" data-target="#readme{{recommendation.product.id}}">
+                     <button type="button" class="btn-sm btn-dark readme-btn" data-toggle="modal" data-target="#readme{{recommendation.product.id}}" aria-label="Recommendation detail">
                        Read Me
                       </button>
                      
@@ -236,7 +236,7 @@
                                  <p>{{ recommendation.description }}</p>                  
                                </div>
                                <div class="modal-footer">
-                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                 <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="close button">Close</button>
                                </div>
                              </div>
                            </div>

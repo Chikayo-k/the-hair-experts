@@ -61,7 +61,7 @@
             <div class="quantity-box">
                 <div class="quantity-btns input-group">
                   <div class="input-group-prepend">
-                    <button class="btn btn-black btn-quantity decrement" data-item_id="{{product.id}}" id="decrement{{product.id}}">
+                    <button class="btn btn-black btn-quantity decrement" data-item_id="{{product.id}}" id="decrement{{product.id}}" aria-label="minus quantity button">
                       <span>
                         <i class="fas fa-minus"></i>
                       </span>
@@ -71,7 +71,7 @@
                      <input class="form-control quantity_input text-center" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                   </div>
                     <div class="input-group-append">
-                      <button class="btn btn-black btn-quantity increment"  data-item_id="{{product.id}}" id="increment{{product.id}}">
+                      <button class="btn btn-black btn-quantity increment"  data-item_id="{{product.id}}" id="increment{{product.id}}" aria-label="plus quantity button">
                         <span>
                           <i class="fas fa-plus"></i>
                         </span>
@@ -115,14 +115,14 @@
        
       {% if user.is_authenticated %}
       <form method="POST" action="{% url 'detail' product_id=product.id %}">
-        <button class="btn-sm btn-dark mt-5 mb-3" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn-sm btn-dark mt-5 mb-3" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-label="Click to open the review form">
           Add Product Comment
         </button> 
       <div class="collapse" id="collapseExample">
         <div class="card card-body"> 
           {% csrf_token %}
          {{ comment_form | crispy }}
-         <button type="submit" class="btn btn-dark" >Add Comment</button> 
+         <button type="submit" class="btn btn-dark" aria-label="Click to add your comment" >Add Comment</button> 
         </div>
       </div> 
       </form>
