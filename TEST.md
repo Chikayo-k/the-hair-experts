@@ -150,3 +150,4 @@ All the css file are passed
 ![CSS validator test profile.css](testing-image/css/profile.png)
 
 **checkout.css**
+

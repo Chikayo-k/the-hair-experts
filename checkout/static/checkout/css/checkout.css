@@ -145,7 +145,7 @@ select option[value=""]{
 
   .order-number{
     flex-direction: column;
-    justify-content: baseline;
+    justify-content: flex-start;
   }
 
   .ordernum-p{
