@@ -79,3 +79,7 @@ Best performance was a bit low score due to cookie is using
 **Product Page**
 
 ![Lighthouse test product page](testing-image/lighthouse/product.png)
+
+**Detail Page**
+
+![Lighthouse test detail page](testing-image/lighthouse/detail.png)
