@@ -123,3 +123,30 @@ All the lighthouse testing scores are high. Only the Best Practices score is bel
 **Edit Product Page**
 
 ![Lighthouse test logout page](testing-image/lighthouse/edit-product.png)
+
+# CSS Validator Test
+
+All the css file are passed
+
+**base.css**
+
+![CSS validator test base.css](testing-image/css/css-test.png)
+
+**product.css**
+
+![CSS validator test product.css](testing-image/css/product.png)
+
+**shopping_bag.css**
+
+![CSS validator test shopping_bag.css](testing-image/css/shopping_bag.png)
+
+
+**news.css**
+
+![CSS validator test news.css](testing-image/css/news.png)
+
+**profile.css**
+
+![CSS validator test profile.css](testing-image/css/profile.png)
+
+**checkout.css**
