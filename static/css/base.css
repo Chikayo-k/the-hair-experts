@@ -308,6 +308,10 @@ footer {
     background-color: white;
 }
 
+.text-success{
+    color: green !important;
+}
+
 .checkout-bg-btn{
     background-color: #CF7500;
     color: white;
