@@ -15,7 +15,7 @@ import os
 from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent 
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 if os.path.isfile('env.py'):
     import env
@@ -33,7 +33,8 @@ SECRET_KEY = os.environ.get('SECRET_KEYS', '')
 # DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-chikayok-thehairexperts-bic3z94aeho.ws.codeinstitute-ide.net','the-hair-experts','the-hair-experts-530953dace3d.herokuapp.com']
+ALLOWED_HOSTS = ['8000-chikayok-thehairexperts-bic3z94aeho.ws.codeinstitute-ide.net', # noqa
+                 'the-hair-experts', 'the-hair-experts-530953dace3d.herokuapp.com'] # noqa
 
 
 # Application definition
@@ -72,20 +73,20 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'the_hair_experts.urls'
 
-CRISPY_TEMPLATE_PACK='bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'templates'),
-            os.path.join(BASE_DIR,'templates','allauth'),
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # Required (allauth)
+                'django.template.context_processors.request',  # Required (allauth) # noqa
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'shopping_bag.contexts.shopping_bag_contents',
@@ -125,15 +126,15 @@ WSGI_APPLICATION = 'the_hair_experts.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-if 'DATABASE_URL'in os.environ:
-   DATABASES = {
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
      'default': dj_database_url.parse(os.getenv('DATABASE_URL'))
-   }
+    }
 else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME'  :os.path.join(BASE_DIR,'db.sqlite3'),
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
 
@@ -142,16 +143,20 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator', # noqa
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
 
@@ -185,10 +190,10 @@ if 'USE_AWS' in os.environ:
         'CacheControl': 'max-age=94608000',
     }
 
-    #Bucket config
+    # Bucket config
     AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY =os.getenv(' AWS_SECRET_ACCESS_KEY')
-    AWS_STORAGE_BUCKET_NAME ='the-hair-experts'
+    AWS_SECRET_ACCESS_KEY = os.getenv(' AWS_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = 'the-hair-experts'
     AWS_S3_REGION_NAME = 'eu-north-1'
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
@@ -212,9 +217,9 @@ FREE_DELIVERY_PRICE = 50
 STANDARD_DELIVERY_PRICE = 5
 STRIPE_CURRENCY = 'eur'
 
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY','')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY','')
-STRIPE_WEBHOOK_SECRET = os.getenv('STRIPE_WEBHOOK_SECRET','')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WEBHOOK_SECRET = os.getenv('STRIPE_WEBHOOK_SECRET', '')
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -224,6 +229,6 @@ else:
     EMAIL_USE_TLS = True
     EMAIL_PORT = 587
     EMAIL_HOST = 'smtp.gmail.com'
-    EMAIL_HOST_USER =  os.environ.get('EMAIL_HOST_USER')
-    EMAIL_HOST_PASSWORD =  os.environ.get('EMAIL_HOST_PASS')
-    DEFAULT_FROM_EMAIL =  os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
