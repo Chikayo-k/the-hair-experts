@@ -26,7 +26,7 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('shopping_bag/', include('shopping_bag.urls')),
     path('checkout/', include('checkout.urls')),
-    path('profile/',include('profiles.urls')),
-    path('news/',include('news.urls')),
+    path('profile/', include('profiles.urls')),
+    path('news/', include('news.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 handler404 = 'the_hair_experts.views.handler404'
