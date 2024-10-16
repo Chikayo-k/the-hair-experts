@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404 # noqa
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Recommendation
@@ -9,12 +9,11 @@ from products.models import Product
 
 
 def view_bag(request):
-  """A view that renders the bag contents page"""
+    """A view that renders the bag contents page"""
+    recommendation = Recommendation.objects.all()
+    context = {'recommendation': recommendation}
 
-  recommendation = Recommendation.objects.all()
-  context = {'recommendation': recommendation}
-    
-  return render(request, 'shopping_bag/shopping_bag.html', context)
+    return render(request, 'shopping_bag/shopping_bag.html', context)
 
 
 def add_to_bag(request, item_id):
