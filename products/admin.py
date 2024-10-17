@@ -1,7 +1,8 @@
 from django.contrib import admin
-from .models import Product, Category,Comment
+from .models import Product, Category, Comment
 
 # Register your models here.
+
 
 class AdminProduct(admin.ModelAdmin):
     list_display = (
@@ -20,6 +21,7 @@ class AdminCategory(admin.ModelAdmin):
         'display_name',
         'name',
     )
+
 
 admin.site.register(Comment)
 
