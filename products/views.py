@@ -10,6 +10,7 @@ from .comment_form import CommentForm
 
 # Create your views here.
 
+
 def all_products(request):
     """
     View to show all products
@@ -30,48 +31,48 @@ def all_products(request):
         """
         if 'sort' in request.GET:
             sortkeyword = request.GET['sort']
-            sort = sortkeyword 
+            sort = sortkeyword
             if sortkeyword == 'name':
-               sortkeyword = 'lower_name'
-               products = products.annotate(lower_name=Lower('name'))
+                sortkeyword = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
             if sortkeyword == 'category':
-                sortkeyword='category__name'            
+                sortkeyword = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
-                    sortkeyword  = f'-{sortkeyword }'
-            products = products.order_by(sortkeyword )
+                    sortkeyword = f'-{sortkeyword}'
+            products = products.order_by(sortkeyword)
 
         """
-        Filter by category    
+        Filter by category
         """
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
         """
-        Search by keyword   
+        Search by keyword
         """
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request,'No search criteria was enterd !')
+                messages.error(request, 'No search criteria was enterd !')
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains = query) | Q(description__icontains=query)
-            products = products.filter(queries)
-    
-    sorting = f'{sort}_{direction}'
 
+            queries = Q(name__icontains = query) | Q(description__icontains=query) # noqa
+            products = products.filter(queries)
+
+    sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
-        'search_word':query,
-        'cureent_categories':categories,
-        'sorting':sorting,
+        'search_word': query,
+        'cureent_categories': categories,
+        'sorting': sorting,
     }
 
     return render(request, 'products/products.html', context)
+
 
 def detail(request, product_id):
     """
@@ -80,52 +81,49 @@ def detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     comment = product.chosen_product.all().order_by("-comment_date")
-    
-     # Write Review Submission
+
+    # Write Review Submission
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.author = request.user
-            comment.product = product       
+            comment.product = product
             comment.save()
             messages.success(
-                request,"Comment submitted Thank you!!"
+                request, "Comment submitted Thank you!!"
             )
-            return redirect(reverse('detail',args=[product_id]))
+            return redirect(reverse('detail', args=[product_id]))
         else:
             messages.error(request, 'Please try again!')
 
-        
     comment_form = CommentForm()
-
-
     context = {
         'product': product,
         'comment': comment,
-        'comment_form':comment_form
+        'comment_form': comment_form
     }
 
     return render(request, 'products/detail.html', context)
+
 
 def delete_comment(request, comment_id, product_id):
 
     comment = get_object_or_404(Comment, id=comment_id, product_id=product_id)
     # products = get_object_or_404(Product, product_id=product_id)
-    
 
     if comment.author == request.user:
-       comment.delete()
-       messages.success(
-            request,"Comment was successfully deleted !"
-       )
-       return redirect(reverse('detail',args=[product_id]))
+        comment.delete()
+        messages.success(
+            request, "Comment was successfully deleted !"
+        )
+        return redirect(reverse('detail', args=[product_id]))
     else:
-        message.error(request,'Error. try again')
-    return redirect(reverse('detail',args=[product_id]))
-   
+        messages.error(request, 'Error. try again')
+    return redirect(reverse('detail', args=[product_id]))
 
-@login_required    
+
+@login_required
 def add_item(request):
     """
     Add items (admin)
@@ -134,24 +132,25 @@ def add_item(request):
         messages.error(request, 'limited to store owners')
         return redirect(reverse('home'))
 
-    if request.method =='POST':
-        form = ItemForm(request.POST,request.FILES)
+    if request.method == 'POST':
+        form = ItemForm(request.POST, request.FILES)
         if form.is_valid():
             item = form.save()
             messages.success(request, 'Item was added successfully!')
-            return redirect(reverse('detail',args=[item.id]))
+            return redirect(reverse('detail', args=[item.id]))
         else:
             messages.error(request, 'Failed. Please try again!')
     else:
         form = ItemForm()
-    template ='products/add_item.html'
-    context ={
-        'form':form,
+    template = 'products/add_item.html'
+    context = {
+        'form': form,
     }
 
-    return render(request,template,context)
+    return render(request, template, context)
 
-@login_required 
+
+@login_required
 def edit_item(request, product_id):
     """
     Edit item in stock
@@ -162,26 +161,28 @@ def edit_item(request, product_id):
 
     item = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
-        form= ItemForm(request.POST, request.FILES, instance=item)
+        form = ItemForm(request.POST, request.FILES, instance=item)
         if form.is_valid():
             form.save()
-            messages.success(request,'Updated stock successfully!')
-            return redirect(reverse('detail',args=[item.id]))
+            messages.success(request, 'Updated stock successfully!')
+            return redirect(reverse('detail', args=[item.id]))
         else:
-            messages.error(request,'Failed to update stock. Please try again.')
+            messages.error(request,
+                           'Failed to update stock. Please try again.')
     else:
         form = ItemForm(instance=item)
         messages.info(request, f'You are editing {item.name}')
 
-    template ='products/edit_item.html'
-    context ={
-        'form':form,
-        'item':item,
+    template = 'products/edit_item.html'
+    context = {
+        'form': form,
+        'item': item,
     }
 
-    return render(request,template,context)
+    return render(request, template, context)
 
-@login_required 
+
+@login_required
 def delete_item(request, product_id):
     """
     Delete item from stock
@@ -192,13 +193,5 @@ def delete_item(request, product_id):
 
     item = get_object_or_404(Product, pk=product_id)
     item.delete()
-    messages.success(request,'Item has been deleted!')
-    return redirect(reverse ('products'))
-
-
-
-
-
-
-
-
+    messages.success(request, 'Item has been deleted!')
+    return redirect(reverse('products'))
