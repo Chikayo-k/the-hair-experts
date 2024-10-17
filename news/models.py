@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class News(models.Model):
     title = models.CharField(max_length=255, unique=True)
@@ -11,5 +12,4 @@ class News(models.Model):
         ordering = ['-post_date']
 
     def __str__(self):
-       return f'News: {self.title}'
-
+        return f'News: {self.title}'
