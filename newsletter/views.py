@@ -3,7 +3,7 @@ from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib import messages
 # from djangomailchimp import settings
-from marketing.forms import NewsLetterForm
+from newsletter.forms import NewsLetterForm
 from mailchimp3 import MailChimp
 # from mailchimp_v3 import settings
 
@@ -16,7 +16,7 @@ def subscribe(request):
             messages.success(request, 'Subscribed successfully!')
         else:
             messages.error(request, 'Failto subscribed. Try again!')
-    return render(request, 'marketing/subscribe.html', {
+    return render(request, 'newsletter/subscribe.html', {
         'form': NewsLetterForm(),
     })
 
