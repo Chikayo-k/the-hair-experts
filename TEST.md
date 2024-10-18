@@ -166,4 +166,8 @@ All the css files have passed.
 
 ![JSHint base.js](testing-image/js/base.png)
 
+**countryfield.js**
+
+![JSHint countryfield.js](testing-image/js/countryfield.png)
+
 
