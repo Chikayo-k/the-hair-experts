@@ -1,5 +1,5 @@
 from django import forms
 
 
-class NewsLetterForm(forms.Form):
+class NewsletterForm(forms.Form):
     email = forms.EmailField(label='Email', max_length=128)
