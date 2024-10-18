@@ -170,4 +170,7 @@ All the css files have passed.
 
 ![JSHint countryfield.js](testing-image/js/countryfield.png)
 
+**strip.js**
 
+There are strip undifined variables. as they are coming from different app I left these as is.
+![JSHint strip.js](testing-image/js/strip.png)

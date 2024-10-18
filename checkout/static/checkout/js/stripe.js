@@ -1,7 +1,8 @@
+/*globals $:false */
 const stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 const clientSecret = $('#id_client_secret').text().slice(1, -1);
 
- stripe = Stripe(stripePublicKey);
+stripe = Stripe(stripePublicKey);
 const elements = stripe.elements();
 const style = {
     base: {
@@ -18,17 +19,19 @@ const style = {
         iconColor: '#dc3545'
     }
 };
-const card = elements.create('card', {style: style});
+const card = elements.create('card', {
+    style: style
+});
 card.mount('#card-element');
 
 // Handle errors
-card.addEventListener('change',function(e){
+card.addEventListener('change', function(e) {
     const errorMessage = document.getElementById('card-errors');
-    if(e.error){
-        const content =`<p>${e.error.message}</p>`;
+    if (e.error) {
+        const content = `<p>${e.error.message}</p>`;
         $(errorMessage).html(content);
-    }else{
-        errorMessage.textContent= '';
+    } else {
+        errorMessage.textContent = '';
     }
 });
 
@@ -37,9 +40,11 @@ var form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
 
-    console.log('FORM: ', form)
+    console.log('FORM: ', form);
     ev.preventDefault();
-    card.update({ 'disabled': true});
+    card.update({
+        'disabled': true
+    });
     $('#submit-button').attr('disabled', true);
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
@@ -53,15 +58,15 @@ form.addEventListener('submit', function(ev) {
     };
     var url = '/checkout/cache_checkout_data/';
 
-    $.post(url, postData).done(function(){
+    $.post(url, postData).done(function() {
         stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: card,
-                billing_details:{
+                billing_details: {
                     name: $.trim(form.full_name.value),
                     phone: $.trim(form.phone.value),
                     email: $.trim(form.email.value),
-                    address:{
+                    address: {
                         line1: $.trim(form.address1.value),
                         line2: $.trim(form.address2.value),
                         city: $.trim(form.town_city.value),
@@ -70,10 +75,10 @@ form.addEventListener('submit', function(ev) {
                     }
                 }
             },
-            shipping:{
+            shipping: {
                 name: $.trim(form.full_name.value),
                 phone: $.trim(form.phone.value),
-                address:{
+                address: {
                     line1: $.trim(form.address1.value),
                     line2: $.trim(form.address2.value),
                     city: $.trim(form.town_city.value),
@@ -85,11 +90,13 @@ form.addEventListener('submit', function(ev) {
         }).then(function(result) {
             if (result.error) {
                 const errorMessage = document.getElementById('card-errors');
-                const content =`<p>${result.error.message}</p>`;
+                const content = `<p>${result.error.message}</p>`;
                 $(errorMessage).html(content);
                 $('#payment-form').fadeToggle(100);
                 $('#loading-overlay').fadeToggle(100);
-                card.update({ 'disabled': false});
+                card.update({
+                    'disabled': false
+                });
                 $('#submit-button').attr('disabled', false);
             } else {
                 if (result.paymentIntent.status === 'succeeded') {
@@ -97,7 +104,7 @@ form.addEventListener('submit', function(ev) {
                 }
             }
         });
-    }).fail(function(){
+    }).fail(function() {
         location.reload();
-    })
+    });
 });
