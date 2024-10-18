@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'news',
+    'marketing.apps.MarketingConfig',
 
     'crispy_forms',
     'storages',
