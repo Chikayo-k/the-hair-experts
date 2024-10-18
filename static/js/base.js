@@ -1,3 +1,4 @@
+/*globals $:false */
 // Sorting
 $('#sort').change(function(){
     let selector = $(this);

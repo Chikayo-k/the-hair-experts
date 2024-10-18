@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404 # noqa
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 from .models import Recommendation
 
 from products.models import Product
