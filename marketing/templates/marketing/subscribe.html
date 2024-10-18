@@ -1,0 +1,28 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'marketing/css/marketing.css' %}">
+{% endblock %}
+
+{% block page_header %}
+   <div class="container">
+      <div class="row">
+          <div class="col">
+          </div>
+      </div>
+   </div>
+{% endblock %}
+
+{% block content %}        
+    <div class="marketing-container">    
+        <h1>Subscribe</h1>
+        <p>Subscribe for our weekly news letters and watch out for our special offers.
+        </p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-dark">Subscribe</button>
+        </form>
+    </div>
+{% endblock %}

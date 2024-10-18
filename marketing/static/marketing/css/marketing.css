@@ -1,0 +1,20 @@
+.marketing-container{
+    min-height: 100vh;
+    margin-top: 30vh;
+    margin-left: 10%;
+}
+
+.email{
+    width: 80%;
+}
+
+/*------------------- Media query-------------------*/
+
+
+@media (max-width: 700px){
+
+    .marketing-container{
+     margin-top: 40vh;
+    }
+}
+
