@@ -16,8 +16,8 @@ COLOURS = {"red": "\033[31m",
            "green": "\033[32m",
            "reset": "\033[0m",
            "bold": "\033[1m"}
-
-BASE_URL = "https://raw.githubusercontent.com/Code-Institute-Org/gitpod-full-template/main/"
+ 
+BASE_URL = "https://raw.githubusercontent.com/Code-Institute-Org/gitpod-full-template/main/" # noqa
 CURRENT_VERSION = 1.0
 THIS_VERSION = 1.0
 
@@ -107,7 +107,7 @@ def build_post_upgrade():
         with open(".vscode/post_upgrade.sh", "w") as f:
             f.writelines(content)
     
-    print("Built post_upgrade.sh. Restart your workspace for it to take effect.")
+    print("Built post_upgrade.sh. Restart your workspace for it to take effect.") # noqa
 
 
 def process(file, suffix):
@@ -166,7 +166,7 @@ def start_migration():
     print("the changes to take effect.\n")
 
     if push_and_recreate:
-        print(f"{COLOURS['red']}{COLOURS['bold']}*** IMPORTANT INFORMATION ***{COLOURS['reset']}")
+        print(f"{COLOURS['red']}{COLOURS['bold']}*** IMPORTANT INFORMATION ***{COLOURS['reset']}") # noqa
         print("The files used to create this workspace have been updated")
         print("Please download any files that are in .gitignore and")
         print("recreate this workspace by clicking on the Gitpod button")
@@ -175,7 +175,7 @@ def start_migration():
 
 if __name__ == "__main__":
 
-    print(f"\n🐦 {COLOURS['blue']}{COLOURS['bold']}ArcticTern version 0.3{COLOURS['reset']}")
+    print(f"\n🐦 {COLOURS['blue']}{COLOURS['bold']}ArcticTern version 0.3{COLOURS['reset']}") # noqa
     print("CI Template Migration Utility")
     print("-----------------------------")
     print("Upgrades the workspace to the latest version.\n")

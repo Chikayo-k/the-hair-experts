@@ -16,31 +16,31 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Order',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('order_number', models.CharField(editable=False, max_length=30)),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')), # noqa
+                ('order_number', models.CharField(editable=False, max_length=30)), # noqa
                 ('full_name', models.CharField(max_length=50)),
                 ('email', models.EmailField(max_length=100)),
-                ('phone', models.CharField(blank=True, max_length=20, null=True)),
-                ('eircode', models.CharField(blank=True, max_length=15, null=True)),
+                ('phone', models.CharField(blank=True, max_length=20, null=True)), # noqa
+                ('eircode', models.CharField(blank=True, max_length=15, null=True)), # noqa
                 ('country', models.CharField(max_length=40)),
                 ('address1', models.CharField(max_length=50)),
-                ('address2', models.CharField(blank=True, max_length=50, null=True)),
+                ('address2', models.CharField(blank=True, max_length=50, null=True)), # noqa
                 ('town_city', models.CharField(max_length=50)),
-                ('county_region', models.CharField(blank=True, max_length=50, null=True)),
+                ('county_region', models.CharField(blank=True, max_length=50, null=True)), # noqa
                 ('date', models.DateTimeField(auto_now_add=True)),
-                ('deliverly_fee', models.DecimalField(decimal_places=2, default=0, max_digits=4)),
-                ('total_cost', models.DecimalField(decimal_places=2, default=0, max_digits=6)),
-                ('grand_total', models.DecimalField(decimal_places=2, default=0, max_digits=6)),
+                ('deliverly_fee', models.DecimalField(decimal_places=2, default=0, max_digits=4)), # noqa
+                ('total_cost', models.DecimalField(decimal_places=2, default=0, max_digits=6)), # noqa
+                ('grand_total', models.DecimalField(decimal_places=2, default=0, max_digits=6)), # noqa
             ],
         ),
         migrations.CreateModel(
             name='OrderItem',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')), # noqa
                 ('quantity', models.IntegerField(default=True)),
-                ('item_total', models.DecimalField(decimal_places=2, editable=False, max_digits=6)),
-                ('order', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='lineitems', to='checkout.order')),
-                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='products.product')),
+                ('item_total', models.DecimalField(decimal_places=2, editable=False, max_digits=6)), # noqa
+                ('order', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='lineitems', to='checkout.order')), # noqa
+                ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='products.product')), # noqa
             ],
         ),
     ]

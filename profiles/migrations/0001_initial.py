@@ -18,15 +18,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='UserProfile',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('default_phone', models.CharField(max_length=20, null=True)),
-                ('default_eircode', models.CharField(max_length=15, null=True)),
-                ('default_country', django_countries.fields.CountryField(max_length=2, null=True)),
-                ('default_address1', models.CharField(max_length=50, null=True)),
-                ('default_address2', models.CharField(max_length=50, null=True)),
-                ('default_town_city', models.CharField(max_length=50, null=True)),
-                ('default_county_region', models.CharField(max_length=50, null=True)),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')), # noqa
+                ('default_phone', models.CharField(max_length=20, null=True)), # noqa
+                ('default_eircode', models.CharField(max_length=15, null=True)), # noqa
+                ('default_country', django_countries.fields.CountryField(max_length=2, null=True)), # noqa
+                ('default_address1', models.CharField(max_length=50, null=True)), # noqa
+                ('default_address2', models.CharField(max_length=50, null=True)), # noqa
+                ('default_town_city', models.CharField(max_length=50, null=True)), # noqa
+                ('default_county_region', models.CharField(max_length=50, null=True)), # noqa
+                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)), # noqa
             ],
         ),
     ]
