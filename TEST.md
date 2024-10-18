@@ -159,3 +159,11 @@ All the css files have passed.
 **checkout.css**
 
 ![CSS validator test checkout.css](testing-image/css/checkout.png)
+
+## JS Hint
+
+**base.js**
+
+![JSHint base.js](testing-image/js/base.png)
+
+
