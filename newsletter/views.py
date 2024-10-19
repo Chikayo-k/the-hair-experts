@@ -1,11 +1,7 @@
-from django.shortcuts import render
-from django.http import JsonResponse
 from django.shortcuts import render, redirect
+from django.http import JsonResponse
 from django.contrib import messages
-#from djangomailchimp import settings
 from newsletter.forms import NewsletterForm
-from mailchimp3 import MailChimp
-# from mailchimp_v3 import settings
 from mailchimp_marketing import Client
 from mailchimp_marketing.api_client import ApiClientError
 from django.conf import settings
@@ -42,9 +38,9 @@ def subscribe(request):
                 logger.info(f'API call successful: {response}')
                 messages.success(request, 'Subscribed successfully!')
                 return redirect('subscribe-success')
-            
+
             except ApiClientError as error:
-                logger.error(f'An exception occurred: {error.text}')       
+                logger.error(f'An exception occurred: {error.text}')
                 messages.error(request, 'Fail subscribed. Try again!')
                 return redirect('subscribe-fail')
 
@@ -53,11 +49,10 @@ def subscribe(request):
     })
 
 
-
 def subscribe_success(request):
     return render(request, 'newsletter/message.html', {
         'title': 'Successfully subscribed',
-        'message': 'You have successfully subscribed to our mailing list. Keep an eye out for some exciting offers and news about our new products',
+        'message': 'You have successfully subscribed to our mailing list. Keep an eye out for some exciting offers and news about our new products', # noqa
     })
 
 
