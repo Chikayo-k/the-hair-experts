@@ -205,9 +205,9 @@ All the css files have passed.
 There are strip undifined variables. as they are coming from different app I left these as is.
 ![JSHint strip.js](testing-image/js/strip.png)
 
-## Testing User Stories ##
+## User Stories Test ##
 
-### Sprint1 ###
+### Sprint 1 ###
 **Epic 1 Create the initial project setup**
 
 - [x]  As a Developer, I want to create the project structure so I can develop the Hair Experts website
@@ -232,7 +232,7 @@ There are strip undifined variables. as they are coming from different app I lef
 
 - [x] As a user I want to click on the product image and have a details page open.
 
-### Sprint2 ###
+### Sprint 2 ###
 
 **Epic 4: Create Product Filtering and Sorting**
 
@@ -248,29 +248,49 @@ There are strip undifined variables. as they are coming from different app I lef
 
 - [x] As a user, I want to see a notification when I add, update and delete item to the shopping basket so I see what is in the basket
 
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
+### Sprint 3 ###
 
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
-- [x]
+**Epic 7: Create checkout app**
+
+- [x] As a developer, I want to add checkout data to the database so that I can store the users order data in the database.
+
+- [x] As a user, I want to fill out my information so that they can send my order
+
+- [x] As a user, I want to pay securely so that I can complete the payment without any worries
+
+- [x] As a developer, I want to use stripe webhooks so that I can update the database when a payment is confirmed
+
+- [x] As a user, I want to receive a confirmation email when I complete my order so I can see what I've purchased
+
+**Epic 8: Profile App**
+
+- [x] As a user, I want to have a personalized user profile so that I can check my order history, confirmation, and payment information.
+
+### Sprint 4 ###
+
+**Epic 9: Create Admin Profile**
+
+- [x] As an owner I want to have add, edit and delete functionality for the site items to manage stock.
+
+**Epic 10: Create News Field**
+
+- [x] As a site owner, I want to have a news section so that I can inform customers about upcoming news
+
+- [x] As an Admin I want to Add, Edit and Delete News articles on the sites news page so that I can keep it updated
+
+- [x] As an Admin I want to Add, Edit and Delete News articles on the sites news page so that I can keep it updated
+
+**Epic 11: Additional functionality**
+
+- [x] As a developer I want to check and finalize this website so that I can complete this site
+
+- [x] As a site owner I want to publish the website so that customers can see
+
+**Epic 12: Final Touch**
+
+- [x] As a user I want to be able to subscribe to a news letter so that I can stay up to date with the latest news and offers.
+
+- [x] As a developer I want to check and finalize this website so that I can complete this site
 
 
 
