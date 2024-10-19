@@ -294,13 +294,25 @@ There are strip undifined variables. as they are coming from different app I lef
 
 ## Manual Test ##
 
-**Navigation**
+**Navigation bar**
+
+![Navigation bar test](testing-image/manual-test/navbar.gif)
+
+**Search bar**
+
+![Search bar test](testing-image/manual-test/search.gif)
 
 **Home**
 
+![Home page test](testing-image/manual-test/home.gif)
 
+**Detail's page and Adding Products in a basket**
 
+![Detail page and adding product test](testing-image/manual-test/adding-bascket.gif)
 
+**Delivery Fee**
+
+![Delivery fee test](testing-image/manual-test/delivery-fee.gif)
 
 
 
