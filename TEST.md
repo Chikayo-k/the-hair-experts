@@ -131,6 +131,18 @@ All the lighthouse testing scores are high. Only the Best Practices score is bel
 
 ![Lighthouse test logout page](testing-image/lighthouse/edit-product.png)
 
+**News Letter Page**
+
+![Lighthouse test news letter page](testing-image/lighthouse/newsletter.png)
+
+**News Letter Success Message**
+
+![Lighthouse test success message page](testing-image/lighthouse/success.png)
+
+**News Letter Fail Message**
+
+![Lighthouse test success message page](testing-image/lighthouse/fail.png)
+
 # CSS Validator Test
 
 All the css files have passed.
