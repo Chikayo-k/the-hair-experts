@@ -347,7 +347,11 @@ There are strip undifined variables. as they are coming from different app I lef
 
 ![Product management test](testing-image/manual-test/product-mg.gif)
 
-**News Letter - Add/Edit/Delete**
+**News - Add/Edit/Delete**
+
+![News test](testing-image/manual-test/news-crud.gif)
+
+**News Letter**
 
 ![News letter test](testing-image/manual-test/news-letter.gif)
 
