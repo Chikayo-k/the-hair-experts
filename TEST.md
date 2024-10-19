@@ -74,6 +74,19 @@ As this is a warning, I decided to leave as is.
 ![HTML validation Edit Product Page](testing-image/html/edit-product-page-validation.png)
 
 
+**News Letter**
+
+![HTML validation News Letter Page](testing-image/html/newsletter.png)
+**News Letter Success Message Page**
+
+![HTML validation Success Meessage Page](testing-image/html/success.png)
+
+
+**News Letter Fail Message Page**
+
+![HTML validation Fail Meessage Page](testing-image/html/fail.png)
+
+
 ## Lighthouse testing
 
 All the lighthouse testing scores are high. Only the Best Practices score is below 80 this is because of cookie related issue with version 3 of stripe.
