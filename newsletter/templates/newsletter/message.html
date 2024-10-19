@@ -1,0 +1,28 @@
+{% extends "base.html"%}
+{% load static %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'newsletter/css/newsletter.css' %}">
+{% endblock %}
+
+{% block page_header %}
+   <div class="container">
+      <div class="row">
+          <div class="col">
+          </div>
+      </div>
+   </div>
+{% endblock %}
+
+{% block content %}        
+    <div class="newsletter-container">    
+        <h1>{{ title }}</h1>
+        <p class="mt-4">{{ message }}</p>
+        <a href="{% url 'home' %}" class="btn btn-black rounded-0 mt-5 text-center" aria-label="Back to home page">
+            <span class="">
+               <i class="fa-solid fa-house"></i>
+            </span>
+            <span class="text-uppercase">Return to home page</span>
+        </a>
+    </div>
+{% endblock %}
