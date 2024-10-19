@@ -302,6 +302,10 @@ There are strip undifined variables. as they are coming from different app I lef
 
 ![Search bar test](testing-image/manual-test/search.gif)
 
+**Sort**
+
+![Sort test](testing-image/manual-test/sort.gif)
+
 **Home**
 
 ![Home page test](testing-image/manual-test/home.gif)
@@ -314,5 +318,39 @@ There are strip undifined variables. as they are coming from different app I lef
 
 ![Delivery fee test](testing-image/manual-test/delivery-fee.gif)
 
+**Payment Form**
+
+![Payment form test](testing-image/manual-test/payment-form.gif)
+
+**Payment**
+
+![Payment test](testing-image/manual-test/payment.gif)
 
 
+**Recommendation**
+
+![Recommendation test](testing-image/manual-test/recommendation.gif)
+
+**Comment add/delete**
+
+![Comment test](testing-image/manual-test/comment.gif)
+
+**Register / Login / Logout**
+
+![Register login logout test](testing-image/manual-test/register-login-logout.gif)
+
+**Profile**
+
+![Profile test](testing-image/manual-test/profile.gif)
+
+**Product Management - Add/Edit/Delete**
+
+![Product management test](testing-image/manual-test/product-mg.gif)
+
+**News Letter - Add/Edit/Delete**
+
+![News letter test](testing-image/manual-test/news-letter.gif)
+
+**Footer**
+
+![Footer test](testing-image/manual-test/footer.gif)
