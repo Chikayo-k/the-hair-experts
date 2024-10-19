@@ -185,6 +185,11 @@ All the css files have passed.
 
 ![CSS validator test checkout.css](testing-image/css/checkout.png)
 
+**newsletter.css**
+
+![CSS validator test newsletter.css](testing-image/css/newsletter.png)
+
+
 ## JS Hint
 
 **base.js**
@@ -199,3 +204,77 @@ All the css files have passed.
 
 There are strip undifined variables. as they are coming from different app I left these as is.
 ![JSHint strip.js](testing-image/js/strip.png)
+
+## Testing User Stories ##
+
+### Sprint1 ###
+**Epic 1 Create the initial project setup**
+
+- [x]  As a Developer, I want to create the project structure so I can develop the Hair Experts website
+
+**Epic: 2 Create home page**
+
+- [x] As a user, I want to be able to open the home page and understand what is this website for.
+
+- [x] As a user, I want to have easy navigation so that I can move through the pages on the site.
+
+- [x] As a user, I want to browse the footer of the webpage so that I can see what's there.
+
+- [x] As a user, I want to see if the website has social media so that I can visit them.
+
+- [x] As a user, I want to be able to access the website on any device so that I can view the content.
+
+**Epic 3: Product setup**
+
+- [x] As a developer I want to create the websites database and add products
+
+- [x] As a user, I want to see the products page clearly so that it is easy to find products.
+
+- [x] As a user I want to click on the product image and have a details page open.
+
+### Sprint2 ###
+
+**Epic 4: Create Product Filtering and Sorting**
+
+- [x] As a user, I want to be able to sort products on the products page so that I see sort by different categories.
+
+**Epic 5: Create shopping basket functionality**
+
+- [x] As a user I want to be able to add items to my shopping basket so that I can see what is in the basket.
+
+- [x] As a user I want to be able to modify the items of my shopping basket so that I can change my order.
+
+**Epic 6: Create Notifications**
+
+- [x] As a user, I want to see a notification when I add, update and delete item to the shopping basket so I see what is in the basket
+
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+- [x]
+
+
+
+
+
+
+
