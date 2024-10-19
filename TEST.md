@@ -292,6 +292,12 @@ There are strip undifined variables. as they are coming from different app I lef
 
 - [x] As a developer I want to check and finalize this website so that I can complete this site
 
+## Manual Test ##
+
+**Navigation**
+
+**Home**
+
 
 
 
