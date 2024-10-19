@@ -152,15 +152,29 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	bottom: 0;
-    margin-top: 5%;
 }
 
 .social-media {
-	width: 30%;
+	width: 50%;
 }
 
 .social-media i {
 	padding-right: 3%;
+}
+
+.social-media i:hover{
+    opacity: 0.7;
+}
+
+.newsletter{
+    color: white;
+    text-decoration: none;
+}
+
+.newsletter:hover{
+    opacity: 0.7;
+    color: white;
+    text-decoration: none;
 }
 
 

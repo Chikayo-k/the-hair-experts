@@ -45,8 +45,8 @@ def subscribe(request):
             
             except ApiClientError as error:
                 logger.error(f'An exception occurred: {error.text}')       
-                messages.error(request, 'Failto subscribed. Try again!')
-                return redirect('subscribe_fail')
+                messages.error(request, 'Fail subscribed. Try again!')
+                return redirect('subscribe-fail')
 
     return render(request, 'newsletter/subscribe.html', {
         'form': NewsletterForm(),

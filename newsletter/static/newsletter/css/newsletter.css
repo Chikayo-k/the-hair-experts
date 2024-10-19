@@ -1,6 +1,6 @@
 .newsletter-container{
     min-height: 100vh;
-    margin-top: 30vh;
+    padding-top: 30vh;
     margin-left: 10%;
 }
 
@@ -14,7 +14,7 @@
 @media (max-width: 700px){
 
     .newsletter-container{
-     margin-top: 40vh;
+     padding-top: 40vh;
     }
 }
 
