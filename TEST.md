@@ -9,6 +9,19 @@ It contains all the testing information for the project The hair experts.
 Tested on mobile, tablet, laptop and desktop. 
 And all devices works as expected.
 
+## Browser Test
+
+Google Chrome  - Pass  
+Microsoft Edge  - Pass   
+Firefox - Pass    
+Brave - Pass  
+
+## Stripe Test
+
+All the payment and webhook success
+
+![Stripe test](testing-image/stripe/stripetest.png)
+
 ## Validation
 
 ### HTML Validation
