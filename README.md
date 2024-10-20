@@ -144,6 +144,10 @@ The project will consists of 17 amount of pages:
 - The news add page
 - The news edit page
 
+### Flow Diagram ###
+
+![Diagram](readme-image/diagram.jpg)
+
 ## User Experience (UX) ##
 
 ### Navigation bar ###
