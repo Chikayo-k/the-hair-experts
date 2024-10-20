@@ -262,4 +262,44 @@ Once a user has successfully created an account they can then login to their acc
 ![Login page](readme-image/ux/login-page.png)
 ![Login](readme-image/ux/login.png)
 
+
+After login, you can go to my profile from my account dropdown and see your delivery info and order history
+
+![Profile](readme-image/ux/profile.png)
+
+### Add / Edit / Delete item (admin) ###
+
 The website uses role based access for its users. When you login as an admin, product management will show up which controls the shop's stock items. 
+
+![Admin my account](readme-image/ux/admin-account.png)
+
+Admins can add a product from the product management page. when you log in as admin edit and delete button will be displayed on the product page or the product’s detail page.
+
+![Add item](readme-image/ux/add-item.png)
+
+The admin user can simply delete an item from the website with a simple click. This means that the site can be kept up to date so customers will always know what items are available.  
+
+![Edit Delete button](readme-image/ux/edit-delete-btn.png)
+
+Once click the edit button edit page will show up.
+
+![Edit Item](readme-image/ux/edit-item.png)
+
+### News Letter ###
+
+Users can subscribe to our newsletter. In order to subscribe users will input the email address and will be added to our mailing list. Once subscribed the user will receive our newsletter with the latest news and special offers. 
+
+![Subscribe](readme-image/ux/subscribe.png)
+
+**After subscription**
+
+If the user subscribes to the email successfully it will display a success page.  Otherwise it will display a subscription failed page and the user will be asked to try again. This lets users know if they have been added to the mail list.  
+
+![Subscribe success](readme-image/ux/subscribe-success.png)
+
+![Subscribe fail](readme-image/ux/subscribe-fail.png)
+
+This shows an email being successfully registered on mailchimp.
+It was tested with [temp email](https://temp-mail.org/en/) which allows you to create a temporary test email.
+
+![Mailchimp subscribed info](readme-image/ux/mailchimp.png)
