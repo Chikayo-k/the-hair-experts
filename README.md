@@ -303,3 +303,18 @@ This shows an email being successfully registered on mailchimp.
 It was tested with [temp email](https://temp-mail.org/en/) which allows you to create a temporary test email.
 
 ![Mailchimp subscribed info](readme-image/ux/mailchimp.png)
+
+### News Page ###
+
+News section. Users can view new news that has been added to the site. The Admin can update news from the add news button.
+Admin can add edit and delete the news when they are logged in. This benefits users as they can see the site's latest news. 
+
+![News](readme-image/ux/news.png)
+
+![Add News](readme-image/ux/add-news.png)
+
+### 404 Page ###
+
+When a user tries to select a page that doesn't exist they will see the custom 404 page. This is a benefit to users as it lets them know clearly the page they are trying to access doesn’t exist.
+
+![404](readme-image/ux/404.png)
