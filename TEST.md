@@ -156,6 +156,10 @@ All the lighthouse testing scores are high. Only the Best Practices score is bel
 
 ![Lighthouse test success message page](testing-image/lighthouse/fail.png)
 
+**404 Page**
+
+![404 Page test](testing-image/lighthouse/404.png)
+
 # CSS Validator Test
 
 All the css files have passed.
@@ -292,6 +296,12 @@ There are strip undifined variables. as they are coming from different app I lef
 
 - [x] As a developer I want to check and finalize this website so that I can complete this site
 
+## Python Test ##
+
+All the files I have created over the duration of the project I have tested and fixed all errors. I have not made any changes to the env file or the 404 handler as these are unused, which is why they still show as errors.
+
+![python test ](testing-image/python/python-test.png)
+
 ## Manual Test ##
 
 **Navigation bar**
@@ -358,3 +368,8 @@ There are strip undifined variables. as they are coming from different app I lef
 **Footer**
 
 ![Footer test](testing-image/manual-test/footer.gif)
+
+**404 Page**
+
+![404 page test](testing-image/manual-test/404.gif)
+
