@@ -65,7 +65,11 @@ This is the best place to focus on because 75.6% of the population in Ireland ar
 
 **Facebook Business Page**
 
-![alt text](readme-image/d-marketing/facebook.png)
+![Facebook page](readme-image/d-marketing/facebook.png)
+
+**Example post**
+
+![Example post](readme-image/d-marketing/example-post.png)
 
 #### Increase the Website’s SEO ####
 
@@ -86,3 +90,11 @@ Searched keywords with [Wordtracker](https://www.wordtracker.com/search?query=pr
 Used long tail keyword
 
 ![Keyword in meta tag](readme-image/d-marketing/keyword-meta.png)
+
+### Email Marketing ### 
+
+Website has a newsletter section where customers can subscribe and get our news and special offers. We use mailchimp to send our campaigns so that we can track 
+Open rates, click through rates and bounce rates.
+This is good because we can test our emails to see what works or does not work.
+Sending email to our customers also increases our website’s traffic and leads to calls to action.
+We will use facebook posts to increase subscribers.
