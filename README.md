@@ -148,6 +148,53 @@ The project will consists of 17 amount of pages:
 
 ![Diagram](readme-image/diagram.jpg)
 
+### Technologies Used ###
+
+Main technologies used:
+- HTML - Used to create the basic design of the website
+- CSS - Used to create the style of the webpages
+- JavaScript - Used to add client side features
+- Python - Used to build this project of backend
+- Django - Main framework of this project
+- Postgres - Used as the projects database
+- Heroku - Used to deploy the project
+- Gitpod - Used to develop the project
+- GitHub - Used to track the project progress
+- Bootstrap - Frontend framework
+- Stripe - Secure payment system
+- Amazon S3 - for storing media and static files for the website
+- Mail chimp for storing using emails as part of the subscription service.
+
+## Agile Methodology ##
+
+**Overview**
+
+The Hair Experts application was developed using the Agile methodology.
+Using GitHub projects, I created Epics, User Stories and Milestones to track all my work.
+
+- I used Sprints and broke the work into Epics (large stories) and these were broken down into smaller User Stories which were broken down into task and acceptance criteria. 
+- The User Story would be finished when all the tasks had been completed.
+To track where work belongs I used labels.
+- Labels let me link my User Story and Epics and this can be seen visually on the board.
+- Each Sprint had its own board for tracking work. With three columns.
+- Once all tasks that are linked with the Sprint have been completed the Sprint can be closed off.
+
+To do – these are tasks taken from the backlog into the sprint that has not yet been started.
+
+In Progress – These are the current tasks I am working on.
+
+Done – These are the tasks I have completed.
+
+**Sprints**
+
+I had 4 sprints which included all the work listed in the Epics and user Story section. I Have included links to the sprint boards in GitHub projects and a screenshot of the finished Sprint board.
+
+All the details click here [User Story Test - TEST.md](TEST.md#user-stories-test)
+
+More details, you can check form [here (The Hair Expert Github Page)](https://github.com/Chikayo-k/the-hair-experts/projects?query=is%3Aopen) 
+
+
+
 ## User Experience (UX) ##
 
 ### Navigation bar ###
