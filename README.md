@@ -447,3 +447,51 @@ A Git fork is when an existing repository has a copy taken of it and it becomes 
 - Search for a repository name and connect to link up the Heroku App to the GitHub - repository code.
 - Use the Manual deploy option and click the Deploy Branch button.
 - When the App is successfully deployed, the View button will show up. The button is the deployed link.
+
+### Amazon S3 ###
+
+S3 is a cloud based storage service which we is used for storing the projects the images and static files (CSS)
+
+Steps to set up AWS S3:
+
+- Create an AWS amazon account (personal) and locate the S3 through the search bar.
+- Create a new bucket using the same name as the Heroku app that was created.
+- Set the bucket to be public and allow public access. Acknowledge that the buckets and its contents will be public.
+- Once created select the bucket and navigate to properties and select the static hosting sections. Use this bucket to host a website. For the index and error html use the default values.
+- Go to the permission tab and add a new CORS configuration that will let the Heroku and bucket communicate.
+- Generate a S3 Bucket policy this is to create a security policy for the bucket.
+- In the access control list set the public access to everyone.
+- Setup IAM (Identity and management) section.
+- Create a group for your bucket and a policy using the S3 full access policy.
+- Attach the policy
+- Create the user for the group and policy use the project's name as the user.
+Add the user to the group where you have the policy attached
+- Download the .csv file containing the users access key and the secret access key these are used to authenticate in the Django app.
+- Install boto3 and Django-storages and freeze them into the requirements.txt file.
+- Set up the connections between Heroku and S3 in the settings.py file.
+- Add the AWS keys to the Heroku config vars.
+- Set the static files and images location for S3.
+- A static folder will now be created in S3 with the project's static files. 
+
+### MailChimp ###
+
+As part of developing the hair experts I included the Mailchimp service to set up a newsletter subscription service. This allows users to subscribe to our newsletter.
+
+Steps:
+- Create a new app in the Django project. I called my app Newsletter.
+- Add the new app at the project level.
+- Add the new URLs for the app in the urls.py file.
+- Create the new html and css files for the subscription form. 
+- Add the Mailchimp packages for Django to let the project connect to the API’s.
+- Create a Mailchimp account.
+- Open the account API tab and select Extras.
+- Select API keys
+- Create a new API key and save it to add to the project.
+- Use the region you are in it can be seen on the url in the format us1.
+- Add these to your settings.py
+- Include this import in the view: from mailchimp_marketing import Client
+- Check the deployment url and append /marketing/ping/
+- The response is “Everything’s Chimpy”
+- Create your audience and copy the Audience ID and add it under settings.py with the other Mailchimp API’s.
+- Once completed when a user subscribes on the form it will be registered in the Mailchimp app.
+
