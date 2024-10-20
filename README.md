@@ -12,30 +12,30 @@ The project was developed using Django, Python, JavaScript, HTML5, CSS and a Pos
 
 The project was developed using Agile methodologies. This was tracked using Githubs built in boards so I could create Sprints to track the Epics and User Stories.
 
-## Project Goals ##
+## Project Goals 
 
-### Project Goal ###
+### Project Goal 
 
 The goal of the project is to create a full stack website for The Hair Experts built and developed using the Django framework, Bootstrap and CSS. Using Stripe as a payment system and to be deployed on the internet using Heroku and AWS S3 for storing files.
 
 The project was designed to be easy to use and have a simple flow from product searching to product purchasing. 
 
-### User Goals ###
+### User Goals 
 
 - As a site user I want to shop and browse for hair care products and items.
 - As a site user I want to be able to create an account on the website which will track my purchase history and keep track of the wishlist I have created.
 - As a site user I want to be able to leave reviews/comments on products I have bought.
 - As a site user I want to buy products securely. 
 
-### Site Owner Goals ###
+### Site Owner Goals 
 
 - As a site owner I want to have a platform to sell hair care products to people in Ireland, England and Europe.
 - As a site owner I want a site that is known for its reliability.
 - As a site owner I want a site that can grow.
 
-## Design ##
+## Design 
 
-### Colour Schemes ###
+### Colour Schemes 
 
 [Color Hunt](https://colorhunt.co/palette/2228312d4059ff5722eeeeee)
 
@@ -47,34 +47,34 @@ There was a low accessibility score due to the button contrast ratio.  I changed
 
 ![button colour](readme-image/button-colour.png)
 
-### Fonts ###
+### Fonts 
 
 Logo: font-family: "Playfair Display", serif;
 
-### Favicon ###
+### Favicon 
 
 Used [Canva](https://www.canva.com/) to create
 ![favicon](readme-image/favicon.png)
 
-## E-Commerce Business Model ##
+## E-Commerce Business Model 
 
 **Business model: B2C** 
 
-### Target Audience ###
+### Target Audience 
 
 From 20 to 60 year old women who live in Ireland that are also interested in hair products. 
 
 ![Target Market Example](readme-image/d-marketing/target-market.png)
 
-### Vision ###
+### Vision 
 
 To provide customers with top-of-the-range hair solutions and the products that help their hair health reach its full potential.
 
-### Objectives ### 
+### Objectives 
 
 The Main objective is to increase profit streams from the online store and expand the market to other demographics and businesses. 
 
-### Strategy ###
+### Strategy 
 
 **To achieve this we need to:**
 
@@ -82,9 +82,9 @@ The Main objective is to increase profit streams from the online store and expan
 - Increase Facebook followers
 - Increase news letter subscribers
 
-### Digital Marketing ### 
+### Digital Marketing 
 
-#### Facebook ####
+#### Facebook 
 
 The hair experts will mainly use facebook to advertise our business.
 This is the best place to focus on because 75.6% of the population in Ireland are using it. We will plan to upload to our Facebook at least twice a day, one for around lunch time and one for before bed time when our target audience who are busy during the day might have a better chance to see our page. We will research facebook insights to monitor clicks and engagement rates to see how effectively our facebook page and posts are working. We will also take advantage of Facebook advertising to reach as many people as possible. This can be run cheaply by setting a target audience for specific people to advertise. As this e-commerce site grows, running YouTube and google ads would be the next step to increase the company’s online presence which will help to increase our profit.
@@ -97,7 +97,7 @@ This is the best place to focus on because 75.6% of the population in Ireland ar
 
 ![Example post](readme-image/d-marketing/example-post.png)
 
-#### Increase the Website’s SEO ####
+#### Increase the Website’s SEO 
 
 We have a news section that can be updated often. 
 We will use keywords that are related to hair products and update on a weekly basis. Topics are something related to hair like how to keep your hair healthy and tips to keep your hair shiny.
@@ -107,7 +107,7 @@ This will increase the site’s activity and improve engagement with our custome
 
 Upload the contents that are associated mainly with hair and beauty and also sometimes topics that are using current trending keywords to increase the traffic a few times a week. Google Keyword Planner and Google trends are useful tools to find suitable keywords.
 
-### Keyword research ###
+### Keyword research 
 
 Searched keywords with [Wordtracker](https://www.wordtracker.com/search?query=professional%20hair%20products%20for%20women) and [Keyserch](https://www.keysearch.co/)
 
@@ -117,7 +117,7 @@ Used long tail keyword
 
  ![Keyword in meta tag](readme-image/d-marketing/keyword-meta.png)
 
-### Email Marketing ### 
+### Email Marketing 
 
 Website has a newsletter section where customers can subscribe and get our news and special offers. We use mailchimp to send our campaigns so that we can track 
 Open rates, click through rates and bounce rates.
@@ -125,7 +125,7 @@ This is good because we can test our emails to see what works or does not work.
 Sending email to our customers also increases our website’s traffic and leads to calls to action.
 We will use facebook posts to increase subscribers.
 
-## Project Structure ##
+## Project Structure 
 
 The project will consists of 17 amount of pages:
 
@@ -147,11 +147,11 @@ The project will consists of 17 amount of pages:
 - The news add page
 - The news edit page
 
-### Flow Diagram ###
+### Flow Diagram 
 
 ![Diagram](readme-image/diagram.jpg)
 
-### Technologies Used ###
+### Technologies Used 
 
 Main technologies used:
 - HTML - Used to create the basic design of the website
@@ -168,7 +168,7 @@ Main technologies used:
 - Amazon S3 - for storing media and static files for the website
 - Mail chimp for storing using emails as part of the subscription service.
 
-## Agile Methodology ##
+## Agile Methodology 
 
 **Overview**
 
@@ -198,9 +198,9 @@ More details, you can check form [here (The Hair Expert Github Page)](https://gi
 
 
 
-## User Experience (UX) ##
+## User Experience (UX) 
 
-### Navigation bar ###
+### Navigation Bar
 Navigation bar contains the links to the different website sections. The main page is the product page which also has a dropdown feature where you can select categories. You also have the search bar where you can search specific products by typing keywords in the box. The logo can be used to navigate to the home page. A user can easily access the other pages on the site to view Hair Products, Electrical Items and News. The layout will allow users to see everything the website has to offer at a glance.
 
 The navigation bar features a news tab so that users can stay up to date with the website's latest news as well as a search bar that lets user’s search for an item directly.
@@ -220,7 +220,7 @@ When the user selects the electric section and selects only the hair dryer then 
 
 ![Filter](readme-image/ux/filter.png)
 
-### Home page ###
+### Home Page 
 
 The website's home page showcases the main image or Hero image it is intended to grab the users attention.The shop now button goes directly to the product page that renders all the products this shop sells.
 
@@ -237,31 +237,31 @@ Clicking on the shampoo and conditioner section will display the set products be
 
 ![Category](readme-image/ux/category.png)
 
-### Footer ###
+### Footer
 
 The foot sections mark the bottom of the page. It contains links to the hair experts social media sites which users can use to visit our social sites to learn more about us and keep updated on our latest news.
 
 ![Footer](readme-image/ux/footer.png)
 
-#### Help Center ####
+#### Help Center 
 
 The help centre section gives the user the option to reach out to a member of the team for help if they need it. This lets the user know we will listen to their problems if they have one and try and help them solve it
 
 ![Help Center](readme-image/ux/help-center.png)
 
-### Product Page ###
+### Product Page 
 
 Product page shows product pictures,product name and price. Clicking on the picture can take the user directly to the product’s detail page. When the admin user is logged in it will display an edit and delete button that shows that the admin can control their stock from the product page. This is beneficial for users as the site 
 
 ![Product Page](readme-image/ux/produc.png)
 
-#### Sorting feature ####
+#### Sorting Feature 
 
 Sorting functionality on the products. Users can sort based on the sorting options below to help them find what they are looking for quicker.
 
 ![Sorting](readme-image/ux/sorting.png)
 
-### Detail page ###
+### Detail Page 
 
 Displays details of product. Users can view the product's details and see if it is the right fit for their needs.
 
@@ -269,7 +269,7 @@ On the detail page when the admin user is logged in they can see the edit and de
 
 ![Dtail](readme-image/ux/detail.png)
 
-#### Review ####
+#### Review 
 
 All users can view comments that have been left on product’s.
 But the delete button is only visible to the user that wrote the comment.
@@ -277,7 +277,7 @@ Also when the user is logged in they can see the add comment for a product butto
 
 ![Review](readme-image/ux/review.png)
 
-### Shopping Bag ###
+### Shopping Bag 
 
 As the user shops on the site they can add products to their basket. When a product is added to the basket it will display the quantity of the product they have added as well as the price. This will let users know how much they are spending and how many items they are buying. 
 User can also remove items from their basket this will decrease the price and the quantity.
@@ -285,7 +285,7 @@ This makes it easy for users to make changes inside the shopping bag.
 
 ![Shopping bag](readme-image/ux/shopping-bag.png)
 
-#### Recommendations ####
+#### Recommendations 
 
 In the shoppoing bag they will see a recommendation for products at the bottom of the page. This will display recomendded products that might interest the user.
 
@@ -295,7 +295,7 @@ When the Read Me button on the recommendation section is clicked a modal opens a
 
 ![Click the recommendation button](readme-image/ux/click-recommendation.png)
 
-### Checkout page ###
+### Checkout page 
 
 Once the user has added the products to the basket. The user will see a form where they fill out their personal details including their address. This section also includes the secure payment form where users can input their card details to pay for their purchase.
 
@@ -303,19 +303,19 @@ This will benefit users as they can enter their personal details so they can ens
 
 ![Checkout](readme-image/ux/checkout.png)
 
-#### After complete order button is pressed ####
+#### After complete order button is pressed 
 
 When the user confirms their order they will see a spinning wheel this lets the user know their order is being processed. 
 
 ![Spinner](readme-image/ux/spinner.png)
 
-#### Confirmation message after the shopping ####
+#### Confirmation message after the shopping 
 
 When the purchase has been successful the user will see the confirmation pop up. This contains all the information the users need to know about their order.  This information benefits the user if they have any issue or need to find out anything about the order. 
 
 ![Confirmation](readme-image/ux/confirmation.png)
 
-### Sign Up ###
+### Sign Up 
 
 Users can sign up and create an account for the website. Once a user has created their account they can access other features like adding and deleting comments. 
 
@@ -331,7 +331,7 @@ When creating their account the user will be asked to confirm their email addres
 
 After confirm your email, you can login.
 
-## Log In ##
+## Log In 
 
 Once a user has successfully created an account they can then login to their account through the login section of the website. 
 
@@ -343,7 +343,7 @@ After login, you can go to my profile from my account dropdown and see your deli
 
 ![Profile](readme-image/ux/profile.png)
 
-### Add / Edit / Delete item (admin) ###
+### Add / Edit / Delete item (admin) 
 
 The website uses role based access for its users. When you login as an admin, product management will show up which controls the shop's stock items. 
 
@@ -361,7 +361,7 @@ Once click the edit button edit page will show up.
 
 ![Edit Item](readme-image/ux/edit-item.png)
 
-### News Letter ###
+### News Letter 
 
 Users can subscribe to our newsletter. In order to subscribe users will input the email address and will be added to our mailing list. Once subscribed the user will receive our newsletter with the latest news and special offers. 
 
@@ -380,7 +380,7 @@ It was tested with [temp email](https://temp-mail.org/en/) which allows you to c
 
 ![Mailchimp subscribed info](readme-image/ux/mailchimp.png)
 
-### News Page ###
+### News Page 
 
 News section. Users can view new news that has been added to the site. The Admin can update news from the add news button.
 Admin can add edit and delete the news when they are logged in. This benefits users as they can see the site's latest news. 
@@ -389,37 +389,58 @@ Admin can add edit and delete the news when they are logged in. This benefits us
 
 ![Add News](readme-image/ux/add-news.png)
 
-### 404 Page ###
+### 404 Page 
 
 When a user tries to select a page that doesn't exist they will see the custom 404 page. This is a benefit to users as it lets them know clearly the page they are trying to access doesn’t exist.
 
 ![404](readme-image/ux/404.png)
 
-## Future Features ## 
+## Future Features 
 
 - A future feature will be to allow users to request specific items. 
 - Add more payment methods so as not to exclude customers.
 
-## Testing ##
+## Testing 
 
-All the test are in the [TEST.md](TEST.md)
+All the test details are in the [TEST.md](TEST.md)
+
+## Bugs / Errors / Issues/
+
+**Data issue**
+
+As I had input all product data myself through the admin panel, I had to go through different steps when I was transferring it. I used the dumpdata and load data commands to transfer the contents from sqlite to postgres.
+
+dump command:  
+python3 manage.py dampdata products.Category > categories.json  
+
+And loading:  
+python3 manage.py loaddata categories.json
+
+**Version issue**
+
+Due to an issue with the latest version of python that was installed on heroku and the version of allauth that was installed (setuptools is removed from the latest python version) I needed to install a specific version of allauth to resove a deployment issue. I used the below command to use a specific version of django-allauth.
+
+pip3 install django-allauth==0.50.0  
+pip3 freeze > requirements.txt
+
+![Deployment Issue](readme-image/deployment-issue.png)
 
 
-## Deployment ##
+## Deployment 
 
-### Clone ###
+### Clone 
 - Clicking on the code dropdown in the main repository.
 - Copying the SSH URL
 - I opened my git bash terminal and cloned the project to a folder on my desktop.
 
-### Fork ###
+### Fork
 
 A Git fork is when an existing repository has a copy taken of it and it becomes its new repository no longer being attached to or tracking the commits of the original repository. I used the original project I had cloned at the start. I could not fork the project the repository as I am the owner but the steps to fork are
 
 - Open the repository on GitHub and select the Fork dropdown
 - Click fork you will have a full copy of the repository.
 
-### Heroku ###
+### Heroku 
 
 - Create requirements for deployment on the project file.
 - Create a Heroku account and set it up if needed.
@@ -455,7 +476,7 @@ A Git fork is when an existing repository has a copy taken of it and it becomes 
 - Use the Manual deploy option and click the Deploy Branch button.
 - When the App is successfully deployed, the View button will show up. The button is the deployed link.
 
-### Amazon S3 ###
+### Amazon S3 
 
 S3 is a cloud based storage service which we is used for storing the projects the images and static files (CSS)
 
@@ -501,4 +522,3 @@ Steps:
 - The response is “Everything’s Chimpy”
 - Create your audience and copy the Audience ID and add it under settings.py with the other Mailchimp API’s.
 - Once completed when a user subscribes on the form it will be registered in the Mailchimp app.
-
