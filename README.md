@@ -122,6 +122,28 @@ This is good because we can test our emails to see what works or does not work.
 Sending email to our customers also increases our website’s traffic and leads to calls to action.
 We will use facebook posts to increase subscribers.
 
+## Project Structure ##
+
+The project will consists of 17 amount of pages:
+
+- The home page 
+- The product page 
+- The add item page
+- The details page 
+- The edit item page
+- The checkout page 
+- The checkout success page
+- The shopping bag page
+- The newsletter page 
+- The newsletter success page 
+- The newsletter fail page 
+- The login page 
+- The logout page
+- The profile page
+- The news page
+- The news add page
+- The news edit page
+
 ## User Experience (UX) ##
 
 ### Navigation bar ###
@@ -318,3 +340,11 @@ Admin can add edit and delete the news when they are logged in. This benefits us
 When a user tries to select a page that doesn't exist they will see the custom 404 page. This is a benefit to users as it lets them know clearly the page they are trying to access doesn’t exist.
 
 ![404](readme-image/ux/404.png)
+
+## Future Features ## 
+
+- A future feature will be to allow users to request specific items. 
+- Add more payment methods so as not to exclude customers.
+
+
+
