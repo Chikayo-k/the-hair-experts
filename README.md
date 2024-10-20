@@ -30,6 +30,16 @@ The project was designed to be easy to use and have a simple flow from product s
 - As a site owner I want a site that is known for its reliability.
 - As a site owner I want a site that can grow.
 
+## Design ##
+
+**Colour Schemes**
+![Colour scheme](readme-image/colour-schemes.png)
+
+![button colour](readme-image/button-colour.png)
+
+There was a low accessibility score due to the button contrast ratio.  I changed the buttons background lightness colour to  #AD6200 so that users can see the button more clearly. 
+
+
 ## E-Commerce Business Model ##
 
 **Business model: B2C** 
