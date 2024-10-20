@@ -218,3 +218,48 @@ In the shoppoing bag they will see a recommendation for products at the bottom o
 When the Read Me button on the recommendation section is clicked a modal opens and displays details of the recommendation product. Clicking the picture of the product brings the user to the product detail page.
 
 ![Click the recommendation button](readme-image/ux/click-recommendation.png)
+
+### Checkout page ###
+
+Once the user has added the products to the basket. The user will see a form where they fill out their personal details including their address. This section also includes the secure payment form where users can input their card details to pay for their purchase.
+
+This will benefit users as they can enter their personal details so they can ensure their products will be sent to the correct address and person. The secure payment allows users to safely enter card details and make payments. 
+
+![Checkout](readme-image/ux/checkout.png)
+
+#### After complete order button is pressed ####
+
+When the user confirms their order they will see a spinning wheel this lets the user know their order is being processed. 
+
+![Spinner](readme-image/ux/spinner.png)
+
+#### Confirmation message after the shopping ####
+
+When the purchase has been successful the user will see the confirmation pop up. This contains all the information the users need to know about their order.  This information benefits the user if they have any issue or need to find out anything about the order. 
+
+![Confirmation](readme-image/ux/confirmation.png)
+
+### Sign Up ###
+
+Users can sign up and create an account for the website. Once a user has created their account they can access other features like adding and deleting comments. 
+
+![Signup](readme-image/ux/signup.png)
+
+When creating their account the user will be asked to confirm their email address, this lets the user know they have entered the correct email address.  
+
+![Verify email](readme-image/ux/verify-email.png)
+
+![Confirmation email](readme-image/ux/confirmation.png)
+
+![alt text](readme-image/ux/confirm-email.png)
+
+After confirm your email, you can login.
+
+## Log In ##
+
+Once a user has successfully created an account they can then login to their account through the login section of the website. 
+
+![Login page](readme-image/ux/login-page.png)
+![Login](readme-image/ux/login.png)
+
+The website uses role based access for its users. When you login as an admin, product management will show up which controls the shop's stock items. 
