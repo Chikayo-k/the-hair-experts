@@ -160,7 +160,7 @@ All the lighthouse testing scores are high. Only the Best Practices score is bel
 
 ![404 Page test](testing-image/lighthouse/404.png)
 
-# CSS Validator Test
+## CSS Validator Test
 
 All the css files have passed.
 
@@ -209,9 +209,9 @@ All the css files have passed.
 There are strip undifined variables. as they are coming from different app I left these as is.
 ![JSHint strip.js](testing-image/js/strip.png)
 
-## User Stories Test ##
+## User Stories Test 
 
-### Sprint 1 ###
+### Sprint 1 
 **Epic 1 Create the initial project setup**
 
 - [x]  As a Developer, I want to create the project structure so I can develop the Hair Experts website
@@ -236,7 +236,7 @@ There are strip undifined variables. as they are coming from different app I lef
 
 - [x] As a user I want to click on the product image and have a details page open.
 
-### Sprint 2 ###
+### Sprint 2 
 
 **Epic 4: Create Product Filtering and Sorting**
 
@@ -252,7 +252,7 @@ There are strip undifined variables. as they are coming from different app I lef
 
 - [x] As a user, I want to see a notification when I add, update and delete item to the shopping basket so I see what is in the basket
 
-### Sprint 3 ###
+### Sprint 3 
 
 **Epic 7: Create checkout app**
 
@@ -270,7 +270,7 @@ There are strip undifined variables. as they are coming from different app I lef
 
 - [x] As a user, I want to have a personalized user profile so that I can check my order history, confirmation, and payment information.
 
-### Sprint 4 ###
+### Sprint 4 
 
 **Epic 9: Create Admin Profile**
 
@@ -296,13 +296,13 @@ There are strip undifined variables. as they are coming from different app I lef
 
 - [x] As a developer I want to check and finalize this website so that I can complete this site
 
-## Python Test ##
+## Python Test 
 
 All the files I have created over the duration of the project I have tested and fixed all errors. I have not made any changes to the env file or the 404 handler as these are unused, which is why they still show as errors.
 
 ![python test ](testing-image/python/python-test.png)
 
-## Manual Test ##
+## Manual Test 
 
 **Navigation bar**
 

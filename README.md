@@ -117,6 +117,15 @@ Used long tail keyword
 
  ![Keyword in meta tag](readme-image/d-marketing/keyword-meta.png)
 
+ **Sitemap and Robots.txt**
+ 
+ Having a sitemap and robots.txt inside the project will incraese the websites SEO (search engine optimization). The sitemap.xml gives search engines access to the site content quickly. When new features or pages have been added updating the site map lets the search engine know.
+ 
+ The robots.txt file is to restrict the search engines access to sensitive pages or locations on the site. When using robot.txt files it is important to remember that not everything should be exposed like the pages that contain personal information like user names and payment details. 
+
+ [sitemap](sitemap.xml)  
+ [robots.txt](robots.txt)
+
 ### Email Marketing 
 
 Website has a newsletter section where customers can subscribe and get our news and special offers. We use mailchimp to send our campaigns so that we can track 
