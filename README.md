@@ -112,7 +112,7 @@ Searched keywords with [Wordtracker](https://www.wordtracker.com/search?query=pr
 
 Used long tail keyword
 
-![Keyword in meta tag](readme-image/d-marketing/keyword-meta.png)
+ ![Keyword in meta tag](readme-image/d-marketing/keyword-meta.png)
 
 ### Email Marketing ### 
 
@@ -127,5 +127,48 @@ We will use facebook posts to increase subscribers.
 ### Navigation bar ###
 Navigation bar contains the links to the different website sections. The main page is the product page which also has a dropdown feature where you can select categories. You also have the search bar where you can search specific products by typing keywords in the box. The logo can be used to navigate to the home page. A user can easily access the other pages on the site to view Hair Products, Electrical Items and News. The layout will allow users to see everything the website has to offer at a glance.
 
+The navigation bar features a news tab so that users can stay up to date with the website's latest news as well as a search bar that lets user’s search for an item directly.
 
 
+![Navigation bar](readme-image/ux/navigation.png)
+
+**dropdown**
+
+The Navigation bar allows users to refine their search. They can browse all the site products. They can choose to select just hair products that will show the user what they offer. 
+
+![Navigatrion dropdown](readme-image/ux/navigation1.png)
+
+**Filter** 
+
+When the user selects the electric section and selects only the hair dryer then this will be all that is displayed. This offers the user the ability to refine their search to find whatever it is they are looking for.
+
+![Filter](readme-image/ux/filter.png)
+
+### Home page ###
+
+The website's home page showcases the main image or Hero image it is intended to grab the users attention.The shop now button goes directly to the product page that renders all the products this shop sells.
+
+**Deliverly charge**
+
+When a user reaches 50 euro free delivery will be applied to their shipping. The amount displayed will change depending on what is inside the basket. Once the limit has been reached it will be set to free shipping. This benefits the user so they can decide if they want to spend more.
+
+![Home](readme-image/ux/home.png)
+
+On the home page, the products have been categorised into three sections. This will make it easy to find products.
+
+Memo:
+Clicking on the shampoo and conditioner section will display the set products because the set includes both shampoo and conditioner
+
+![Category](readme-image/ux/category.png)
+
+### Footer ###
+
+The foot sections mark the bottom of the page. It contains links to the hair experts social media sites which users can use to visit our social sites to learn more about us and keep updated on our latest news.
+
+![Footer](readme-image/ux/footer.png)
+
+#### Help Center ####
+
+The help centre section gives the user the option to reach out to a member of the team for help if they need it. This lets the user know we will listen to their problems if they have one and try and help them solve it
+
+![Help Center](readme-image/ux/help-center.png)
