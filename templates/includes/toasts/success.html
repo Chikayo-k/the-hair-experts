@@ -24,7 +24,7 @@
                 </a>
                 {% else %}
                 <a href="{%url 'detail' item.product.id%}" aria-label="Go to {{ item.product.name }} detail page">
-                  <img class="img-fluid roundded  table-pic" src="/media/noimg.jpg" alt="No product image">
+                  <img class="img-fluid roundded  table-pic" src="{{ MEDIA_URL }}no-img.jpg" alt="No product image">
                 <a href="{%url 'detail' item.product.id%}">
                 {% endif %} 
               </div>
