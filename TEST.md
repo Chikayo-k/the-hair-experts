@@ -18,9 +18,9 @@ Brave - Pass
 
 ## Stripe Test
 
-All the payment and webhook success
+All the payments and webhooks has been successfully tested.
 
-![Stripe test](testing-image/stripe/stripetest.png)
+![Stripe test](image.png)
 
 ## Validation
 
