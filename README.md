@@ -189,7 +189,7 @@ Done – These are the tasks I have completed.
 
 I had 4 sprints which included all the work listed in the Epics and user Story section. I Have included links to the sprint boards in GitHub projects and a screenshot of the finished Sprint board.
 
-All the details click here [User Story Test - TEST.md](TEST.md#user-stories-test)
+Click here to check details [User Story Test - TEST.md](TEST.md#user-stories-test)
 
 More details, you can check form [here (The Hair Expert Github Page)](https://github.com/Chikayo-k/the-hair-experts/projects?query=is%3Aopen) 
 
@@ -398,4 +398,52 @@ When a user tries to select a page that doesn't exist they will see the custom 4
 - Add more payment methods so as not to exclude customers.
 
 
+## Deployment ##
 
+### Clone ###
+- Clicking on the code dropdown in the main repository.
+- Copying the SSH URL
+- I opened my git bash terminal and cloned the project to a folder on my desktop.
+
+### Fork ###
+
+A Git fork is when an existing repository has a copy taken of it and it becomes its new repository no longer being attached to or tracking the commits of the original repository. I used the original project I had cloned at the start. I could not fork the project the repository as I am the owner but the steps to fork are
+
+- Open the repository on GitHub and select the Fork dropdown
+- Click fork you will have a full copy of the repository.
+
+### Heroku ###
+
+- Create requirements for deployment on the project file.
+- Create a Heroku account and set it up if needed.
+- Click the Create New App button.
+- Name the App and select a region then click Create App.
+- Click the settings tab and create the Config Vars.
+- Config vars should include:
+
+  AWS_ACCESS_KEY_ID  
+  AWS_SECRET_ACCESS_KEY  
+  DATABASE_URL  
+  EMAIL_HOST  
+  EMAIL_HOST_PASS   
+  EMAIL_HOST_USER  
+  SECRET_KEYS  
+  STRIPE_PUBLIC_KEY  
+  STRIPE_SECRET_KEY  
+  STRIPE_WEBHOOK_SECRET  
+  USE_AWS  
+  MAILCHIMP_API_KEY  
+  MAILCHIMP_MARKETING_AUDIENCE_ID  
+  MAILCHIMP_REGION  
+
+- Install a production-ready web server for Heroku.
+- Add requirements.txt file.
+- Create a Procfile file in the project and execute to the Django project.
+- Set setting.py where it is necessary.
+- Add buildpack select node.js and save changes.
+- Go back to the deploy section.
+- Choose the deployment method for GitHub.
+- Click the Connect to GitHub button.
+- Search for a repository name and connect to link up the Heroku App to the GitHub - repository code.
+- Use the Manual deploy option and click the Deploy Branch button.
+- When the App is successfully deployed, the View button will show up. The button is the deployed link.
