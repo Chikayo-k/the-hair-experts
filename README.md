@@ -151,6 +151,10 @@ The project will consists of 17 amount of pages:
 
 ![Diagram](readme-image/diagram.jpg)
 
+### Database Design
+
+![Database Design](readme-image/database-design.png)
+
 ### Technologies Used 
 
 Main technologies used:
