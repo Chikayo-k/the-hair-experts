@@ -35,6 +35,10 @@ The project was designed to be easy to use and have a simple flow from product s
 
 ## Design 
 
+### Wireframe
+
+[Wireframe - Desktop](readme-image/wireframe/wireframe-desktop.jpg)
+
 ### Colour Schemes 
 
 [Color Hunt](https://colorhunt.co/palette/2228312d4059ff5722eeeeee)
