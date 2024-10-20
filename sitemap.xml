@@ -9,197 +9,202 @@
 
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/?category=shampoo</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/?category=conditioner</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/?category=set</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/?category=hair_oil</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/?category=shampoo,conditioner,set,hair_oil</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/?category=hair_dryer</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/?category=hair_iron</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/?category=hair_dryer,hair_iron</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/news/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/accounts/login/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/shopping_bag/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/?category=shampoo,conditioner,set</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://the-hair-experts-530953dace3d.herokuapp.com/newsletter/</loc>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/40/</loc>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/12/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/8/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/7/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/10/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/7/</loc>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/15/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/6/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/5/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/6/</loc>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/16/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/11/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/17/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/3/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/18/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/19/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/20/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/21/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/22/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/25/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/33/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/23/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/products/24/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://the-hair-experts-530953dace3d.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2024-10-15T18:56:23+00:00</lastmod>
+  <lastmod>2024-10-20T20:59:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
