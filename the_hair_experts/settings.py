@@ -31,6 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEYS', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 
 ALLOWED_HOSTS = ['8000-chikayok-thehairexperts-bic3z94aeho.ws.codeinstitute-ide.net', # noqa
@@ -90,6 +91,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',  # Required (allauth) # noqa
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'shopping_bag.contexts.shopping_bag_contents',
             ],
             'builtins': [
