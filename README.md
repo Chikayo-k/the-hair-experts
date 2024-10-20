@@ -2,6 +2,9 @@
 
 ![Am I responvive image](readme-image/amiresponsive.png)
 
+[Go to the website](https://the-hair-experts-530953dace3d.herokuapp.com/)  
+[Go to the Github](https://github.com/Chikayo-k/the-hair-experts)
+
 The Hair Experts is the fifth project in the Code Institute Diploma in Full Stack Software Development.
 It is a B2C ( Business to Consumer) full stack E-commerce website that offers a range of hair care products and treatments. User’s can create accounts, browse through a selected range of hair care products and items, add them to their basket and purchase them. Users also have the ability to create wishlists and leave comments on products. 
 
@@ -396,6 +399,10 @@ When a user tries to select a page that doesn't exist they will see the custom 4
 
 - A future feature will be to allow users to request specific items. 
 - Add more payment methods so as not to exclude customers.
+
+## Testing ##
+
+All the test are in the [TEST.md](TEST.md)
 
 
 ## Deployment ##
