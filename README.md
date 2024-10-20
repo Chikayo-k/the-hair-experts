@@ -172,3 +172,49 @@ The foot sections mark the bottom of the page. It contains links to the hair exp
 The help centre section gives the user the option to reach out to a member of the team for help if they need it. This lets the user know we will listen to their problems if they have one and try and help them solve it
 
 ![Help Center](readme-image/ux/help-center.png)
+
+### Product Page ###
+
+Product page shows product pictures,product name and price. Clicking on the picture can take the user directly to the product’s detail page. When the admin user is logged in it will display an edit and delete button that shows that the admin can control their stock from the product page. This is beneficial for users as the site 
+
+![Product Page](readme-image/ux/produc.png)
+
+#### Sorting feature ####
+
+Sorting functionality on the products. Users can sort based on the sorting options below to help them find what they are looking for quicker.
+
+![Sorting](readme-image/ux/sorting.png)
+
+### Detail page ###
+
+Displays details of product. Users can view the product's details and see if it is the right fit for their needs.
+
+On the detail page when the admin user is logged in they can see the edit and delete button next to rating. This allows the admin control over the shop's stocks and users will always be kept informed on what products we have available.
+
+![Dtail](readme-image/ux/detail.png)
+
+#### Review ####
+
+All users can view comments that have been left on product’s.
+But the delete button is only visible to the user that wrote the comment.
+Also when the user is logged in they can see the add comment for a product button. Once you click it, a comment form will be displayed that the user can leave a comment on this product. This is only visible for users that have logged in.
+
+![Review](readme-image/ux/review.png)
+
+### Shopping Bag ###
+
+As the user shops on the site they can add products to their basket. When a product is added to the basket it will display the quantity of the product they have added as well as the price. This will let users know how much they are spending and how many items they are buying. 
+User can also remove items from their basket this will decrease the price and the quantity.
+This makes it easy for users to make changes inside the shopping bag. 
+
+![Shopping bag](readme-image/ux/shopping-bag.png)
+
+#### Recommendations ####
+
+In the shoppoing bag they will see a recommendation for products at the bottom of the page. This will display recomendded products that might interest the user.
+
+![Recommendation](readme-image/ux/recommendation.png)
+
+When the Read Me button on the recommendation section is clicked a modal opens and displays details of the recommendation product. Clicking the picture of the product brings the user to the product detail page.
+
+![Click the recommendation button](readme-image/ux/click-recommendation.png)
