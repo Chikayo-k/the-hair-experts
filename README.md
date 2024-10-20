@@ -533,3 +533,37 @@ To complete test payment:
 Test card number: “ 4242 4242 4242 4242”.  
 The MM/YY number needs to use a future date. Eg - “04/25”   
 CVC and ZIP can be a selection of any number.
+
+## Reference
+
+I used Code Institute study materials and the walkthrough project in coming up with the idea for my project. I used w3schools and Django documentation to check how to write code as well as the different types of methods that were available for this project.  
+When I ran into an issue, I used Code Institute's tutor assistance and received great help.
+
+[Integrating Mailchimp with Django](https://testdriven.io/blog/django-mailchimp/)  
+[W3schools - html / css / javaScript/ python reference](https://www.w3schools.com/)  
+[Some issues solved with stackoverflow](https://stackoverflow.com/)  
+[Wish list reference](https://www.youtube.com/watch?v=A8rarkE0TKQ)
+
+**Images / others**  
+
+I used ChatGPT to create product images.  
+[Pexels](https://www.pexels.com/)  
+[Pixabay](https://pixabay.com/)  
+[unsplush](https://unsplash.com/)  
+[Fontawsome](https://fontawesome.com/)  
+[Canva](https://www.canva.com/)
+[Google fonts](https://fonts.google.com/)
+
+**Test**
+
+[W3C Markup Validation Service](https://validator.w3.org/)  
+[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)  
+[Jshint.com](https://jshint.com/)  
+
+
+
+
+
+
+
+
