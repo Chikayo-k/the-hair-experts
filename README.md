@@ -501,7 +501,7 @@ Add the user to the group where you have the policy attached
 - Set the static files and images location for S3.
 - A static folder will now be created in S3 with the project's static files. 
 
-### MailChimp ###
+### MailChimp 
 
 As part of developing the hair experts I included the Mailchimp service to set up a newsletter subscription service. This allows users to subscribe to our newsletter.
 
@@ -522,3 +522,14 @@ Steps:
 - The response is “Everything’s Chimpy”
 - Create your audience and copy the Audience ID and add it under settings.py with the other Mailchimp API’s.
 - Once completed when a user subscribes on the form it will be registered in the Mailchimp app.
+
+## Stripe
+
+Payment system is used Stripe.  
+When using the Stripe payment system users need to use the Stripe test Visa Card.
+
+To complete test payment:
+
+Test card number: “ 4242 4242 4242 4242”.  
+The MM/YY number needs to use a future date. Eg - “04/25”   
+CVC and ZIP can be a selection of any number.
