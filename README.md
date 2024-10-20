@@ -32,13 +32,26 @@ The project was designed to be easy to use and have a simple flow from product s
 
 ## Design ##
 
-**Colour Schemes**
-![Colour scheme](readme-image/colour-schemes.png)
+### Colour Schemes ###
 
-![button colour](readme-image/button-colour.png)
+[Color Hunt](https://colorhunt.co/palette/2228312d4059ff5722eeeeee)
+
+When developing the site I wanted to keep the colours simple. Keeping colours simple would make the pictures stand out and not overpower the images for the products with lots of colour.
+
+![Colour scheme](readme-image/colour-schemes.png)
 
 There was a low accessibility score due to the button contrast ratio.  I changed the buttons background lightness colour to  #AD6200 so that users can see the button more clearly. 
 
+![button colour](readme-image/button-colour.png)
+
+### Fonts ###
+
+Logo: font-family: "Playfair Display", serif;
+
+### Favicon ###
+
+Used [Canva](https://www.canva.com/) to create
+![favicon](readme-image/favicon.png)
 
 ## E-Commerce Business Model ##
 
@@ -108,3 +121,11 @@ Open rates, click through rates and bounce rates.
 This is good because we can test our emails to see what works or does not work.
 Sending email to our customers also increases our website’s traffic and leads to calls to action.
 We will use facebook posts to increase subscribers.
+
+## User Experience (UX) ##
+
+### Navigation bar ###
+Navigation bar contains the links to the different website sections. The main page is the product page which also has a dropdown feature where you can select categories. You also have the search bar where you can search specific products by typing keywords in the box. The logo can be used to navigate to the home page. A user can easily access the other pages on the site to view Hair Products, Electrical Items and News. The layout will allow users to see everything the website has to offer at a glance.
+
+
+
