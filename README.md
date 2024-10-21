@@ -2,7 +2,7 @@
 
 ![Am I responvive image](readme-image/amiresponsive.png)
 
-[Go to the website](https://the-hair-experts-530953dace3d.herokuapp.com/)  
+[Go to the Website](https://the-hair-experts-530953dace3d.herokuapp.com/)  
 [Go to the Github](https://github.com/Chikayo-k/the-hair-experts)
 
 The Hair Experts is the fifth project in the Code Institute Diploma in Full Stack Software Development.
@@ -51,7 +51,7 @@ When developing the site I wanted to keep the colours simple. Keeping colours si
 
 There was a low accessibility score due to the button contrast ratio.  I changed the buttons background lightness colour to  #AD6200 so that users can see the button more clearly. 
 
-![button colour](readme-image/button-colour.png)
+[button colour](readme-image/button-colour.png)
 
 ### Fonts 
 
@@ -227,7 +227,7 @@ The navigation bar features a news tab so that users can stay up to date with th
 
 ![Navigation bar](readme-image/ux/navigation.png)
 
-**dropdown**
+**Dropdown**
 
 The Navigation bar allows users to refine their search. They can browse all the site products. They can choose to select just hair products that will show the user what they offer. 
 
