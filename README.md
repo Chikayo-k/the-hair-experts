@@ -38,8 +38,8 @@ The project was designed to be easy to use and have a simple flow from product s
 ### Wireframe
 
 [Wireframe - Desktop](readme-image/wireframe/wireframe-desktop.jpg)  
-[Wireframe - Tablet](readme-image/wireframe/wireframe-tablet.jpg)
-
+[Wireframe - Tablet](readme-image/wireframe/wireframe-tablet.jpg)  
+[Wireframe - Mobile](readme-image/wireframe/wireframe-mobile.jpg)
 
 ### Colour Schemes 
 

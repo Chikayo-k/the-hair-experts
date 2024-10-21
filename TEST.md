@@ -20,7 +20,7 @@ Brave - Pass
 
 All the payments and webhooks has been successfully tested.
 
-![Stripe test](image.png)
+![Stripe payment webhook test](testing-image/stripe/stripetest.png)
 
 ## Validation
 
